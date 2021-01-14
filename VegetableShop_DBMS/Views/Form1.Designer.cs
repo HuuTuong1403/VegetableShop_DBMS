@@ -33,7 +33,9 @@ namespace VegetableShop_DBMS
             this.ptBImage = new Guna.UI.WinForms.GunaPictureBox();
             this.btnSignIn = new Guna.UI.WinForms.GunaButton();
             this.btnSignUp = new Guna.UI.WinForms.GunaButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptBImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ptBImage
@@ -59,7 +61,7 @@ namespace VegetableShop_DBMS
             this.btnSignIn.ForeColor = System.Drawing.Color.Black;
             this.btnSignIn.Image = null;
             this.btnSignIn.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSignIn.Location = new System.Drawing.Point(12, 12);
+            this.btnSignIn.Location = new System.Drawing.Point(403, 12);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnSignIn.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -86,7 +88,7 @@ namespace VegetableShop_DBMS
             this.btnSignUp.ForeColor = System.Drawing.Color.Black;
             this.btnSignUp.Image = null;
             this.btnSignUp.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSignUp.Location = new System.Drawing.Point(120, 12);
+            this.btnSignUp.Location = new System.Drawing.Point(511, 12);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnSignUp.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -99,12 +101,24 @@ namespace VegetableShop_DBMS
             this.btnSignUp.Text = "Đăng kí";
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
+            this.gunaPictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(145, 135);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 9;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // frmVegetableShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.ptBImage);
@@ -115,6 +129,7 @@ namespace VegetableShop_DBMS
             this.Text = "Vegetable Shop";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ptBImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -124,6 +139,7 @@ namespace VegetableShop_DBMS
         private Guna.UI.WinForms.GunaPictureBox ptBImage;
         private Guna.UI.WinForms.GunaButton btnSignIn;
         private Guna.UI.WinForms.GunaButton btnSignUp;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }
 

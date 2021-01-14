@@ -102,6 +102,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\icon\shop.ico" />
+    <Content Include="images\logo.gif" />
+    <Content Include="images\tatcarau.jpeg" />
+    <Content Include="images\tatcarau.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\imagesProduct\" />
+    <Folder Include="images\imagesUser\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
