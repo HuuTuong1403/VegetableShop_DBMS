@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Views\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +76,11 @@
     <Compile Include="Views\frmSignUp.Designer.cs">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="obj\Debug\VegetableShop_DBMS.frmVegetableShop.resources" />
+    <EmbeddedResource Include="obj\Debug\VegetableShop_DBMS.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\VegetableShop_DBMS.Views.frmInformationAccount.resources" />
+    <EmbeddedResource Include="obj\Debug\VegetableShop_DBMS.Views.frmSignUp.resources" />
+    <EmbeddedResource Include="obj\Debug\VegetableShop_DBMS.Views.SignIn.frmSignIn.resources" />
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +102,14 @@
     <EmbeddedResource Include="Views\frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\VegetableShop_DBMS.exe.config" />
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\VegetableShop_DBMS.csproj.CopyComplete" />
+    <None Include="obj\Debug\VegetableShop_DBMS.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\VegetableShop_DBMS.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\VegetableShop_DBMS.csprojAssemblyReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,15 +124,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Guna.UI.dll" />
+    <Content Include="bin\Debug\VegetableShop_DBMS.exe" />
+    <Content Include="bin\Debug\VegetableShop_DBMS.pdb" />
     <Content Include="images\icon\shop.ico" />
     <Content Include="images\logo.gif" />
     <Content Include="images\logo1.gif" />
     <Content Include="images\tatcarau.jpeg" />
     <Content Include="images\tatcarau.jpg" />
+    <Content Include="obj\Debug\VegetableShop_DBMS.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\VegetableShop_DBMS.exe" />
+    <Content Include="obj\Debug\VegetableShop_DBMS.pdb" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Release\" />
     <Folder Include="images\imagesProduct\" />
     <Folder Include="images\imagesUser\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
