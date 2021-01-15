@@ -7,23 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VegetableShop_DBMS.Views.SignIn;
 
 namespace VegetableShop_DBMS.Views
 {
-    public partial class frmSignUp : Form
+    public partial class frmInformationAccount : Form
     {
-        public frmSignUp()
+        public frmInformationAccount()
         {
             InitializeComponent();
         }
 
-        private void btnSignIn_Click(object sender, EventArgs e)
+        private void frmInformationAccount_Load(object sender, EventArgs e)
         {
-            frmSignIn frm = new frmSignIn();
-            frm.Show();
-            frm.TopMost = true;
-            Visible = false;
+
         }
     }
 }

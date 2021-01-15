@@ -57,6 +57,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\frmInformationAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmInformationAccount.Designer.cs">
+      <DependentUpon>frmInformationAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\frmInformationAccount.resx">
+      <DependentUpon>frmInformationAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +112,7 @@
   <ItemGroup>
     <Content Include="images\icon\shop.ico" />
     <Content Include="images\logo.gif" />
+    <Content Include="images\logo1.gif" />
     <Content Include="images\tatcarau.jpeg" />
     <Content Include="images\tatcarau.jpg" />
   </ItemGroup>

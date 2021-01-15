@@ -81,6 +81,7 @@ namespace VegetableShop_DBMS.Views.SignIn
             this.btnSignUp.TabIndex = 16;
             this.btnSignUp.Text = "Đăng kí";
             this.btnSignUp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // gunaLabel2
             // 
@@ -93,6 +94,7 @@ namespace VegetableShop_DBMS.Views.SignIn
             // 
             // btnSignIn
             // 
+            this.btnSignIn.Animated = true;
             this.btnSignIn.AnimationHoverSpeed = 0.07F;
             this.btnSignIn.AnimationSpeed = 0.03F;
             this.btnSignIn.BackColor = System.Drawing.Color.Transparent;

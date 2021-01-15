@@ -1,7 +1,7 @@
 ﻿
 namespace VegetableShop_DBMS.Views
 {
-    partial class frmSignUp
+    partial class frmInformationAccount
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@ namespace VegetableShop_DBMS.Views
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSignUp));
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInformationAccount));
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.btnSignUp = new Guna.UI.WinForms.GunaButton();
+            this.btnSaveInfor = new Guna.UI.WinForms.GunaButton();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.cbbWard = new System.Windows.Forms.ComboBox();
@@ -59,53 +59,52 @@ namespace VegetableShop_DBMS.Views
             this.txtAccount = new Guna.UI.WinForms.GunaTextBox();
             this.lblPassword = new Guna.UI.WinForms.GunaLabel();
             this.lblAccount = new Guna.UI.WinForms.GunaLabel();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnSignIn = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
+            this.btnChangePass = new Guna.UI.WinForms.GunaButton();
+            this.ptBImageUser = new Guna.UI.WinForms.GunaPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptBImageUser)).BeginInit();
             this.SuspendLayout();
+            // 
+            // gunaPictureBox2
+            // 
+            this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
+            this.gunaPictureBox2.Location = new System.Drawing.Point(248, 12);
+            this.gunaPictureBox2.Name = "gunaPictureBox2";
+            this.gunaPictureBox2.Size = new System.Drawing.Size(598, 119);
+            this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox2.TabIndex = 21;
+            this.gunaPictureBox2.TabStop = false;
+            // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
+            this.gunaPictureBox1.Location = new System.Drawing.Point(24, 12);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(126, 119);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 20;
+            this.gunaPictureBox1.TabStop = false;
             // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel1.Location = new System.Drawing.Point(442, 156);
+            this.gunaLabel1.Location = new System.Drawing.Point(371, 158);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(135, 33);
-            this.gunaLabel1.TabIndex = 5;
-            this.gunaLabel1.Text = "ĐĂNG KÍ";
-            // 
-            // gunaPictureBox1
-            // 
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(25, 12);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(126, 119);
-            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox1.TabIndex = 9;
-            this.gunaPictureBox1.TabStop = false;
-            // 
-            // gunaPictureBox2
-            // 
-            this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
-            this.gunaPictureBox2.Location = new System.Drawing.Point(225, 12);
-            this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(598, 119);
-            this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox2.TabIndex = 18;
-            this.gunaPictureBox2.TabStop = false;
+            this.gunaLabel1.Size = new System.Drawing.Size(338, 33);
+            this.gunaLabel1.TabIndex = 19;
+            this.gunaLabel1.Text = "THÔNG TIN TÀI KHOẢN";
             // 
             // gunaPanel1
             // 
             this.gunaPanel1.AutoScroll = true;
-            this.gunaPanel1.Controls.Add(this.btnSignIn);
-            this.gunaPanel1.Controls.Add(this.gunaLabel12);
-            this.gunaPanel1.Controls.Add(this.btnSignUp);
+            this.gunaPanel1.Controls.Add(this.btnChangePass);
+            this.gunaPanel1.Controls.Add(this.btnSaveInfor);
             this.gunaPanel1.Controls.Add(this.gunaTextBox1);
             this.gunaPanel1.Controls.Add(this.gunaLabel11);
             this.gunaPanel1.Controls.Add(this.cbbWard);
@@ -130,38 +129,38 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel1.Controls.Add(this.txtAccount);
             this.gunaPanel1.Controls.Add(this.lblPassword);
             this.gunaPanel1.Controls.Add(this.lblAccount);
-            this.gunaPanel1.Location = new System.Drawing.Point(12, 192);
+            this.gunaPanel1.Location = new System.Drawing.Point(24, 219);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1002, 427);
-            this.gunaPanel1.TabIndex = 19;
+            this.gunaPanel1.Size = new System.Drawing.Size(1002, 381);
+            this.gunaPanel1.TabIndex = 23;
             // 
-            // btnSignUp
+            // btnSaveInfor
             // 
-            this.btnSignUp.Animated = true;
-            this.btnSignUp.AnimationHoverSpeed = 0.07F;
-            this.btnSignUp.AnimationSpeed = 0.03F;
-            this.btnSignUp.BackColor = System.Drawing.Color.Transparent;
-            this.btnSignUp.BaseColor = System.Drawing.Color.Silver;
-            this.btnSignUp.BorderColor = System.Drawing.Color.Black;
-            this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSignUp.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSignUp.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSignUp.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignUp.ForeColor = System.Drawing.Color.Black;
-            this.btnSignUp.Image = null;
-            this.btnSignUp.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSignUp.Location = new System.Drawing.Point(290, 305);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnSignUp.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnSignUp.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnSignUp.OnHoverImage = null;
-            this.btnSignUp.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSignUp.Radius = 10;
-            this.btnSignUp.Size = new System.Drawing.Size(468, 51);
-            this.btnSignUp.TabIndex = 69;
-            this.btnSignUp.Text = "ĐĂNG KÝ";
-            this.btnSignUp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSaveInfor.Animated = true;
+            this.btnSaveInfor.AnimationHoverSpeed = 0.07F;
+            this.btnSaveInfor.AnimationSpeed = 0.03F;
+            this.btnSaveInfor.BackColor = System.Drawing.Color.Transparent;
+            this.btnSaveInfor.BaseColor = System.Drawing.Color.Silver;
+            this.btnSaveInfor.BorderColor = System.Drawing.Color.Black;
+            this.btnSaveInfor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveInfor.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSaveInfor.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSaveInfor.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveInfor.ForeColor = System.Drawing.Color.Black;
+            this.btnSaveInfor.Image = null;
+            this.btnSaveInfor.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSaveInfor.Location = new System.Drawing.Point(24, 306);
+            this.btnSaveInfor.Name = "btnSaveInfor";
+            this.btnSaveInfor.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnSaveInfor.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnSaveInfor.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnSaveInfor.OnHoverImage = null;
+            this.btnSaveInfor.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSaveInfor.Radius = 10;
+            this.btnSaveInfor.Size = new System.Drawing.Size(468, 51);
+            this.btnSaveInfor.TabIndex = 69;
+            this.btnSaveInfor.Text = "LƯU THÔNG TIN";
+            this.btnSaveInfor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gunaTextBox1
             // 
@@ -496,66 +495,68 @@ namespace VegetableShop_DBMS.Views
             this.lblAccount.TabIndex = 45;
             this.lblAccount.Text = "Tài khoản:";
             // 
-            // openFileDialog1
+            // btnChangePass
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.btnChangePass.Animated = true;
+            this.btnChangePass.AnimationHoverSpeed = 0.07F;
+            this.btnChangePass.AnimationSpeed = 0.03F;
+            this.btnChangePass.BackColor = System.Drawing.Color.Transparent;
+            this.btnChangePass.BaseColor = System.Drawing.Color.Silver;
+            this.btnChangePass.BorderColor = System.Drawing.Color.Black;
+            this.btnChangePass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangePass.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnChangePass.FocusedColor = System.Drawing.Color.Empty;
+            this.btnChangePass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePass.ForeColor = System.Drawing.Color.Black;
+            this.btnChangePass.Image = null;
+            this.btnChangePass.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnChangePass.Location = new System.Drawing.Point(510, 306);
+            this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnChangePass.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnChangePass.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnChangePass.OnHoverImage = null;
+            this.btnChangePass.OnPressedColor = System.Drawing.Color.Black;
+            this.btnChangePass.Radius = 10;
+            this.btnChangePass.Size = new System.Drawing.Size(468, 51);
+            this.btnChangePass.TabIndex = 70;
+            this.btnChangePass.Text = "ĐỔI MẬT KHẨU";
+            this.btnChangePass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnSignIn
+            // ptBImageUser
             // 
-            this.btnSignIn.AnimationHoverSpeed = 0.07F;
-            this.btnSignIn.AnimationSpeed = 0.03F;
-            this.btnSignIn.BackColor = System.Drawing.Color.Transparent;
-            this.btnSignIn.BaseColor = System.Drawing.Color.Transparent;
-            this.btnSignIn.BorderColor = System.Drawing.Color.Black;
-            this.btnSignIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSignIn.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSignIn.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSignIn.Font = new System.Drawing.Font("Tahoma", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignIn.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnSignIn.Image = null;
-            this.btnSignIn.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSignIn.Location = new System.Drawing.Point(527, 388);
-            this.btnSignIn.Name = "btnSignIn";
-            this.btnSignIn.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.btnSignIn.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnSignIn.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnSignIn.OnHoverImage = null;
-            this.btnSignIn.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSignIn.Radius = 10;
-            this.btnSignIn.Size = new System.Drawing.Size(107, 18);
-            this.btnSignIn.TabIndex = 71;
-            this.btnSignIn.Text = "Đăng nhập";
-            this.btnSignIn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
+            this.ptBImageUser.BackColor = System.Drawing.Color.Transparent;
+            this.ptBImageUser.BaseColor = System.Drawing.Color.White;
+            this.ptBImageUser.Image = ((System.Drawing.Image)(resources.GetObject("ptBImageUser.Image")));
+            this.ptBImageUser.Location = new System.Drawing.Point(886, 12);
+            this.ptBImageUser.Name = "ptBImageUser";
+            this.ptBImageUser.Radius = 35;
+            this.ptBImageUser.Size = new System.Drawing.Size(140, 119);
+            this.ptBImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptBImageUser.TabIndex = 24;
+            this.ptBImageUser.TabStop = false;
             // 
-            // gunaLabel12
-            // 
-            this.gunaLabel12.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel12.Location = new System.Drawing.Point(385, 388);
-            this.gunaLabel12.Name = "gunaLabel12";
-            this.gunaLabel12.Size = new System.Drawing.Size(161, 18);
-            this.gunaLabel12.TabIndex = 70;
-            this.gunaLabel12.Text = "Bạn đã có tài khoản?";
-            // 
-            // frmSignUp
+            // frmInformationAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1026, 631);
+            this.ClientSize = new System.Drawing.Size(1049, 623);
+            this.Controls.Add(this.ptBImageUser);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.gunaPictureBox2);
             this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.gunaLabel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmSignUp";
+            this.Name = "frmInformationAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đăng kí";
-            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
+            this.Text = "frmInformationAccount";
+            this.Load += new System.EventHandler(this.frmInformationAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptBImageUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,11 +564,11 @@ namespace VegetableShop_DBMS.Views
 
         #endregion
 
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
-        private Guna.UI.WinForms.GunaButton btnSignUp;
+        private Guna.UI.WinForms.GunaButton btnSaveInfor;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel11;
         private System.Windows.Forms.ComboBox cbbWard;
@@ -592,8 +593,7 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaTextBox txtAccount;
         private Guna.UI.WinForms.GunaLabel lblPassword;
         private Guna.UI.WinForms.GunaLabel lblAccount;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private Guna.UI.WinForms.GunaButton btnSignIn;
-        private Guna.UI.WinForms.GunaLabel gunaLabel12;
+        private Guna.UI.WinForms.GunaButton btnChangePass;
+        private Guna.UI.WinForms.GunaPictureBox ptBImageUser;
     }
 }
