@@ -15,9 +15,23 @@ namespace VegetableShop_DBMS
     public partial class frmVegetableShop : Form
     {
         private bool flaqMenuAccount = true;
-        public frmVegetableShop()
+        public string UserName;
+        public string PassWord;
+        public string Role;
+        public frmVegetableShop(string UserName, string PassWord, string Role)
         {
+            this.UserName = UserName;
+            this.PassWord = PassWord;
+            this.Role = Role;            
             InitializeComponent();
+            if (UserName == "")
+            {
+                btnAccount.Text = "Username ▼";
+            }
+            else
+            {
+                btnAccount.Text = UserName + "▼";
+            }
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
