@@ -41,7 +41,14 @@ namespace VegetableShop_DBMS.Views.SignIn
             string role = dt.Rows[0][0].ToString();
             if (role != "")
             {
-                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult dialogResult;
+                dialogResult = MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dialogResult == DialogResult.OK)
+                {
+                    frmVegetableShop form = new frmVegetableShop(UserName, PassWord, role);
+                    form.ShowDialog();
+                    this.Close();
+                }
             }
             else
             {

@@ -118,7 +118,15 @@ namespace VegetableShop_DBMS.Views
             bool check = SignUpController.Register_Customer(UserName, PassWord, FullName, Gender, DateofBirth, PhoneNumber, Email, Image, Province, District, Ward, Street, ref err);
             if (check == true)
             {
-                MessageBox.Show("Bạn đã tạo tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult dialogResult;
+                dialogResult = MessageBox.Show("Bạn đã tạo tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dialogResult == DialogResult.OK)
+                {
+                    frmSignIn form = new frmSignIn();
+                    form.ShowDialog();
+                    this.Close();
+                    
+                }
             }
             else
             {
