@@ -125,7 +125,7 @@ namespace VegetableShop_DBMS.Views
                     frmSignIn form = new frmSignIn();
                     form.ShowDialog();
                     this.Close();
-                    
+                    Application.Exit();
                 }
             }
             else

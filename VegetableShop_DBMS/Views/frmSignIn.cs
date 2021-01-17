@@ -48,6 +48,7 @@ namespace VegetableShop_DBMS.Views.SignIn
                     frmVegetableShop form = new frmVegetableShop(UserName, PassWord, role);
                     form.ShowDialog();
                     this.Close();
+                    Application.Exit();
                 }
             }
             else
