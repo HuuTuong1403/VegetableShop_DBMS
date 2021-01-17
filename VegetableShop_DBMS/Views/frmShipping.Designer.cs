@@ -34,6 +34,9 @@ namespace VegetableShop_DBMS.Views
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaPanel6 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.btnUpdateItem = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
             this.btnAccept = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel7 = new Guna.UI.WinForms.GunaPanel();
@@ -57,18 +60,22 @@ namespace VegetableShop_DBMS.Views
             this.lblFullName = new Guna.UI.WinForms.GunaLabel();
             this.lblAddress = new Guna.UI.WinForms.GunaLabel();
             this.btnUpdateAddress = new Guna.UI.WinForms.GunaButton();
-            this.gunaPanel6 = new Guna.UI.WinForms.GunaPanel();
-            this.btnUpdateItem = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.lblShowQuantityxItem = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel14 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel15 = new Guna.UI.WinForms.GunaLabel();
+            this.lblShowPrice = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaPanel2.SuspendLayout();
+            this.gunaPanel6.SuspendLayout();
             this.gunaPanel7.SuspendLayout();
             this.gunaPanel5.SuspendLayout();
             this.gunaPanel3.SuspendLayout();
             this.gunaPanel4.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
-            this.gunaPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaLabel1
@@ -122,6 +129,62 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel2.Size = new System.Drawing.Size(776, 512);
             this.gunaPanel2.TabIndex = 26;
             // 
+            // gunaPanel6
+            // 
+            this.gunaPanel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gunaPanel6.Controls.Add(this.lblShowPrice);
+            this.gunaPanel6.Controls.Add(this.gunaLabel15);
+            this.gunaPanel6.Controls.Add(this.gunaLabel14);
+            this.gunaPanel6.Controls.Add(this.gunaLabel10);
+            this.gunaPanel6.Controls.Add(this.gunaLabel8);
+            this.gunaPanel6.Controls.Add(this.lblShowQuantityxItem);
+            this.gunaPanel6.Controls.Add(this.gunaLabel3);
+            this.gunaPanel6.Controls.Add(this.gunaLabel2);
+            this.gunaPanel6.Controls.Add(this.btnUpdateItem);
+            this.gunaPanel6.Location = new System.Drawing.Point(518, 230);
+            this.gunaPanel6.Name = "gunaPanel6";
+            this.gunaPanel6.Size = new System.Drawing.Size(245, 263);
+            this.gunaPanel6.TabIndex = 41;
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.Location = new System.Drawing.Point(9, 10);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(78, 18);
+            this.gunaLabel2.TabIndex = 32;
+            this.gunaLabel2.Text = "Đơn hàng";
+            // 
+            // btnUpdateItem
+            // 
+            this.btnUpdateItem.AnimationHoverSpeed = 0.07F;
+            this.btnUpdateItem.AnimationSpeed = 0.03F;
+            this.btnUpdateItem.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdateItem.BaseColor = System.Drawing.Color.LightGray;
+            this.btnUpdateItem.BorderColor = System.Drawing.Color.Black;
+            this.btnUpdateItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateItem.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnUpdateItem.FocusedColor = System.Drawing.Color.Empty;
+            this.btnUpdateItem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateItem.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateItem.Image = null;
+            this.btnUpdateItem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnUpdateItem.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnUpdateItem.Location = new System.Drawing.Point(162, 6);
+            this.btnUpdateItem.Name = "btnUpdateItem";
+            this.btnUpdateItem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnUpdateItem.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnUpdateItem.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnUpdateItem.OnHoverImage = null;
+            this.btnUpdateItem.OnPressedColor = System.Drawing.Color.Black;
+            this.btnUpdateItem.Radius = 10;
+            this.btnUpdateItem.Size = new System.Drawing.Size(65, 25);
+            this.btnUpdateItem.TabIndex = 32;
+            this.btnUpdateItem.Text = "Sửa";
+            this.btnUpdateItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnUpdateItem.Click += new System.EventHandler(this.btnUpdateItem_Click);
+            // 
             // gunaLabel13
             // 
             this.gunaLabel13.AutoSize = true;
@@ -172,6 +235,7 @@ namespace VegetableShop_DBMS.Views
             // radiobtnCOD
             // 
             this.radiobtnCOD.AutoSize = true;
+            this.radiobtnCOD.Checked = true;
             this.radiobtnCOD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radiobtnCOD.Location = new System.Drawing.Point(13, 9);
             this.radiobtnCOD.Name = "radiobtnCOD";
@@ -286,6 +350,7 @@ namespace VegetableShop_DBMS.Views
             // radiobtnStandard
             // 
             this.radiobtnStandard.BaseColor = System.Drawing.SystemColors.Control;
+            this.radiobtnStandard.Checked = true;
             this.radiobtnStandard.CheckedOffColor = System.Drawing.Color.Gray;
             this.radiobtnStandard.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.radiobtnStandard.FillColor = System.Drawing.Color.White;
@@ -314,9 +379,9 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel1.Controls.Add(this.lblFullName);
             this.gunaPanel1.Controls.Add(this.lblAddress);
             this.gunaPanel1.Controls.Add(this.btnUpdateAddress);
-            this.gunaPanel1.Location = new System.Drawing.Point(530, 12);
+            this.gunaPanel1.Location = new System.Drawing.Point(518, 12);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(233, 194);
+            this.gunaPanel1.Size = new System.Drawing.Size(245, 194);
             this.gunaPanel1.TabIndex = 26;
             // 
             // gunaLabel5
@@ -326,7 +391,7 @@ namespace VegetableShop_DBMS.Views
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel5.Location = new System.Drawing.Point(8, 44);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(218, 10);
+            this.gunaLabel5.Size = new System.Drawing.Size(232, 10);
             this.gunaLabel5.TabIndex = 31;
             // 
             // gunaLabel4
@@ -362,7 +427,7 @@ namespace VegetableShop_DBMS.Views
             this.lblAddress.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(5, 103);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(222, 45);
+            this.lblAddress.Size = new System.Drawing.Size(235, 45);
             this.lblAddress.TabIndex = 27;
             this.lblAddress.Text = "Số 2 Đào Trinh Nhất, Linh Tây, Thủ Đức";
             // 
@@ -394,52 +459,76 @@ namespace VegetableShop_DBMS.Views
             this.btnUpdateAddress.Text = "Sửa";
             this.btnUpdateAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // gunaPanel6
+            // gunaLabel3
             // 
-            this.gunaPanel6.Controls.Add(this.gunaLabel2);
-            this.gunaPanel6.Controls.Add(this.btnUpdateItem);
-            this.gunaPanel6.Location = new System.Drawing.Point(530, 230);
-            this.gunaPanel6.Name = "gunaPanel6";
-            this.gunaPanel6.Size = new System.Drawing.Size(233, 244);
-            this.gunaPanel6.TabIndex = 41;
+            this.gunaLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gunaLabel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Location = new System.Drawing.Point(9, 49);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(232, 2);
+            this.gunaLabel3.TabIndex = 32;
             // 
-            // btnUpdateItem
+            // lblShowQuantityxItem
             // 
-            this.btnUpdateItem.AnimationHoverSpeed = 0.07F;
-            this.btnUpdateItem.AnimationSpeed = 0.03F;
-            this.btnUpdateItem.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdateItem.BaseColor = System.Drawing.Color.LightGray;
-            this.btnUpdateItem.BorderColor = System.Drawing.Color.Black;
-            this.btnUpdateItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdateItem.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnUpdateItem.FocusedColor = System.Drawing.Color.Empty;
-            this.btnUpdateItem.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateItem.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdateItem.Image = null;
-            this.btnUpdateItem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnUpdateItem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUpdateItem.Location = new System.Drawing.Point(162, 3);
-            this.btnUpdateItem.Name = "btnUpdateItem";
-            this.btnUpdateItem.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnUpdateItem.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnUpdateItem.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnUpdateItem.OnHoverImage = null;
-            this.btnUpdateItem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnUpdateItem.Radius = 10;
-            this.btnUpdateItem.Size = new System.Drawing.Size(65, 25);
-            this.btnUpdateItem.TabIndex = 32;
-            this.btnUpdateItem.Text = "Sửa";
-            this.btnUpdateItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblShowQuantityxItem.AutoSize = true;
+            this.lblShowQuantityxItem.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowQuantityxItem.Location = new System.Drawing.Point(8, 62);
+            this.lblShowQuantityxItem.Name = "lblShowQuantityxItem";
+            this.lblShowQuantityxItem.Size = new System.Drawing.Size(210, 17);
+            this.lblShowQuantityxItem.TabIndex = 32;
+            this.lblShowQuantityxItem.Text = "Số lượng x Tên món: 10000đ";
             // 
-            // gunaLabel2
+            // gunaLabel8
             // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(9, 10);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(78, 18);
-            this.gunaLabel2.TabIndex = 32;
-            this.gunaLabel2.Text = "Đơn hàng";
+            this.gunaLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gunaLabel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel8.Location = new System.Drawing.Point(8, 207);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(232, 6);
+            this.gunaLabel8.TabIndex = 33;
+            // 
+            // gunaLabel10
+            // 
+            this.gunaLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gunaLabel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel10.Location = new System.Drawing.Point(5, 186);
+            this.gunaLabel10.Name = "gunaLabel10";
+            this.gunaLabel10.Size = new System.Drawing.Size(232, 2);
+            this.gunaLabel10.TabIndex = 34;
+            // 
+            // gunaLabel14
+            // 
+            this.gunaLabel14.AutoSize = true;
+            this.gunaLabel14.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel14.Location = new System.Drawing.Point(9, 189);
+            this.gunaLabel14.Name = "gunaLabel14";
+            this.gunaLabel14.Size = new System.Drawing.Size(175, 17);
+            this.gunaLabel14.TabIndex = 35;
+            this.gunaLabel14.Text = "Phí vận chuyển: 10000đ";
+            // 
+            // gunaLabel15
+            // 
+            this.gunaLabel15.AutoSize = true;
+            this.gunaLabel15.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel15.Location = new System.Drawing.Point(9, 222);
+            this.gunaLabel15.Name = "gunaLabel15";
+            this.gunaLabel15.Size = new System.Drawing.Size(87, 17);
+            this.gunaLabel15.TabIndex = 36;
+            this.gunaLabel15.Text = "Thành tiền:";
+            // 
+            // lblShowPrice
+            // 
+            this.lblShowPrice.AutoSize = true;
+            this.lblShowPrice.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(35)))), ((int)(((byte)(71)))));
+            this.lblShowPrice.Location = new System.Drawing.Point(174, 222);
+            this.lblShowPrice.Name = "lblShowPrice";
+            this.lblShowPrice.Size = new System.Drawing.Size(44, 17);
+            this.lblShowPrice.TabIndex = 37;
+            this.lblShowPrice.Text = "Tổng";
             // 
             // frmShipping
             // 
@@ -460,6 +549,8 @@ namespace VegetableShop_DBMS.Views
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();
+            this.gunaPanel6.ResumeLayout(false);
+            this.gunaPanel6.PerformLayout();
             this.gunaPanel7.ResumeLayout(false);
             this.gunaPanel7.PerformLayout();
             this.gunaPanel5.ResumeLayout(false);
@@ -470,8 +561,6 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel4.PerformLayout();
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
-            this.gunaPanel6.ResumeLayout(false);
-            this.gunaPanel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -509,5 +598,12 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaPanel gunaPanel6;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaButton btnUpdateItem;
+        private Guna.UI.WinForms.GunaLabel lblShowQuantityxItem;
+        private Guna.UI.WinForms.GunaLabel gunaLabel3;
+        private Guna.UI.WinForms.GunaLabel lblShowPrice;
+        private Guna.UI.WinForms.GunaLabel gunaLabel15;
+        private Guna.UI.WinForms.GunaLabel gunaLabel14;
+        private Guna.UI.WinForms.GunaLabel gunaLabel10;
+        private Guna.UI.WinForms.GunaLabel gunaLabel8;
     }
 }

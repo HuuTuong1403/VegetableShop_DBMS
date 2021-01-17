@@ -16,5 +16,13 @@ namespace VegetableShop_DBMS.Views
         {
             InitializeComponent();
         }
+
+        private void btnUpdateItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmShoppingCart frmShopping = new frmShoppingCart();
+            frmShopping.ShowDialog();
+            this.Close();
+        }
     }
 }
