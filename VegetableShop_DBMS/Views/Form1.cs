@@ -71,5 +71,29 @@ namespace VegetableShop_DBMS
             frmShoppingCart frmCart = new frmShoppingCart();
             frmCart.ShowDialog();
         }
+
+        private void btnAddSeller_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmRegisterSeller frmRS = new frmRegisterSeller();
+            frmRS.ShowDialog();
+            this.Show();      
+        }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmAddItem frmAdd = new frmAddItem();
+            frmAdd.ShowDialog();
+            this.Show();
+        }
+
+        private void btnImportItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmImportItem frmImport = new frmImportItem();
+            frmImport.ShowDialog();
+            this.Show();
+        }
     }
 }
