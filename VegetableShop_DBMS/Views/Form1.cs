@@ -65,5 +65,11 @@ namespace VegetableShop_DBMS
             frmInformationAccount frmInfor = new frmInformationAccount();
             frmInfor.ShowDialog();
         }
+
+        private void btnShoppingCart_Click(object sender, EventArgs e)
+        {
+            frmShoppingCart frmCart = new frmShoppingCart();
+            frmCart.ShowDialog();
+        }
     }
 }

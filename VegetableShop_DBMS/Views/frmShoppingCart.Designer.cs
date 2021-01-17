@@ -1,0 +1,238 @@
+﻿
+namespace VegetableShop_DBMS.Views
+{
+    partial class frmShoppingCart
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShoppingCart));
+            this.dtGVShoppingCart = new System.Windows.Forms.DataGridView();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.colImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSalePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOrigin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDeleteCart = new Guna.UI.WinForms.GunaButton();
+            this.btnOrderCart = new Guna.UI.WinForms.GunaButton();
+            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVShoppingCart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dtGVShoppingCart
+            // 
+            this.dtGVShoppingCart.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dtGVShoppingCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVShoppingCart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colImage,
+            this.colItemName,
+            this.colDescription,
+            this.colSalePrice,
+            this.colOrigin,
+            this.colQuantity,
+            this.colCategory});
+            this.dtGVShoppingCart.Location = new System.Drawing.Point(3, 193);
+            this.dtGVShoppingCart.Name = "dtGVShoppingCart";
+            this.dtGVShoppingCart.Size = new System.Drawing.Size(796, 288);
+            this.dtGVShoppingCart.TabIndex = 0;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Gray;
+            this.gunaLabel1.Location = new System.Drawing.Point(330, 147);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(157, 33);
+            this.gunaLabel1.TabIndex = 19;
+            this.gunaLabel1.Text = "GIỎ HÀNG";
+            // 
+            // colImage
+            // 
+            this.colImage.HeaderText = "Image";
+            this.colImage.Name = "colImage";
+            // 
+            // colItemName
+            // 
+            this.colItemName.HeaderText = "Tên món ăn";
+            this.colItemName.Name = "colItemName";
+            this.colItemName.Width = 140;
+            // 
+            // colDescription
+            // 
+            this.colDescription.HeaderText = "Thành phần";
+            this.colDescription.Name = "colDescription";
+            this.colDescription.Width = 150;
+            // 
+            // colSalePrice
+            // 
+            this.colSalePrice.HeaderText = "Giá";
+            this.colSalePrice.Name = "colSalePrice";
+            // 
+            // colOrigin
+            // 
+            this.colOrigin.HeaderText = "Xuất xứ";
+            this.colOrigin.Name = "colOrigin";
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.HeaderText = "Số lượng";
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.Width = 80;
+            // 
+            // colCategory
+            // 
+            this.colCategory.HeaderText = "Loại";
+            this.colCategory.Name = "colCategory";
+            this.colCategory.Width = 82;
+            // 
+            // btnDeleteCart
+            // 
+            this.btnDeleteCart.AnimationHoverSpeed = 0.07F;
+            this.btnDeleteCart.AnimationSpeed = 0.03F;
+            this.btnDeleteCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnDeleteCart.BaseColor = System.Drawing.Color.Silver;
+            this.btnDeleteCart.BorderColor = System.Drawing.Color.Black;
+            this.btnDeleteCart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteCart.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDeleteCart.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDeleteCart.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteCart.ForeColor = System.Drawing.Color.Black;
+            this.btnDeleteCart.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteCart.Image")));
+            this.btnDeleteCart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDeleteCart.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDeleteCart.Location = new System.Drawing.Point(526, 487);
+            this.btnDeleteCart.Name = "btnDeleteCart";
+            this.btnDeleteCart.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnDeleteCart.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDeleteCart.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDeleteCart.OnHoverImage = null;
+            this.btnDeleteCart.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDeleteCart.Radius = 10;
+            this.btnDeleteCart.Size = new System.Drawing.Size(121, 42);
+            this.btnDeleteCart.TabIndex = 23;
+            this.btnDeleteCart.Text = "Xóa";
+            this.btnDeleteCart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnOrderCart
+            // 
+            this.btnOrderCart.AnimationHoverSpeed = 0.07F;
+            this.btnOrderCart.AnimationSpeed = 0.03F;
+            this.btnOrderCart.BackColor = System.Drawing.Color.Transparent;
+            this.btnOrderCart.BaseColor = System.Drawing.Color.Silver;
+            this.btnOrderCart.BorderColor = System.Drawing.Color.Black;
+            this.btnOrderCart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrderCart.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnOrderCart.FocusedColor = System.Drawing.Color.Empty;
+            this.btnOrderCart.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderCart.ForeColor = System.Drawing.Color.Black;
+            this.btnOrderCart.Image = ((System.Drawing.Image)(resources.GetObject("btnOrderCart.Image")));
+            this.btnOrderCart.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnOrderCart.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnOrderCart.Location = new System.Drawing.Point(653, 487);
+            this.btnOrderCart.Name = "btnOrderCart";
+            this.btnOrderCart.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnOrderCart.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnOrderCart.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnOrderCart.OnHoverImage = null;
+            this.btnOrderCart.OnPressedColor = System.Drawing.Color.Black;
+            this.btnOrderCart.Radius = 10;
+            this.btnOrderCart.Size = new System.Drawing.Size(135, 42);
+            this.btnOrderCart.TabIndex = 22;
+            this.btnOrderCart.Text = "Đặt hàng";
+            this.btnOrderCart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnOrderCart.Click += new System.EventHandler(this.btnOrderCart_Click);
+            // 
+            // gunaPictureBox2
+            // 
+            this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
+            this.gunaPictureBox2.Location = new System.Drawing.Point(190, 12);
+            this.gunaPictureBox2.Name = "gunaPictureBox2";
+            this.gunaPictureBox2.Size = new System.Drawing.Size(598, 119);
+            this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox2.TabIndex = 21;
+            this.gunaPictureBox2.TabStop = false;
+            // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
+            this.gunaPictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(126, 119);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 20;
+            this.gunaPictureBox1.TabStop = false;
+            // 
+            // frmShoppingCart
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(800, 541);
+            this.Controls.Add(this.btnDeleteCart);
+            this.Controls.Add(this.btnOrderCart);
+            this.Controls.Add(this.gunaPictureBox2);
+            this.Controls.Add(this.gunaPictureBox1);
+            this.Controls.Add(this.gunaLabel1);
+            this.Controls.Add(this.dtGVShoppingCart);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "frmShoppingCart";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Giỏ hàng";
+            ((System.ComponentModel.ISupportInitialize)(this.dtGVShoppingCart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.DataGridView dtGVShoppingCart;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaButton btnOrderCart;
+        private Guna.UI.WinForms.GunaButton btnDeleteCart;
+        private System.Windows.Forms.DataGridViewImageColumn colImage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDescription;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSalePrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colOrigin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCategory;
+    }
+}

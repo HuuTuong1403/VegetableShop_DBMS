@@ -66,6 +66,18 @@
     <Compile Include="Views\frmInformationAccount.Designer.cs">
       <DependentUpon>frmInformationAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmShipping.Designer.cs">
+      <DependentUpon>frmShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmShoppingCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmShoppingCart.Designer.cs">
+      <DependentUpon>frmShoppingCart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmSignIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,9 +101,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Views\frmInformationAccount.resx">
       <DependentUpon>frmInformationAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmShipping.resx">
+      <DependentUpon>frmShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmShoppingCart.resx">
+      <DependentUpon>frmShoppingCart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmSignIn.resx">
       <DependentUpon>frmSignIn.cs</DependentUpon>
@@ -116,8 +135,14 @@
     <Content Include="images\icon\shop.ico" />
     <Content Include="images\logo.gif" />
     <Content Include="images\logo1.gif" />
+    <Content Include="images\right-arrow.png" />
+    <Content Include="images\shopping cart.jpg" />
+    <Content Include="images\shopping-cart %281%29.png" />
+    <Content Include="images\shopping-cart.png" />
     <Content Include="images\tatcarau.jpeg" />
     <Content Include="images\tatcarau.jpg" />
+    <Content Include="images\trash.png" />
+    <None Include="Resources\avatar.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\imagesProduct\" />
