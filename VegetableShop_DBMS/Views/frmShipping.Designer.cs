@@ -35,12 +35,18 @@ namespace VegetableShop_DBMS.Views
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel6 = new Guna.UI.WinForms.GunaPanel();
+            this.lblShowPrice = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel15 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel14 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
+            this.lblShowQuantityxItem = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.btnUpdateItem = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
             this.btnAccept = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel7 = new Guna.UI.WinForms.GunaPanel();
-            this.radiobtnCOD = new System.Windows.Forms.RadioButton();
             this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel5 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
@@ -60,13 +66,7 @@ namespace VegetableShop_DBMS.Views
             this.lblFullName = new Guna.UI.WinForms.GunaLabel();
             this.lblAddress = new Guna.UI.WinForms.GunaLabel();
             this.btnUpdateAddress = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.lblShowQuantityxItem = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel14 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel15 = new Guna.UI.WinForms.GunaLabel();
-            this.lblShowPrice = new Guna.UI.WinForms.GunaLabel();
+            this.radiobtnCOD = new Guna.UI.WinForms.GunaRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaPanel2.SuspendLayout();
@@ -145,6 +145,77 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel6.Name = "gunaPanel6";
             this.gunaPanel6.Size = new System.Drawing.Size(245, 263);
             this.gunaPanel6.TabIndex = 41;
+            // 
+            // lblShowPrice
+            // 
+            this.lblShowPrice.AutoSize = true;
+            this.lblShowPrice.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(35)))), ((int)(((byte)(71)))));
+            this.lblShowPrice.Location = new System.Drawing.Point(174, 222);
+            this.lblShowPrice.Name = "lblShowPrice";
+            this.lblShowPrice.Size = new System.Drawing.Size(44, 17);
+            this.lblShowPrice.TabIndex = 37;
+            this.lblShowPrice.Text = "Tổng";
+            // 
+            // gunaLabel15
+            // 
+            this.gunaLabel15.AutoSize = true;
+            this.gunaLabel15.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel15.Location = new System.Drawing.Point(9, 222);
+            this.gunaLabel15.Name = "gunaLabel15";
+            this.gunaLabel15.Size = new System.Drawing.Size(87, 17);
+            this.gunaLabel15.TabIndex = 36;
+            this.gunaLabel15.Text = "Thành tiền:";
+            // 
+            // gunaLabel14
+            // 
+            this.gunaLabel14.AutoSize = true;
+            this.gunaLabel14.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel14.Location = new System.Drawing.Point(9, 189);
+            this.gunaLabel14.Name = "gunaLabel14";
+            this.gunaLabel14.Size = new System.Drawing.Size(175, 17);
+            this.gunaLabel14.TabIndex = 35;
+            this.gunaLabel14.Text = "Phí vận chuyển: 10000đ";
+            // 
+            // gunaLabel10
+            // 
+            this.gunaLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gunaLabel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel10.Location = new System.Drawing.Point(5, 186);
+            this.gunaLabel10.Name = "gunaLabel10";
+            this.gunaLabel10.Size = new System.Drawing.Size(232, 2);
+            this.gunaLabel10.TabIndex = 34;
+            // 
+            // gunaLabel8
+            // 
+            this.gunaLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gunaLabel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel8.Location = new System.Drawing.Point(8, 207);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(232, 6);
+            this.gunaLabel8.TabIndex = 33;
+            // 
+            // lblShowQuantityxItem
+            // 
+            this.lblShowQuantityxItem.AutoSize = true;
+            this.lblShowQuantityxItem.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShowQuantityxItem.Location = new System.Drawing.Point(8, 62);
+            this.lblShowQuantityxItem.Name = "lblShowQuantityxItem";
+            this.lblShowQuantityxItem.Size = new System.Drawing.Size(210, 17);
+            this.lblShowQuantityxItem.TabIndex = 32;
+            this.lblShowQuantityxItem.Text = "Số lượng x Tên món: 10000đ";
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gunaLabel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Location = new System.Drawing.Point(9, 49);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(232, 2);
+            this.gunaLabel3.TabIndex = 32;
             // 
             // gunaLabel2
             // 
@@ -231,19 +302,6 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel7.Name = "gunaPanel7";
             this.gunaPanel7.Size = new System.Drawing.Size(458, 44);
             this.gunaPanel7.TabIndex = 39;
-            // 
-            // radiobtnCOD
-            // 
-            this.radiobtnCOD.AutoSize = true;
-            this.radiobtnCOD.Checked = true;
-            this.radiobtnCOD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobtnCOD.Location = new System.Drawing.Point(13, 9);
-            this.radiobtnCOD.Name = "radiobtnCOD";
-            this.radiobtnCOD.Size = new System.Drawing.Size(359, 23);
-            this.radiobtnCOD.TabIndex = 0;
-            this.radiobtnCOD.TabStop = true;
-            this.radiobtnCOD.Text = "Thanh toán bằng tiền mặt khi nhận hàng";
-            this.radiobtnCOD.UseVisualStyleBackColor = true;
             // 
             // gunaLabel12
             // 
@@ -459,76 +517,19 @@ namespace VegetableShop_DBMS.Views
             this.btnUpdateAddress.Text = "Sửa";
             this.btnUpdateAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // gunaLabel3
+            // radiobtnCOD
             // 
-            this.gunaLabel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaLabel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(9, 49);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(232, 2);
-            this.gunaLabel3.TabIndex = 32;
-            // 
-            // lblShowQuantityxItem
-            // 
-            this.lblShowQuantityxItem.AutoSize = true;
-            this.lblShowQuantityxItem.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowQuantityxItem.Location = new System.Drawing.Point(8, 62);
-            this.lblShowQuantityxItem.Name = "lblShowQuantityxItem";
-            this.lblShowQuantityxItem.Size = new System.Drawing.Size(210, 17);
-            this.lblShowQuantityxItem.TabIndex = 32;
-            this.lblShowQuantityxItem.Text = "Số lượng x Tên món: 10000đ";
-            // 
-            // gunaLabel8
-            // 
-            this.gunaLabel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaLabel8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel8.Location = new System.Drawing.Point(8, 207);
-            this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(232, 6);
-            this.gunaLabel8.TabIndex = 33;
-            // 
-            // gunaLabel10
-            // 
-            this.gunaLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaLabel10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel10.Location = new System.Drawing.Point(5, 186);
-            this.gunaLabel10.Name = "gunaLabel10";
-            this.gunaLabel10.Size = new System.Drawing.Size(232, 2);
-            this.gunaLabel10.TabIndex = 34;
-            // 
-            // gunaLabel14
-            // 
-            this.gunaLabel14.AutoSize = true;
-            this.gunaLabel14.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel14.Location = new System.Drawing.Point(9, 189);
-            this.gunaLabel14.Name = "gunaLabel14";
-            this.gunaLabel14.Size = new System.Drawing.Size(175, 17);
-            this.gunaLabel14.TabIndex = 35;
-            this.gunaLabel14.Text = "Phí vận chuyển: 10000đ";
-            // 
-            // gunaLabel15
-            // 
-            this.gunaLabel15.AutoSize = true;
-            this.gunaLabel15.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel15.Location = new System.Drawing.Point(9, 222);
-            this.gunaLabel15.Name = "gunaLabel15";
-            this.gunaLabel15.Size = new System.Drawing.Size(87, 17);
-            this.gunaLabel15.TabIndex = 36;
-            this.gunaLabel15.Text = "Thành tiền:";
-            // 
-            // lblShowPrice
-            // 
-            this.lblShowPrice.AutoSize = true;
-            this.lblShowPrice.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(35)))), ((int)(((byte)(71)))));
-            this.lblShowPrice.Location = new System.Drawing.Point(174, 222);
-            this.lblShowPrice.Name = "lblShowPrice";
-            this.lblShowPrice.Size = new System.Drawing.Size(44, 17);
-            this.lblShowPrice.TabIndex = 37;
-            this.lblShowPrice.Text = "Tổng";
+            this.radiobtnCOD.BaseColor = System.Drawing.SystemColors.Control;
+            this.radiobtnCOD.Checked = true;
+            this.radiobtnCOD.CheckedOffColor = System.Drawing.Color.Gray;
+            this.radiobtnCOD.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.radiobtnCOD.FillColor = System.Drawing.Color.White;
+            this.radiobtnCOD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radiobtnCOD.Location = new System.Drawing.Point(12, 11);
+            this.radiobtnCOD.Name = "radiobtnCOD";
+            this.radiobtnCOD.Size = new System.Drawing.Size(368, 23);
+            this.radiobtnCOD.TabIndex = 35;
+            this.radiobtnCOD.Text = "Thanh toán bằng tiền mặt khi nhận hàng";
             // 
             // frmShipping
             // 
@@ -592,7 +593,6 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaLabel lblShowMSTPoint;
         private Guna.UI.WinForms.GunaPanel gunaPanel7;
         private Guna.UI.WinForms.GunaLabel gunaLabel12;
-        private System.Windows.Forms.RadioButton radiobtnCOD;
         private Guna.UI.WinForms.GunaLabel gunaLabel13;
         private Guna.UI.WinForms.GunaButton btnAccept;
         private Guna.UI.WinForms.GunaPanel gunaPanel6;
@@ -605,5 +605,6 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaLabel gunaLabel14;
         private Guna.UI.WinForms.GunaLabel gunaLabel10;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
+        private Guna.UI.WinForms.GunaRadioButton radiobtnCOD;
     }
 }

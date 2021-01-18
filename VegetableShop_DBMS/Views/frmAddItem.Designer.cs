@@ -31,6 +31,12 @@ namespace VegetableShop_DBMS.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddItem));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.btnChooseImageItem = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
+            this.cbbCategory = new System.Windows.Forms.ComboBox();
+            this.cbbSubCategory = new System.Windows.Forms.ComboBox();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.btnRegister = new Guna.UI.WinForms.GunaButton();
             this.txtOrgin = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
@@ -45,12 +51,6 @@ namespace VegetableShop_DBMS.Views
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.cbbCategory = new System.Windows.Forms.ComboBox();
-            this.cbbSubCategory = new System.Windows.Forms.ComboBox();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.btnChooseImageItem = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
@@ -80,6 +80,90 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1002, 325);
             this.gunaPanel1.TabIndex = 27;
+            // 
+            // btnChooseImageItem
+            // 
+            this.btnChooseImageItem.Animated = true;
+            this.btnChooseImageItem.AnimationHoverSpeed = 0.07F;
+            this.btnChooseImageItem.AnimationSpeed = 0.03F;
+            this.btnChooseImageItem.BackColor = System.Drawing.Color.Transparent;
+            this.btnChooseImageItem.BaseColor = System.Drawing.Color.White;
+            this.btnChooseImageItem.BorderColor = System.Drawing.Color.Black;
+            this.btnChooseImageItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChooseImageItem.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnChooseImageItem.FocusedColor = System.Drawing.Color.Empty;
+            this.btnChooseImageItem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChooseImageItem.ForeColor = System.Drawing.Color.Black;
+            this.btnChooseImageItem.Image = null;
+            this.btnChooseImageItem.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnChooseImageItem.Location = new System.Drawing.Point(674, 170);
+            this.btnChooseImageItem.Name = "btnChooseImageItem";
+            this.btnChooseImageItem.OnHoverBaseColor = System.Drawing.Color.Silver;
+            this.btnChooseImageItem.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnChooseImageItem.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnChooseImageItem.OnHoverImage = null;
+            this.btnChooseImageItem.OnPressedColor = System.Drawing.Color.Black;
+            this.btnChooseImageItem.Radius = 10;
+            this.btnChooseImageItem.Size = new System.Drawing.Size(293, 28);
+            this.btnChooseImageItem.TabIndex = 76;
+            this.btnChooseImageItem.Text = "Chọn ảnh";
+            this.btnChooseImageItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.Location = new System.Drawing.Point(556, 170);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(103, 23);
+            this.gunaLabel7.TabIndex = 75;
+            this.gunaLabel7.Text = "Hình ảnh:";
+            // 
+            // cbbCategory
+            // 
+            this.cbbCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbbCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbbCategory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbCategory.ForeColor = System.Drawing.Color.Gray;
+            this.cbbCategory.FormattingEnabled = true;
+            this.cbbCategory.Location = new System.Drawing.Point(665, 69);
+            this.cbbCategory.Name = "cbbCategory";
+            this.cbbCategory.Size = new System.Drawing.Size(294, 27);
+            this.cbbCategory.TabIndex = 74;
+            this.cbbCategory.Text = "Chọn loại";
+            // 
+            // cbbSubCategory
+            // 
+            this.cbbSubCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbbSubCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbbSubCategory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbSubCategory.ForeColor = System.Drawing.Color.Gray;
+            this.cbbSubCategory.FormattingEnabled = true;
+            this.cbbSubCategory.Location = new System.Drawing.Point(665, 118);
+            this.cbbSubCategory.Name = "cbbSubCategory";
+            this.cbbSubCategory.Size = new System.Drawing.Size(294, 27);
+            this.cbbSubCategory.TabIndex = 73;
+            this.cbbSubCategory.Text = "Chọn danh mục";
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.Location = new System.Drawing.Point(554, 69);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(105, 23);
+            this.gunaLabel4.TabIndex = 72;
+            this.gunaLabel4.Text = "Phân loại:";
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Location = new System.Drawing.Point(547, 118);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(112, 23);
+            this.gunaLabel5.TabIndex = 71;
+            this.gunaLabel5.Text = "Danh mục:";
             // 
             // btnRegister
             // 
@@ -280,90 +364,6 @@ namespace VegetableShop_DBMS.Views
             this.gunaPictureBox1.TabIndex = 25;
             this.gunaPictureBox1.TabStop = false;
             // 
-            // cbbCategory
-            // 
-            this.cbbCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbbCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cbbCategory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCategory.ForeColor = System.Drawing.Color.Gray;
-            this.cbbCategory.FormattingEnabled = true;
-            this.cbbCategory.Location = new System.Drawing.Point(665, 69);
-            this.cbbCategory.Name = "cbbCategory";
-            this.cbbCategory.Size = new System.Drawing.Size(294, 27);
-            this.cbbCategory.TabIndex = 74;
-            this.cbbCategory.Text = "Chọn loại";
-            // 
-            // cbbSubCategory
-            // 
-            this.cbbSubCategory.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbbSubCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cbbSubCategory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbSubCategory.ForeColor = System.Drawing.Color.Gray;
-            this.cbbSubCategory.FormattingEnabled = true;
-            this.cbbSubCategory.Location = new System.Drawing.Point(665, 118);
-            this.cbbSubCategory.Name = "cbbSubCategory";
-            this.cbbSubCategory.Size = new System.Drawing.Size(294, 27);
-            this.cbbSubCategory.TabIndex = 73;
-            this.cbbSubCategory.Text = "Chọn danh mục";
-            // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(554, 69);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(105, 23);
-            this.gunaLabel4.TabIndex = 72;
-            this.gunaLabel4.Text = "Phân loại:";
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(547, 118);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(112, 23);
-            this.gunaLabel5.TabIndex = 71;
-            this.gunaLabel5.Text = "Danh mục:";
-            // 
-            // btnChooseImageItem
-            // 
-            this.btnChooseImageItem.Animated = true;
-            this.btnChooseImageItem.AnimationHoverSpeed = 0.07F;
-            this.btnChooseImageItem.AnimationSpeed = 0.03F;
-            this.btnChooseImageItem.BackColor = System.Drawing.Color.Transparent;
-            this.btnChooseImageItem.BaseColor = System.Drawing.Color.White;
-            this.btnChooseImageItem.BorderColor = System.Drawing.Color.Black;
-            this.btnChooseImageItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChooseImageItem.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnChooseImageItem.FocusedColor = System.Drawing.Color.Empty;
-            this.btnChooseImageItem.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChooseImageItem.ForeColor = System.Drawing.Color.Black;
-            this.btnChooseImageItem.Image = null;
-            this.btnChooseImageItem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnChooseImageItem.Location = new System.Drawing.Point(674, 170);
-            this.btnChooseImageItem.Name = "btnChooseImageItem";
-            this.btnChooseImageItem.OnHoverBaseColor = System.Drawing.Color.Silver;
-            this.btnChooseImageItem.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnChooseImageItem.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnChooseImageItem.OnHoverImage = null;
-            this.btnChooseImageItem.OnPressedColor = System.Drawing.Color.Black;
-            this.btnChooseImageItem.Radius = 10;
-            this.btnChooseImageItem.Size = new System.Drawing.Size(293, 28);
-            this.btnChooseImageItem.TabIndex = 76;
-            this.btnChooseImageItem.Text = "Chọn ảnh";
-            this.btnChooseImageItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // gunaLabel7
-            // 
-            this.gunaLabel7.AutoSize = true;
-            this.gunaLabel7.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel7.Location = new System.Drawing.Point(556, 170);
-            this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(103, 23);
-            this.gunaLabel7.TabIndex = 75;
-            this.gunaLabel7.Text = "Hình ảnh:";
-            // 
             // frmAddItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,6 +376,7 @@ namespace VegetableShop_DBMS.Views
             this.Controls.Add(this.gunaLabel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAddItem";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm món";
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();

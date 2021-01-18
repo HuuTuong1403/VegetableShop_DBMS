@@ -22,7 +22,7 @@ namespace VegetableShop_DBMS
         {
             this.UserName = UserName;
             this.PassWord = PassWord;
-            this.Role = Role;            
+            this.Role = Role;  
             InitializeComponent();
             if (UserName == "")
             {
@@ -30,8 +30,20 @@ namespace VegetableShop_DBMS
             }
             else
             {
+                this.btnLogOut.Visible = true;
                 btnAccount.Text = UserName + "▼";
+                this.btnSignIn.Visible = false;
+                this.btnSignUp.Visible = false;
+                this.btnInformationAccount.Visible = true;
+                this.btnInformationAccount.Location = new Point(3, 6);
+                this.btnLogOut.Location = new Point(3, 54);
             }
+            if(Role == "Admin")
+            {
+                this.btnAddItem.Visible = true;
+                this.btnAddSeller.Visible = true;
+                this.btnImportItem.Visible = true;
+            }    
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -68,8 +80,21 @@ namespace VegetableShop_DBMS
 
         private void btnShoppingCart_Click(object sender, EventArgs e)
         {
-            frmShoppingCart frmCart = new frmShoppingCart();
-            frmCart.ShowDialog();
+            if(UserName != "")
+            {
+                frmShoppingCart frmCart = new frmShoppingCart();
+                frmCart.ShowDialog();
+            }
+            else
+            {
+                DialogResult dialogResult;
+                dialogResult = MessageBox.Show("Mời bạn đăng nhập để sử dụng tính năng này", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if(dialogResult == DialogResult.OK)
+                {
+                    frmSignIn frmSign = new frmSignIn();
+                    frmSign.ShowDialog();
+                } 
+            }    
         }
 
         private void btnAddSeller_Click(object sender, EventArgs e)
@@ -94,6 +119,11 @@ namespace VegetableShop_DBMS
             frmImportItem frmImport = new frmImportItem();
             frmImport.ShowDialog();
             this.Show();
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
