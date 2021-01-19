@@ -43,7 +43,11 @@ namespace VegetableShop_DBMS
                 this.btnAddItem.Visible = true;
                 this.btnAddSeller.Visible = true;
                 this.btnImportItem.Visible = true;
-            }    
+            }
+            if (Role == "Seller")
+            {
+                this.btnImportItem.Visible = true;
+            }
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -117,7 +121,7 @@ namespace VegetableShop_DBMS
         private void btnImportItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmImportItem frmImport = new frmImportItem();
+            frmImportItem frmImport = new frmImportItem(UserName);
             frmImport.ShowDialog();
             this.Show();
         }

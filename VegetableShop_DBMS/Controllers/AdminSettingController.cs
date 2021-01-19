@@ -17,21 +17,6 @@ namespace VegetableShop_DBMS.Controllers
             Database_VegetableShop _db = new Database_VegetableShop();
             return _db.MyExecuteNonQuery("execute RegisterSeller N'" + UserName + "',N'" + PassWord + "',N'" + FullName + "',N'" + Gender + "',N'" + DateofBirth + "',N'" + PhoneNumber + "',N'" + Email + "',N'" + Image + "'", CommandType.Text, ref err);
         }
-        public static bool AddItems(string ItemName, float ImportPrice, float SalePrice, string Description, ref string err)
-        {
-            Database_VegetableShop _db = new Database_VegetableShop();
-            return _db.MyExecuteNonQuery("execute AddItems N'" + ItemName + "'," + ImportPrice + " , " + SalePrice + " , N'" + Description + "'", CommandType.Text, ref err);
-        }
-        //public static DataSet IDDistrict_Find(string DistrictName)
-        //{
-        //    Database_VegetableShop _db = new Database_VegetableShop();
-        //    return _db.ExecuteQueryDataSet("select District.Id from District where District.Name = N'" + DistrictName + "'", CommandType.Text);
-        //}
-        //public static DataSet District_Show(int Id)
-        //{
-        //    Database_VegetableShop _db = new Database_VegetableShop();
-        //    return _db.ExecuteQueryDataSet("select District.Type + ' ' + District.Name as DistrictName from District where District.ProvinceId = N'" + Id + "'", CommandType.Text);
-        //}
         public static DataSet Category_Show ()
         {
             Database_VegetableShop _db = new Database_VegetableShop();
@@ -46,6 +31,18 @@ namespace VegetableShop_DBMS.Controllers
         {
             Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select SubCategory.SubCategoryName as SubCategoryName from SubCategory where SubCategory.IDCategory = '" + IDCategory + "'", CommandType.Text);
+        }
+        public static DataSet IDSubCategory_Find(string SubCategoryName)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.ExecuteQueryDataSet("select IDSubCategory from SubCategory where SubCategory.SubCategoryName = N'" + SubCategoryName + "'", CommandType.Text);
+        }
+        public static bool AddItem(string ItemName, float ImportPrice, float SalePrice, string Description, string Orgin,
+                                    string IDCategory, string IDSubcategory, string Image, ref string err)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.MyExecuteNonQuery("exec AddItems N'" + ItemName + "'," + ImportPrice + "," + SalePrice + ",N'" + Description +
+                "',N'" + Orgin + "',N'" + IDCategory + "',N'" + IDSubcategory + "',N'" + Image + "'", CommandType.Text, ref err);
         }
     }
 }

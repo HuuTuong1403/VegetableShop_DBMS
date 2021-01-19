@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AdminSettingController.cs" />
+    <Compile Include="Controllers\SellerSettingController.cs" />
     <Compile Include="Controllers\SignInController.cs" />
     <Compile Include="Controllers\SignUpController.cs" />
     <Compile Include="Models\Database_VegetableShop.cs" />
