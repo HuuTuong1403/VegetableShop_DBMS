@@ -34,6 +34,7 @@ namespace VegetableShop_DBMS.Views
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.btnChangePass = new Guna.UI.WinForms.GunaButton();
             this.btnSaveInfor = new Guna.UI.WinForms.GunaButton();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
@@ -59,8 +60,8 @@ namespace VegetableShop_DBMS.Views
             this.txtAccount = new Guna.UI.WinForms.GunaTextBox();
             this.lblPassword = new Guna.UI.WinForms.GunaLabel();
             this.lblAccount = new Guna.UI.WinForms.GunaLabel();
-            this.btnChangePass = new Guna.UI.WinForms.GunaButton();
             this.ptBImageUser = new Guna.UI.WinForms.GunaPictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaPanel1.SuspendLayout();
@@ -133,6 +134,34 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1002, 381);
             this.gunaPanel1.TabIndex = 23;
+            // 
+            // btnChangePass
+            // 
+            this.btnChangePass.Animated = true;
+            this.btnChangePass.AnimationHoverSpeed = 0.07F;
+            this.btnChangePass.AnimationSpeed = 0.03F;
+            this.btnChangePass.BackColor = System.Drawing.Color.Transparent;
+            this.btnChangePass.BaseColor = System.Drawing.Color.Silver;
+            this.btnChangePass.BorderColor = System.Drawing.Color.Black;
+            this.btnChangePass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangePass.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnChangePass.FocusedColor = System.Drawing.Color.Empty;
+            this.btnChangePass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChangePass.ForeColor = System.Drawing.Color.Black;
+            this.btnChangePass.Image = null;
+            this.btnChangePass.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnChangePass.Location = new System.Drawing.Point(510, 306);
+            this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnChangePass.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnChangePass.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnChangePass.OnHoverImage = null;
+            this.btnChangePass.OnPressedColor = System.Drawing.Color.Black;
+            this.btnChangePass.Radius = 10;
+            this.btnChangePass.Size = new System.Drawing.Size(468, 51);
+            this.btnChangePass.TabIndex = 70;
+            this.btnChangePass.Text = "ĐỔI MẬT KHẨU";
+            this.btnChangePass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnSaveInfor
             // 
@@ -495,34 +524,6 @@ namespace VegetableShop_DBMS.Views
             this.lblAccount.TabIndex = 45;
             this.lblAccount.Text = "Tài khoản:";
             // 
-            // btnChangePass
-            // 
-            this.btnChangePass.Animated = true;
-            this.btnChangePass.AnimationHoverSpeed = 0.07F;
-            this.btnChangePass.AnimationSpeed = 0.03F;
-            this.btnChangePass.BackColor = System.Drawing.Color.Transparent;
-            this.btnChangePass.BaseColor = System.Drawing.Color.Silver;
-            this.btnChangePass.BorderColor = System.Drawing.Color.Black;
-            this.btnChangePass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChangePass.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnChangePass.FocusedColor = System.Drawing.Color.Empty;
-            this.btnChangePass.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePass.ForeColor = System.Drawing.Color.Black;
-            this.btnChangePass.Image = null;
-            this.btnChangePass.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnChangePass.Location = new System.Drawing.Point(510, 306);
-            this.btnChangePass.Name = "btnChangePass";
-            this.btnChangePass.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnChangePass.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnChangePass.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnChangePass.OnHoverImage = null;
-            this.btnChangePass.OnPressedColor = System.Drawing.Color.Black;
-            this.btnChangePass.Radius = 10;
-            this.btnChangePass.Size = new System.Drawing.Size(468, 51);
-            this.btnChangePass.TabIndex = 70;
-            this.btnChangePass.Text = "ĐỔI MẬT KHẨU";
-            this.btnChangePass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // ptBImageUser
             // 
             this.ptBImageUser.BackColor = System.Drawing.Color.Transparent;
@@ -535,6 +536,10 @@ namespace VegetableShop_DBMS.Views
             this.ptBImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptBImageUser.TabIndex = 24;
             this.ptBImageUser.TabStop = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frmInformationAccount
             // 
@@ -595,5 +600,6 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaLabel lblAccount;
         private Guna.UI.WinForms.GunaButton btnChangePass;
         private Guna.UI.WinForms.GunaPictureBox ptBImageUser;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

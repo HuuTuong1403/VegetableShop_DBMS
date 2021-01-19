@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using VegetableShop_DBMS.Views.SignIn;
 using VegetableShop_DBMS.Models;
 using VegetableShop_DBMS.Controller;
+using System.IO;
 
 namespace VegetableShop_DBMS.Views
 {
     public partial class frmSignUp : Form
     {
         string err;
+        string iName = "";
         public frmSignUp()
         {
             InitializeComponent();
@@ -48,7 +50,7 @@ namespace VegetableShop_DBMS.Views
             string ProvinceName = "";
             if (ProvinceNametemp.Contains("Tỉnh"))
             {
-               ProvinceName = ProvinceNametemp.Substring(5);
+                ProvinceName = ProvinceNametemp.Substring(5);
             }
             if (ProvinceNametemp.Contains("Thành Phố"))
             {
@@ -109,12 +111,11 @@ namespace VegetableShop_DBMS.Views
             DateTime DateofBirth = dtpDateOfBirth.Value;
             string PhoneNumber = txtPhone.Text.Trim();
             string Email = txtEmail.Text.Trim();
-            string Image = "";
             string Province = cbbProvince.SelectedItem.ToString();
             string District = cbbDistrict.SelectedItem.ToString();
             string Ward = cbbWard.SelectedItem.ToString();
             string Street = txtStreet.Text.Trim();
-
+            string Image = iName;
             bool check = SignUpController.Register_Customer(UserName, PassWord, FullName, Gender, DateofBirth, PhoneNumber, Email, Image, Province, District, Ward, Street, ref err);
             if (check == true)
             {
@@ -131,6 +132,33 @@ namespace VegetableShop_DBMS.Views
             else
             {
                 MessageBox.Show("Đăng ký thất bại, xin thử lại lần nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnChooseImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Title = "Select a Image";
+            openFile.Filter = "jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesUser\";
+            if (Directory.Exists(appPath) == false)
+            {
+                Directory.CreateDirectory(appPath);
+            }
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {   
+                iName = openFile.SafeFileName;
+                string filepath = openFile.FileName;
+                string fileName = appPath + iName;
+                if (File.Exists(fileName) == false)
+                {
+                    File.Copy(filepath, fileName);
+                    ptBImageUser.Image = new Bitmap(fileName);
+                }
+                else
+                {
+                    MessageBox.Show("Hình ảnh bạn chọn bị trùng. Vui lòng chọn lại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }    
             }
         }
     }

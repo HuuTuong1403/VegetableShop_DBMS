@@ -91,6 +91,7 @@ namespace VegetableShop_DBMS
                 dialogResult = MessageBox.Show("Mời bạn đăng nhập để sử dụng tính năng này", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 if(dialogResult == DialogResult.OK)
                 {
+                    this.Hide();
                     frmSignIn frmSign = new frmSignIn();
                     frmSign.ShowDialog();
                 } 

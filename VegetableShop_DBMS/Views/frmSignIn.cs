@@ -21,7 +21,6 @@ namespace VegetableShop_DBMS.Views.SignIn
 
         private void frmSignIn_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
@@ -45,6 +44,7 @@ namespace VegetableShop_DBMS.Views.SignIn
                 dialogResult = MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.OK)
                 {
+                    this.Hide();
                     frmVegetableShop form = new frmVegetableShop(UserName, PassWord, role);
                     form.ShowDialog();
                     this.Close();

@@ -61,10 +61,11 @@ namespace VegetableShop_DBMS.Views
             this.txtAccount = new Guna.UI.WinForms.GunaTextBox();
             this.lblPassword = new Guna.UI.WinForms.GunaLabel();
             this.lblAccount = new Guna.UI.WinForms.GunaLabel();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.ptBImageUser = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             this.gunaPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptBImageUser)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaLabel1
@@ -103,6 +104,7 @@ namespace VegetableShop_DBMS.Views
             // gunaPanel1
             // 
             this.gunaPanel1.AutoScroll = true;
+            this.gunaPanel1.Controls.Add(this.ptBImageUser);
             this.gunaPanel1.Controls.Add(this.btnSignIn);
             this.gunaPanel1.Controls.Add(this.gunaLabel12);
             this.gunaPanel1.Controls.Add(this.btnSignUp);
@@ -341,10 +343,11 @@ namespace VegetableShop_DBMS.Views
             this.btnChooseImage.OnHoverImage = null;
             this.btnChooseImage.OnPressedColor = System.Drawing.Color.Black;
             this.btnChooseImage.Radius = 10;
-            this.btnChooseImage.Size = new System.Drawing.Size(293, 28);
+            this.btnChooseImage.Size = new System.Drawing.Size(146, 28);
             this.btnChooseImage.TabIndex = 59;
             this.btnChooseImage.Text = "Chọn ảnh";
             this.btnChooseImage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnChooseImage.Click += new System.EventHandler(this.btnChooseImage_Click);
             // 
             // gunaLabel7
             // 
@@ -537,9 +540,14 @@ namespace VegetableShop_DBMS.Views
             this.lblAccount.TabIndex = 45;
             this.lblAccount.Text = "Tài khoản:";
             // 
-            // openFileDialog1
+            // ptBImageUser
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.ptBImageUser.Location = new System.Drawing.Point(849, 58);
+            this.ptBImageUser.Name = "ptBImageUser";
+            this.ptBImageUser.Size = new System.Drawing.Size(50, 50);
+            this.ptBImageUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptBImageUser.TabIndex = 72;
+            this.ptBImageUser.TabStop = false;
             // 
             // frmSignUp
             // 
@@ -561,6 +569,7 @@ namespace VegetableShop_DBMS.Views
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptBImageUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,8 +606,8 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaTextBox txtAccount;
         private Guna.UI.WinForms.GunaLabel lblPassword;
         private Guna.UI.WinForms.GunaLabel lblAccount;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI.WinForms.GunaButton btnSignIn;
         private Guna.UI.WinForms.GunaLabel gunaLabel12;
+        private System.Windows.Forms.PictureBox ptBImageUser;
     }
 }
