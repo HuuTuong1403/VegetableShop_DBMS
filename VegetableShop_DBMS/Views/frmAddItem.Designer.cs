@@ -76,9 +76,10 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel1.Controls.Add(this.txtItemName);
             this.gunaPanel1.Controls.Add(this.lblPassword);
             this.gunaPanel1.Controls.Add(this.lblAccount);
-            this.gunaPanel1.Location = new System.Drawing.Point(12, 192);
+            this.gunaPanel1.Location = new System.Drawing.Point(16, 236);
+            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(1002, 325);
+            this.gunaPanel1.Size = new System.Drawing.Size(1336, 400);
             this.gunaPanel1.TabIndex = 27;
             // 
             // btnChooseImageItem
@@ -96,7 +97,8 @@ namespace VegetableShop_DBMS.Views
             this.btnChooseImageItem.ForeColor = System.Drawing.Color.Black;
             this.btnChooseImageItem.Image = null;
             this.btnChooseImageItem.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnChooseImageItem.Location = new System.Drawing.Point(674, 170);
+            this.btnChooseImageItem.Location = new System.Drawing.Point(899, 209);
+            this.btnChooseImageItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChooseImageItem.Name = "btnChooseImageItem";
             this.btnChooseImageItem.OnHoverBaseColor = System.Drawing.Color.Silver;
             this.btnChooseImageItem.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -104,18 +106,20 @@ namespace VegetableShop_DBMS.Views
             this.btnChooseImageItem.OnHoverImage = null;
             this.btnChooseImageItem.OnPressedColor = System.Drawing.Color.Black;
             this.btnChooseImageItem.Radius = 10;
-            this.btnChooseImageItem.Size = new System.Drawing.Size(293, 28);
+            this.btnChooseImageItem.Size = new System.Drawing.Size(391, 34);
             this.btnChooseImageItem.TabIndex = 76;
             this.btnChooseImageItem.Text = "Chọn ảnh";
             this.btnChooseImageItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnChooseImageItem.Click += new System.EventHandler(this.btnChooseImageItem_Click);
             // 
             // gunaLabel7
             // 
             this.gunaLabel7.AutoSize = true;
             this.gunaLabel7.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel7.Location = new System.Drawing.Point(556, 170);
+            this.gunaLabel7.Location = new System.Drawing.Point(741, 209);
+            this.gunaLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(103, 23);
+            this.gunaLabel7.Size = new System.Drawing.Size(128, 29);
             this.gunaLabel7.TabIndex = 75;
             this.gunaLabel7.Text = "Hình ảnh:";
             // 
@@ -126,11 +130,14 @@ namespace VegetableShop_DBMS.Views
             this.cbbCategory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCategory.ForeColor = System.Drawing.Color.Gray;
             this.cbbCategory.FormattingEnabled = true;
-            this.cbbCategory.Location = new System.Drawing.Point(665, 69);
+            this.cbbCategory.Location = new System.Drawing.Point(887, 85);
+            this.cbbCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbCategory.Name = "cbbCategory";
-            this.cbbCategory.Size = new System.Drawing.Size(294, 27);
+            this.cbbCategory.Size = new System.Drawing.Size(391, 32);
             this.cbbCategory.TabIndex = 74;
             this.cbbCategory.Text = "Chọn loại";
+            this.cbbCategory.SelectedIndexChanged += new System.EventHandler(this.cbbCategory_SelectedIndexChanged);
+            this.cbbCategory.Click += new System.EventHandler(this.cbbCategory_Click);
             // 
             // cbbSubCategory
             // 
@@ -139,9 +146,10 @@ namespace VegetableShop_DBMS.Views
             this.cbbSubCategory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSubCategory.ForeColor = System.Drawing.Color.Gray;
             this.cbbSubCategory.FormattingEnabled = true;
-            this.cbbSubCategory.Location = new System.Drawing.Point(665, 118);
+            this.cbbSubCategory.Location = new System.Drawing.Point(887, 145);
+            this.cbbSubCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbSubCategory.Name = "cbbSubCategory";
-            this.cbbSubCategory.Size = new System.Drawing.Size(294, 27);
+            this.cbbSubCategory.Size = new System.Drawing.Size(391, 32);
             this.cbbSubCategory.TabIndex = 73;
             this.cbbSubCategory.Text = "Chọn danh mục";
             // 
@@ -149,9 +157,10 @@ namespace VegetableShop_DBMS.Views
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(554, 69);
+            this.gunaLabel4.Location = new System.Drawing.Point(739, 85);
+            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(105, 23);
+            this.gunaLabel4.Size = new System.Drawing.Size(132, 29);
             this.gunaLabel4.TabIndex = 72;
             this.gunaLabel4.Text = "Phân loại:";
             // 
@@ -159,9 +168,10 @@ namespace VegetableShop_DBMS.Views
             // 
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(547, 118);
+            this.gunaLabel5.Location = new System.Drawing.Point(729, 145);
+            this.gunaLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(112, 23);
+            this.gunaLabel5.Size = new System.Drawing.Size(142, 29);
             this.gunaLabel5.TabIndex = 71;
             this.gunaLabel5.Text = "Danh mục:";
             // 
@@ -180,7 +190,8 @@ namespace VegetableShop_DBMS.Views
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
             this.btnRegister.Image = null;
             this.btnRegister.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRegister.Location = new System.Drawing.Point(291, 232);
+            this.btnRegister.Location = new System.Drawing.Point(388, 286);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnRegister.OnHoverBorderColor = System.Drawing.Color.Transparent;
@@ -188,7 +199,7 @@ namespace VegetableShop_DBMS.Views
             this.btnRegister.OnHoverImage = null;
             this.btnRegister.OnPressedColor = System.Drawing.Color.Black;
             this.btnRegister.Radius = 10;
-            this.btnRegister.Size = new System.Drawing.Size(468, 51);
+            this.btnRegister.Size = new System.Drawing.Size(624, 63);
             this.btnRegister.TabIndex = 69;
             this.btnRegister.Text = "THÊM MÓN";
             this.btnRegister.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -203,21 +214,23 @@ namespace VegetableShop_DBMS.Views
             this.txtOrgin.FocusedBorderColor = System.Drawing.Color.Gray;
             this.txtOrgin.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtOrgin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrgin.Location = new System.Drawing.Point(665, 17);
+            this.txtOrgin.Location = new System.Drawing.Point(887, 21);
+            this.txtOrgin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtOrgin.Name = "txtOrgin";
             this.txtOrgin.PasswordChar = '\0';
             this.txtOrgin.Radius = 5;
             this.txtOrgin.SelectedText = "";
-            this.txtOrgin.Size = new System.Drawing.Size(294, 35);
+            this.txtOrgin.Size = new System.Drawing.Size(392, 43);
             this.txtOrgin.TabIndex = 57;
             // 
             // gunaLabel6
             // 
             this.gunaLabel6.AutoSize = true;
             this.gunaLabel6.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel6.Location = new System.Drawing.Point(568, 24);
+            this.gunaLabel6.Location = new System.Drawing.Point(757, 30);
+            this.gunaLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(91, 23);
+            this.gunaLabel6.Size = new System.Drawing.Size(116, 29);
             this.gunaLabel6.TabIndex = 56;
             this.gunaLabel6.Text = "Xuất xứ:";
             // 
@@ -231,12 +244,13 @@ namespace VegetableShop_DBMS.Views
             this.txtDescription.FocusedBorderColor = System.Drawing.Color.Gray;
             this.txtDescription.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtDescription.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(167, 168);
+            this.txtDescription.Location = new System.Drawing.Point(223, 207);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
             this.txtDescription.Radius = 5;
             this.txtDescription.SelectedText = "";
-            this.txtDescription.Size = new System.Drawing.Size(294, 35);
+            this.txtDescription.Size = new System.Drawing.Size(392, 43);
             this.txtDescription.TabIndex = 52;
             // 
             // txtSalePrice
@@ -249,30 +263,33 @@ namespace VegetableShop_DBMS.Views
             this.txtSalePrice.FocusedBorderColor = System.Drawing.Color.Gray;
             this.txtSalePrice.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSalePrice.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalePrice.Location = new System.Drawing.Point(167, 116);
+            this.txtSalePrice.Location = new System.Drawing.Point(223, 143);
+            this.txtSalePrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSalePrice.Name = "txtSalePrice";
             this.txtSalePrice.PasswordChar = '\0';
             this.txtSalePrice.Radius = 5;
             this.txtSalePrice.SelectedText = "";
-            this.txtSalePrice.Size = new System.Drawing.Size(294, 35);
+            this.txtSalePrice.Size = new System.Drawing.Size(392, 43);
             this.txtSalePrice.TabIndex = 51;
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(28, 170);
+            this.gunaLabel2.Location = new System.Drawing.Point(37, 209);
+            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(129, 23);
+            this.gunaLabel2.Size = new System.Drawing.Size(162, 29);
             this.gunaLabel2.TabIndex = 50;
             this.gunaLabel2.Text = "Thành phần:";
             // 
             // gunaLabel3
             // 
             this.gunaLabel3.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(66, 118);
+            this.gunaLabel3.Location = new System.Drawing.Point(88, 145);
+            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(121, 30);
+            this.gunaLabel3.Size = new System.Drawing.Size(161, 37);
             this.gunaLabel3.TabIndex = 49;
             this.gunaLabel3.Text = "Giá bán:";
             // 
@@ -286,12 +303,13 @@ namespace VegetableShop_DBMS.Views
             this.txtImportPrice.FocusedBorderColor = System.Drawing.Color.Gray;
             this.txtImportPrice.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtImportPrice.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImportPrice.Location = new System.Drawing.Point(167, 67);
+            this.txtImportPrice.Location = new System.Drawing.Point(223, 82);
+            this.txtImportPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtImportPrice.Name = "txtImportPrice";
             this.txtImportPrice.PasswordChar = '\0';
             this.txtImportPrice.Radius = 5;
             this.txtImportPrice.SelectedText = "";
-            this.txtImportPrice.Size = new System.Drawing.Size(294, 35);
+            this.txtImportPrice.Size = new System.Drawing.Size(392, 43);
             this.txtImportPrice.TabIndex = 48;
             // 
             // txtItemName
@@ -304,30 +322,33 @@ namespace VegetableShop_DBMS.Views
             this.txtItemName.FocusedBorderColor = System.Drawing.Color.Gray;
             this.txtItemName.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtItemName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemName.Location = new System.Drawing.Point(167, 15);
+            this.txtItemName.Location = new System.Drawing.Point(223, 18);
+            this.txtItemName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.PasswordChar = '\0';
             this.txtItemName.Radius = 5;
             this.txtItemName.SelectedText = "";
-            this.txtItemName.Size = new System.Drawing.Size(294, 35);
+            this.txtItemName.Size = new System.Drawing.Size(392, 43);
             this.txtItemName.TabIndex = 47;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(56, 73);
+            this.lblPassword.Location = new System.Drawing.Point(75, 90);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(101, 23);
+            this.lblPassword.Size = new System.Drawing.Size(127, 29);
             this.lblPassword.TabIndex = 46;
             this.lblPassword.Text = "Giá nhập:";
             // 
             // lblAccount
             // 
             this.lblAccount.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccount.Location = new System.Drawing.Point(56, 24);
+            this.lblAccount.Location = new System.Drawing.Point(75, 30);
+            this.lblAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAccount.Name = "lblAccount";
-            this.lblAccount.Size = new System.Drawing.Size(121, 30);
+            this.lblAccount.Size = new System.Drawing.Size(161, 37);
             this.lblAccount.TabIndex = 45;
             this.lblAccount.Text = "Tên món:";
             // 
@@ -336,9 +357,10 @@ namespace VegetableShop_DBMS.Views
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel1.Location = new System.Drawing.Point(421, 156);
+            this.gunaLabel1.Location = new System.Drawing.Point(561, 192);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(215, 33);
+            this.gunaLabel1.Size = new System.Drawing.Size(267, 41);
             this.gunaLabel1.TabIndex = 24;
             this.gunaLabel1.Text = "THÊM MÓN ĂN";
             // 
@@ -346,9 +368,10 @@ namespace VegetableShop_DBMS.Views
             // 
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
-            this.gunaPictureBox2.Location = new System.Drawing.Point(225, 12);
+            this.gunaPictureBox2.Location = new System.Drawing.Point(300, 15);
+            this.gunaPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(598, 119);
+            this.gunaPictureBox2.Size = new System.Drawing.Size(797, 146);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox2.TabIndex = 26;
             this.gunaPictureBox2.TabStop = false;
@@ -357,24 +380,26 @@ namespace VegetableShop_DBMS.Views
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(25, 12);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(33, 15);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(126, 119);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(168, 146);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 25;
             this.gunaPictureBox1.TabStop = false;
             // 
             // frmAddItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1026, 529);
+            this.ClientSize = new System.Drawing.Size(1368, 651);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.gunaPictureBox2);
             this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.gunaLabel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAddItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm món";
