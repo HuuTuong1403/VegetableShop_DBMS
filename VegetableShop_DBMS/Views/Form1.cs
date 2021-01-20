@@ -82,6 +82,7 @@ namespace VegetableShop_DBMS
                 btn.BaseColor = Color.Transparent;
                 btn.Cursor = Cursors.Hand;
                 btn.OnHoverBaseColor = Color.LightGray;
+                btn.Click += Btn_Click;
 
                 //Label
                 lbl.Location = new Point(xlbl, 198);
@@ -119,11 +120,23 @@ namespace VegetableShop_DBMS
                 btnPaging.TextAlign = HorizontalAlignment.Center;
                 btnPaging.OnHoverBaseColor = Color.LightGray;
                 btnPaging.OnHoverForeColor = Color.Black;
-
+                btnPaging.Click += BtnPaging_Click;
                 xbtnPaing += 34;
 
                 pnItems.Controls.Add(btnPaging);
             }    
+        }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            Guna.UI.WinForms.GunaButton btn = sender as Guna.UI.WinForms.GunaButton;
+            MessageBox.Show(btn.Text);
+        }
+
+        private void BtnPaging_Click(object sender, EventArgs e)
+        {
+            Guna.UI.WinForms.GunaButton btn = sender as Guna.UI.WinForms.GunaButton;
+            MessageBox.Show(btn.Text);
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
