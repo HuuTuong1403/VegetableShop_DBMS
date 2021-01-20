@@ -107,7 +107,9 @@ namespace VegetableShop_DBMS.Views
                     txtDescription.Clear();
                     txtOrgin.Clear();
                     cbbCategory.Items.Clear();
+                    cbbCategory.Text = "Chọn loại";
                     cbbSubCategory.Items.Clear();
+                    cbbSubCategory.Text = "Chọn danh mục";
                     ptBImageProduct.Image = null;
                 }
             }
