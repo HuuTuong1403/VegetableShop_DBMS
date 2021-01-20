@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VegetableShop_DBMS.Views.SignIn;
 using VegetableShop_DBMS.Views;
+using VegetableShop_DBMS.Controllers;
 
 namespace VegetableShop_DBMS
 {
@@ -49,45 +50,80 @@ namespace VegetableShop_DBMS
                 this.btnImportItem.Visible = true;
             }
             int xptb = 65;
-            int xbtn = 192;
-            int xlbl = 65;
-            for (int i = 0; i <= 5; i++)
+            int xbtn = 65;
+            int xlbl = 111;
+
+            DataTable dtItem = HomeController.ShowItem().Tables[0];
+            foreach (DataRow dr in dtItem.Rows)
             {
                 Guna.UI.WinForms.GunaPictureBox ptb = new Guna.UI.WinForms.GunaPictureBox();
                 Guna.UI.WinForms.GunaButton btn = new Guna.UI.WinForms.GunaButton();
                 Guna.UI.WinForms.GunaLabel lbl = new Guna.UI.WinForms.GunaLabel();
-
+                string ImageTemp = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\" + dr["Image"].ToString();
+                
                 //PictureBox
                 ptb.Location = new Point(xptb, 33);
                 ptb.Size = new Size(162, 162);
-                ptb.Image = Image.FromFile(@"E:\Đại học 2020\Year 3 Semester 1\Hệ quản trị cơ sở dữ liệu (DBMS)\VegetableShop_DBMS\VegetableShop_DBMS\images\trash.png");
+                ptb.Image = Image.FromFile(ImageTemp);
                 ptb.SizeMode = PictureBoxSizeMode.StretchImage;
                 ptb.BorderStyle = BorderStyle.FixedSingle;
 
                 //Button
-                btn.Location = new Point(xbtn, 196);
-                btn.Size = new Size(35, 36);
+                btn.Location = new Point(xbtn, 220);
+                btn.Size = new Size(162, 36);
                 string image = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\cart-plus.png";
                 btn.Image = Image.FromFile(image);
-                btn.ImageAlign = HorizontalAlignment.Center;
-                btn.ImageSize = new Size(30, 30);
+                btn.Text = dr["ItemName"].ToString();
+                btn.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                btn.ForeColor = Color.Black;
+                btn.OnHoverForeColor = Color.Black;
+                btn.ImageAlign = HorizontalAlignment.Right;
+                btn.ImageSize = new Size(20, 20);
                 btn.BaseColor = Color.Transparent;
                 btn.Cursor = Cursors.Hand;
                 btn.OnHoverBaseColor = Color.LightGray;
 
                 //Label
-                lbl.Location = new Point(xlbl, 207);
+                lbl.Location = new Point(xlbl, 198);
                 lbl.Font = new Font("Tahoma", 12, FontStyle.Bold);
-                lbl.Text = "";
+                lbl.Text = dr["SalePrice"].ToString() + "₫";
+
+                
 
                 xlbl += 212;
                 xptb += 212;
                 xbtn += 212;
+                
 
                 pnItems.Controls.Add(ptb);
                 pnItems.Controls.Add(btn);
                 pnItems.Controls.Add(lbl);
+                
             }
+            int i = dtItem.Rows.Count / 6;
+            int xbtnPaing = 450;
+            for (int j = 1; j <= i; j++) 
+            {
+                //Button Paging
+                Guna.UI.WinForms.GunaButton btnPaging = new Guna.UI.WinForms.GunaButton();
+                btnPaging.Location = new Point(xbtnPaing, 327);
+                btnPaging.Size = new Size(35, 35);
+                btnPaging.BaseColor = Color.Silver;
+                btnPaging.BorderColor = Color.Black;
+                btnPaging.BorderSize = 1;
+                btnPaging.Font = new Font("Tahoma", 9, FontStyle.Bold);
+                btnPaging.ForeColor = Color.Black;
+                btnPaging.Image = null;
+                btnPaging.Text = j.ToString();
+                btnPaging.Cursor = Cursors.Hand;
+                btnPaging.TextAlign = HorizontalAlignment.Center;
+                btnPaging.OnHoverBaseColor = Color.LightGray;
+                btnPaging.OnHoverForeColor = Color.Black;
+
+                xbtnPaing += 34;
+
+                pnItems.Controls.Add(btnPaging);
+            }    
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
