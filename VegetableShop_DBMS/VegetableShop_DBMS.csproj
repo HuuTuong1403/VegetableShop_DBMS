@@ -172,6 +172,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\cart-plus.png" />
     <Content Include="images\icon\shop.ico" />
     <Content Include="images\imagesProduct\Bí ngòi.jpg" />
     <Content Include="images\imagesProduct\Bí đao.jpg" />
