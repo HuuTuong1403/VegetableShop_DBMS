@@ -61,7 +61,6 @@ namespace VegetableShop_DBMS.Views
             this.lblPassword = new Guna.UI.WinForms.GunaLabel();
             this.lblAccount = new Guna.UI.WinForms.GunaLabel();
             this.ptBImageUser = new Guna.UI.WinForms.GunaPictureBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaPanel1.SuspendLayout();
@@ -537,10 +536,6 @@ namespace VegetableShop_DBMS.Views
             this.ptBImageUser.TabIndex = 24;
             this.ptBImageUser.TabStop = false;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // frmInformationAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -600,6 +595,5 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaLabel lblAccount;
         private Guna.UI.WinForms.GunaButton btnChangePass;
         private Guna.UI.WinForms.GunaPictureBox ptBImageUser;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

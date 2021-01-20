@@ -10,8 +10,8 @@ namespace VegetableShop_DBMS.Models
 {
     class Database_VegetableShop
     {
-        string strConnectionString = "Data Source=DESKTOP-30KMJ3I;Initial Catalog=Database_VegetableStore;Integrated Security=True";
-        //string strConnectionString = "Data Source=DESKTOP-ID9RBP3;Initial Catalog=Database_VegetableStore;Integrated Security=True";
+        //string strConnectionString = "Data Source=DESKTOP-30KMJ3I;Initial Catalog=Database_VegetableStore;Integrated Security=True";
+        string strConnectionString = "Data Source=DESKTOP-ID9RBP3;Initial Catalog=Database_VegetableStore;Integrated Security=True";
 
         //Tạo kết nối
         SqlConnection conn = null;
