@@ -22,7 +22,7 @@ namespace VegetableShop_DBMS
         {
             this.UserName = UserName;
             this.PassWord = PassWord;
-            this.Role = Role;  
+            this.Role = Role;
             InitializeComponent();
             if (UserName == "")
             {
@@ -38,7 +38,7 @@ namespace VegetableShop_DBMS
                 this.btnInformationAccount.Location = new Point(3, 6);
                 this.btnLogOut.Location = new Point(3, 54);
             }
-            if(Role == "Admin")
+            if (Role == "Admin")
             {
                 this.btnAddItem.Visible = true;
                 this.btnAddSeller.Visible = true;
@@ -47,6 +47,46 @@ namespace VegetableShop_DBMS
             if (Role == "Seller")
             {
                 this.btnImportItem.Visible = true;
+            }
+            int xptb = 65;
+            int xbtn = 192;
+            int xlbl = 65;
+            for (int i = 0; i <= 5; i++)
+            {
+                Guna.UI.WinForms.GunaPictureBox ptb = new Guna.UI.WinForms.GunaPictureBox();
+                Guna.UI.WinForms.GunaButton btn = new Guna.UI.WinForms.GunaButton();
+                Guna.UI.WinForms.GunaLabel lbl = new Guna.UI.WinForms.GunaLabel();
+
+                //PictureBox
+                ptb.Location = new Point(xptb, 33);
+                ptb.Size = new Size(162, 162);
+                ptb.Image = Image.FromFile(@"E:\Đại học 2020\Year 3 Semester 1\Hệ quản trị cơ sở dữ liệu (DBMS)\VegetableShop_DBMS\VegetableShop_DBMS\images\trash.png");
+                ptb.SizeMode = PictureBoxSizeMode.StretchImage;
+                ptb.BorderStyle = BorderStyle.FixedSingle;
+
+                //Button
+                btn.Location = new Point(xbtn, 196);
+                btn.Size = new Size(35, 36);
+                string image = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\cart-plus.png";
+                btn.Image = Image.FromFile(image);
+                btn.ImageAlign = HorizontalAlignment.Center;
+                btn.ImageSize = new Size(30, 30);
+                btn.BaseColor = Color.Transparent;
+                btn.Cursor = Cursors.Hand;
+                btn.OnHoverBaseColor = Color.LightGray;
+
+                //Label
+                lbl.Location = new Point(xlbl, 207);
+                lbl.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                lbl.Text = "";
+
+                xlbl += 212;
+                xptb += 212;
+                xbtn += 212;
+
+                pnItems.Controls.Add(ptb);
+                pnItems.Controls.Add(btn);
+                pnItems.Controls.Add(lbl);
             }
         }
 
@@ -64,16 +104,16 @@ namespace VegetableShop_DBMS
 
         private void btnAccount_MouseClick(object sender, MouseEventArgs e)
         {
-            if(flaqMenuAccount == true)
+            if (flaqMenuAccount == true)
             {
                 pnUser.Visible = true;
                 flaqMenuAccount = false;
-            }    
+            }
             else
             {
                 pnUser.Visible = false;
                 flaqMenuAccount = true;
-            }    
+            }
         }
 
         private void btnInformationAccount_Click(object sender, EventArgs e)
@@ -84,7 +124,7 @@ namespace VegetableShop_DBMS
 
         private void btnShoppingCart_Click(object sender, EventArgs e)
         {
-            if(UserName != "")
+            if (UserName != "")
             {
                 frmShoppingCart frmCart = new frmShoppingCart(UserName);
                 frmCart.ShowDialog();
@@ -93,13 +133,13 @@ namespace VegetableShop_DBMS
             {
                 DialogResult dialogResult;
                 dialogResult = MessageBox.Show("Mời bạn đăng nhập để sử dụng tính năng này", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                if(dialogResult == DialogResult.OK)
+                if (dialogResult == DialogResult.OK)
                 {
                     this.Hide();
                     frmSignIn frmSign = new frmSignIn();
                     frmSign.ShowDialog();
-                } 
-            }    
+                }
+            }
         }
 
         private void btnAddSeller_Click(object sender, EventArgs e)
@@ -107,7 +147,7 @@ namespace VegetableShop_DBMS
             this.Hide();
             frmRegisterSeller frmRS = new frmRegisterSeller();
             frmRS.ShowDialog();
-            this.Show();      
+            this.Show();
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)
@@ -128,7 +168,15 @@ namespace VegetableShop_DBMS
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            
+            this.Hide();
+            frmVegetableShop frm = new frmVegetableShop("", "", "");
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void frmVegetableShop_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
