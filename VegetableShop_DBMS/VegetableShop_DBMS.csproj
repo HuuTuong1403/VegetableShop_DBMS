@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AdminSettingController.cs" />
+    <Compile Include="Controllers\OrderItemsController.cs" />
     <Compile Include="Controllers\SellerSettingController.cs" />
     <Compile Include="Controllers\SignInController.cs" />
     <Compile Include="Controllers\SignUpController.cs" />
@@ -68,6 +69,12 @@
     </Compile>
     <Compile Include="Views\frmAddItem.Designer.cs">
       <DependentUpon>frmAddItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmDefaultAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmDefaultAddress.Designer.cs">
+      <DependentUpon>frmDefaultAddress.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmImportItem.cs">
       <SubType>Form</SubType>
@@ -126,6 +133,9 @@
     </Compile>
     <EmbeddedResource Include="Views\frmAddItem.resx">
       <DependentUpon>frmAddItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmDefaultAddress.resx">
+      <DependentUpon>frmDefaultAddress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmImportItem.resx">
       <DependentUpon>frmImportItem.cs</DependentUpon>

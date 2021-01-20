@@ -86,7 +86,7 @@ namespace VegetableShop_DBMS
         {
             if(UserName != "")
             {
-                frmShoppingCart frmCart = new frmShoppingCart();
+                frmShoppingCart frmCart = new frmShoppingCart(UserName);
                 frmCart.ShowDialog();
             }
             else

@@ -47,6 +47,7 @@ namespace VegetableShop_DBMS.Views
             this.gunaLabel13 = new Guna.UI.WinForms.GunaLabel();
             this.btnAccept = new Guna.UI.WinForms.GunaButton();
             this.gunaPanel7 = new Guna.UI.WinForms.GunaPanel();
+            this.radiobtnCOD = new Guna.UI.WinForms.GunaRadioButton();
             this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel5 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
@@ -66,7 +67,6 @@ namespace VegetableShop_DBMS.Views
             this.lblFullName = new Guna.UI.WinForms.GunaLabel();
             this.lblAddress = new Guna.UI.WinForms.GunaLabel();
             this.btnUpdateAddress = new Guna.UI.WinForms.GunaButton();
-            this.radiobtnCOD = new Guna.UI.WinForms.GunaRadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaPanel2.SuspendLayout();
@@ -303,6 +303,20 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel7.Size = new System.Drawing.Size(458, 44);
             this.gunaPanel7.TabIndex = 39;
             // 
+            // radiobtnCOD
+            // 
+            this.radiobtnCOD.BaseColor = System.Drawing.SystemColors.Control;
+            this.radiobtnCOD.Checked = true;
+            this.radiobtnCOD.CheckedOffColor = System.Drawing.Color.Gray;
+            this.radiobtnCOD.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.radiobtnCOD.FillColor = System.Drawing.Color.White;
+            this.radiobtnCOD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radiobtnCOD.Location = new System.Drawing.Point(12, 11);
+            this.radiobtnCOD.Name = "radiobtnCOD";
+            this.radiobtnCOD.Size = new System.Drawing.Size(368, 23);
+            this.radiobtnCOD.TabIndex = 35;
+            this.radiobtnCOD.Text = "Thanh toán bằng tiền mặt khi nhận hàng";
+            // 
             // gunaLabel12
             // 
             this.gunaLabel12.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -516,25 +530,13 @@ namespace VegetableShop_DBMS.Views
             this.btnUpdateAddress.TabIndex = 26;
             this.btnUpdateAddress.Text = "Sửa";
             this.btnUpdateAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // radiobtnCOD
-            // 
-            this.radiobtnCOD.BaseColor = System.Drawing.SystemColors.Control;
-            this.radiobtnCOD.Checked = true;
-            this.radiobtnCOD.CheckedOffColor = System.Drawing.Color.Gray;
-            this.radiobtnCOD.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.radiobtnCOD.FillColor = System.Drawing.Color.White;
-            this.radiobtnCOD.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radiobtnCOD.Location = new System.Drawing.Point(12, 11);
-            this.radiobtnCOD.Name = "radiobtnCOD";
-            this.radiobtnCOD.Size = new System.Drawing.Size(368, 23);
-            this.radiobtnCOD.TabIndex = 35;
-            this.radiobtnCOD.Text = "Thanh toán bằng tiền mặt khi nhận hàng";
+            this.btnUpdateAddress.Click += new System.EventHandler(this.btnUpdateAddress_Click);
             // 
             // frmShipping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 713);
             this.Controls.Add(this.gunaPanel2);
