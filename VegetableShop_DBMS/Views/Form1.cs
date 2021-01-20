@@ -78,7 +78,7 @@ namespace VegetableShop_DBMS
 
         private void btnInformationAccount_Click(object sender, EventArgs e)
         {
-            frmInformationAccount frmInfor = new frmInformationAccount();
+            frmInformationAccount frmInfor = new frmInformationAccount(UserName);
             frmInfor.ShowDialog();
         }
 
