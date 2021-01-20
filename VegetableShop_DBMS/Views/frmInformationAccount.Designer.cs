@@ -34,7 +34,6 @@ namespace VegetableShop_DBMS.Views
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.ptbImageEdit = new Guna.UI.WinForms.GunaPictureBox();
             this.btnChangePass = new Guna.UI.WinForms.GunaButton();
             this.btnSaveInfor = new Guna.UI.WinForms.GunaButton();
             this.cbbGender = new System.Windows.Forms.ComboBox();
@@ -52,11 +51,12 @@ namespace VegetableShop_DBMS.Views
             this.txtAccount = new Guna.UI.WinForms.GunaTextBox();
             this.lblAccount = new Guna.UI.WinForms.GunaLabel();
             this.ptBImageUser = new Guna.UI.WinForms.GunaPictureBox();
+            this.ptbImageEdit = new Guna.UI.WinForms.GunaPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImageEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptBImageUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImageEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaPictureBox2
@@ -120,19 +120,6 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(1336, 469);
             this.gunaPanel1.TabIndex = 23;
-            // 
-            // ptbImageEdit
-            // 
-            this.ptbImageEdit.BackColor = System.Drawing.Color.Transparent;
-            this.ptbImageEdit.BaseColor = System.Drawing.Color.Transparent;
-            this.ptbImageEdit.Location = new System.Drawing.Point(1126, 96);
-            this.ptbImageEdit.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbImageEdit.Name = "ptbImageEdit";
-            this.ptbImageEdit.Radius = 35;
-            this.ptbImageEdit.Size = new System.Drawing.Size(164, 143);
-            this.ptbImageEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbImageEdit.TabIndex = 71;
-            this.ptbImageEdit.TabStop = false;
             // 
             // btnChangePass
             // 
@@ -430,6 +417,19 @@ namespace VegetableShop_DBMS.Views
             this.ptBImageUser.TabIndex = 24;
             this.ptBImageUser.TabStop = false;
             // 
+            // ptbImageEdit
+            // 
+            this.ptbImageEdit.BackColor = System.Drawing.Color.Transparent;
+            this.ptbImageEdit.BaseColor = System.Drawing.Color.Transparent;
+            this.ptbImageEdit.Location = new System.Drawing.Point(1123, 104);
+            this.ptbImageEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbImageEdit.Name = "ptbImageEdit";
+            this.ptbImageEdit.Radius = 35;
+            this.ptbImageEdit.Size = new System.Drawing.Size(167, 121);
+            this.ptbImageEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbImageEdit.TabIndex = 71;
+            this.ptbImageEdit.TabStop = false;
+            // 
             // frmInformationAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -451,8 +451,8 @@ namespace VegetableShop_DBMS.Views
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbImageEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptBImageUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbImageEdit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -482,5 +482,6 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaButton btnChangePass;
         private Guna.UI.WinForms.GunaPictureBox ptBImageUser;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Guna.UI.WinForms.GunaPictureBox ptbImageEdit;
     }
 }
