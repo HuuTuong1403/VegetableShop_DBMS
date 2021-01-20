@@ -45,13 +45,12 @@ namespace VegetableShop_DBMS
             this.btnShoppingCart = new Guna.UI.WinForms.GunaButton();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.ptBImage = new Guna.UI.WinForms.GunaPictureBox();
+            this.pnItems = new Guna.UI.WinForms.GunaPanel();
             this.pnUser.SuspendLayout();
             this.pnGroupMenu.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptBImage)).BeginInit();
             this.SuspendLayout();
             // 
             // pnUser
@@ -377,46 +376,42 @@ namespace VegetableShop_DBMS
             this.gunaPictureBox1.TabIndex = 9;
             this.gunaPictureBox1.TabStop = false;
             // 
-            // ptBImage
+            // pnItems
             // 
-            this.ptBImage.BaseColor = System.Drawing.Color.White;
-            this.ptBImage.Location = new System.Drawing.Point(12, 234);
-            this.ptBImage.Name = "ptBImage";
-            this.ptBImage.Size = new System.Drawing.Size(1339, 308);
-            this.ptBImage.TabIndex = 0;
-            this.ptBImage.TabStop = false;
+            this.pnItems.Location = new System.Drawing.Point(12, 269);
+            this.pnItems.Name = "pnItems";
+            this.pnItems.Size = new System.Drawing.Size(1346, 468);
+            this.pnItems.TabIndex = 22;
             // 
             // frmVegetableShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1370, 554);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.pnUser);
+            this.Controls.Add(this.pnItems);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.gunaPictureBox2);
             this.Controls.Add(this.pnGroupMenu);
-            this.Controls.Add(this.pnUser);
             this.Controls.Add(this.gunaPictureBox1);
-            this.Controls.Add(this.ptBImage);
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmVegetableShop";
             this.Text = "Cửa hàng bán rau MST";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmVegetableShop_Load);
             this.pnUser.ResumeLayout(false);
             this.pnGroupMenu.ResumeLayout(false);
             this.gunaPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptBImage)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Guna.UI.WinForms.GunaPictureBox ptBImage;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaPanel pnUser;
         private Guna.UI.WinForms.GunaButton btnInformationAccount;
@@ -432,6 +427,7 @@ namespace VegetableShop_DBMS
         private Guna.UI.WinForms.GunaButton btnImportItem;
         private Guna.UI.WinForms.GunaButton btnAddSeller;
         private Guna.UI.WinForms.GunaButton btnAddItem;
+        private Guna.UI.WinForms.GunaPanel pnItems;
     }
 }
 
