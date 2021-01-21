@@ -34,5 +34,11 @@ namespace VegetableShop_DBMS.Controllers
             return _db.MyExecuteNonQuery("exec EditUser N'" + UserName + "',N'" + FullName + "',N'" + Gender +
             "','" + DateorBirth + "',N'" + PhoneNumber + "',N'" + Email + "',N'" + Image + "'",CommandType.Text, ref err);
         }
+        public static DataSet ShowRole (string UserName)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.ExecuteQueryDataSet("select Roles.Role from Users inner join Roles on Users.IDRole = Roles.IDRole where Users.UserName = N'" +
+                UserName + "'", CommandType.Text);
+        }
     }
 }

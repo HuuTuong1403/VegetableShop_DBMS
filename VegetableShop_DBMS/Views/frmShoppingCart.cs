@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VegetableShop_DBMS.Controller;
-
+using VegetableShop_DBMS.Controllers;
 namespace VegetableShop_DBMS.Views
 {
     public partial class frmShoppingCart : Form
@@ -18,6 +17,31 @@ namespace VegetableShop_DBMS.Views
         {
             this.UserName = UserName;
             InitializeComponent();
+            DataTable dtCart = OrderItemsController.ShowCart(UserName).Tables[0];
+            foreach (DataRow dr in dtCart.Rows)
+            {
+                string ImageTemp = dr["Image"].ToString();
+                Image image;
+                if (ImageTemp != "")
+                {
+                    string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\";
+                    string FileName = appPath + ImageTemp;
+                    image = Image.FromFile(FileName);
+                }
+                else
+                {
+                    ImageTemp = "10.jpg";
+                    string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesUser\";
+                    string FileName = appPath + ImageTemp;
+                    image = Image.FromFile(FileName);
+                }
+                string ItemName = dr["ItemName"].ToString();
+                string Description = dr["Description"].ToString();
+                string PaidPrice = dr["PaidPrice"].ToString();
+                string Orgin = dr["Orgin"].ToString();
+                string Quantity = dr["Quantity"].ToString();
+                dtGVShoppingCart.Rows.Add(image, ItemName, Description, PaidPrice, Orgin, Quantity);
+            }
         }
 
         private void btnOrderCart_Click(object sender, EventArgs e)

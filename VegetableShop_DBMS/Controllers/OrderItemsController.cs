@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VegetableShop_DBMS.Models;
 
-namespace VegetableShop_DBMS.Controller
+namespace VegetableShop_DBMS.Controllers
 {
     class OrderItemsController
     {
@@ -24,6 +24,21 @@ namespace VegetableShop_DBMS.Controller
         {
             Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select *  from Address_Users where IDUser = N'" + IDUser + "'", CommandType.Text);
+        }
+        public static bool AddCart(string UserName, string ItemName, float SalePrice, float Quantity, ref string err)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.MyExecuteNonQuery("exec AddCart N'" + UserName + "',N'" + ItemName + "'," + SalePrice + ", " + Quantity, CommandType.Text, ref err);
+        }
+        public static DataSet ShowCart(string UserName)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.ExecuteQueryDataSet("select * from dbo.ShowCart(N'" + UserName + "')", CommandType.Text);
+        }
+        public static bool OrderItem (string UserName, ref string err)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.MyExecuteNonQuery("exec OrderItem N'" + UserName + "'", CommandType.Text, ref err);
         }
     }
 }

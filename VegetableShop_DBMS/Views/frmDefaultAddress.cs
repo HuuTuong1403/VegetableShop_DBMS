@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using VegetableShop_DBMS.Controller;
+using VegetableShop_DBMS.Controllers;
 
 namespace VegetableShop_DBMS.Views
 {
