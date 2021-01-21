@@ -15,5 +15,11 @@ namespace VegetableShop_DBMS.Controllers
             Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select ItemName, SalePrice, Image from Items", CommandType.Text);
         }
+        public static DataSet PriceItem(string ItemName)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.ExecuteQueryDataSet("select SalePrice from Items where Items.ItemName = N'" + ItemName + "'", CommandType.Text);
+        }
+
     }
 }

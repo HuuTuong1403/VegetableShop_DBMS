@@ -45,7 +45,7 @@ namespace VegetableShop_DBMS.Views.SignIn
                 if (dialogResult == DialogResult.OK)
                 {
                     this.Hide();
-                    frmVegetableShop form = new frmVegetableShop(UserName, PassWord, role);
+                    frmVegetableShop form = new frmVegetableShop(UserName, role);
                     form.ShowDialog();
                     this.Close();
                     Application.Exit();
