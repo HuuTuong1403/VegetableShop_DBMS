@@ -141,8 +141,10 @@ namespace VegetableShop_DBMS
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmSignIn frmSignIn = new frmSignIn();
             frmSignIn.ShowDialog();
+            this.Close();
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
