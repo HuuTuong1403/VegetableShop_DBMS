@@ -83,11 +83,23 @@
     <Compile Include="Views\frmImportItem.Designer.cs">
       <DependentUpon>frmImportItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmImportItemsManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmImportItemsManagement.Designer.cs">
+      <DependentUpon>frmImportItemsManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmInformationAccount.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\frmInformationAccount.Designer.cs">
       <DependentUpon>frmInformationAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmItemsManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmItemsManagement.Designer.cs">
+      <DependentUpon>frmItemsManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmRegisterSeller.cs">
       <SubType>Form</SubType>
@@ -119,6 +131,12 @@
     <Compile Include="Views\frmSignUp.Designer.cs">
       <DependentUpon>frmSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\frmUserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmUserManagement.Designer.cs">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,8 +159,14 @@
     <EmbeddedResource Include="Views\frmImportItem.resx">
       <DependentUpon>frmImportItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmImportItemsManagement.resx">
+      <DependentUpon>frmImportItemsManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmInformationAccount.resx">
       <DependentUpon>frmInformationAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmItemsManagement.resx">
+      <DependentUpon>frmItemsManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmRegisterSeller.resx">
       <DependentUpon>frmRegisterSeller.cs</DependentUpon>
@@ -159,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmSignUp.resx">
       <DependentUpon>frmSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmUserManagement.resx">
+      <DependentUpon>frmUserManagement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

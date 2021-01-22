@@ -373,6 +373,7 @@ namespace VegetableShop_DBMS.Views
             this.cbbDefalutAddress.Name = "cbbDefalutAddress";
             this.cbbDefalutAddress.Size = new System.Drawing.Size(472, 27);
             this.cbbDefalutAddress.TabIndex = 71;
+            this.cbbDefalutAddress.SelectedIndexChanged += new System.EventHandler(this.cbbDefalutAddress_SelectedIndexChanged);
             this.cbbDefalutAddress.Click += new System.EventHandler(this.cbbDefalutAddress_Click);
             // 
             // btnAcceptDefaultAddress
@@ -402,6 +403,7 @@ namespace VegetableShop_DBMS.Views
             this.btnAcceptDefaultAddress.TabIndex = 78;
             this.btnAcceptDefaultAddress.Text = "ĐỔI ĐỊA CHỈ";
             this.btnAcceptDefaultAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAcceptDefaultAddress.Click += new System.EventHandler(this.btnAcceptDefaultAddress_Click);
             // 
             // frmDefaultAddress
             // 

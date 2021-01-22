@@ -55,6 +55,7 @@ namespace VegetableShop_DBMS.Views.SignIn
             else
             {
                 MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.txtPassword.Clear();
             }
         }
     }

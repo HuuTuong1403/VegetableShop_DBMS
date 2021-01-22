@@ -25,6 +25,11 @@ namespace VegetableShop_DBMS.Controllers
             Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select *  from Address_Users where IDUser = N'" + IDUser + "'", CommandType.Text);
         }
+        public static bool ChangeDefauleAddress_User(string UserName, string IDAddress_User, ref string err)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.MyExecuteNonQuery("exec ChangeDefauleAddress_User N'" + UserName + "',N'" + IDAddress_User + "'", CommandType.Text, ref err);
+        }
         public static bool AddCart(string UserName, string ItemName, float SalePrice, float Quantity, ref string err)
         {
             Database_VegetableShop _db = new Database_VegetableShop();

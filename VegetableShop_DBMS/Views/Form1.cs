@@ -17,6 +17,7 @@ namespace VegetableShop_DBMS
     public partial class frmVegetableShop : Form
     {
         private bool flaqMenuAccount = true;
+        private bool flaqMenuManagement = true;
         public string UserName;
         public string Role;
         DataTable dtItem;
@@ -45,10 +46,13 @@ namespace VegetableShop_DBMS
                 this.btnAddItem.Visible = true;
                 this.btnAddSeller.Visible = true;
                 this.btnImportItem.Visible = true;
+                this.btnManagement.Visible = true;
             }
             if (Role == "Seller")
             {
                 this.btnImportItem.Visible = true;
+                this.btnManagement.Visible = true;
+                this.pnManagement.Height = 56;
             }
             int xptb = 65;
             int xbtn = 65;
@@ -141,7 +145,7 @@ namespace VegetableShop_DBMS
                 string ItemName = btn.Text;
                 float SalePrice = float.Parse(HomeController.PriceItem(ItemName).Tables[0].Rows[0][0].ToString());
                 float Quantity = 1;
-                bool check = OrderItemsController.AddCart(UserName, ItemName, SalePrice, Quantity, ref err);
+                bool check = OrderItemsController.AddCart(UserName, ItemName, SalePrice, Quantity, ref err); 
                 if (check == true)
                 {
                     MessageBox.Show("Bạn đã thêm " + ItemName + " vào giỏ hàng thành công");
@@ -424,6 +428,44 @@ namespace VegetableShop_DBMS
         private void frmVegetableShop_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnManagement_Click(object sender, EventArgs e)
+        {
+            if (flaqMenuManagement == true)
+            {
+                pnManagement.Visible = true;
+                flaqMenuManagement = false;
+            }
+            else
+            {
+                pnManagement.Visible = false;
+                flaqMenuManagement = true;
+            }
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmUserManagement frmUser = new frmUserManagement();
+            frmUser.ShowDialog();
+            this.Close();
+        }
+
+        private void btnItemsManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmItemsManagement frmItems = new frmItemsManagement();
+            frmItems.ShowDialog();
+            this.Close();
+        }
+
+        private void btnImportItemsManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmImportItemsManagement frmImport = new frmImportItemsManagement();
+            frmImport.ShowDialog();
+            this.Close();
         }
     }
 }

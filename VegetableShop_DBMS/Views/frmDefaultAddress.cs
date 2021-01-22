@@ -17,6 +17,8 @@ namespace VegetableShop_DBMS.Views
         private bool flaqNewAddress = true;
         public string UserName;
         public string DefaultAddress;
+        public List<string> lstAddress = new List<string>();
+        public int indexCombobox;
         public frmDefaultAddress(string UserName, string DefaultAddress)
         {
             this.UserName = UserName;
@@ -167,10 +169,10 @@ namespace VegetableShop_DBMS.Views
                     this.cbbWard.Items.Clear();
                     this.txtStreet.Clear();
                 }
-                else
-                {
-                    MessageBox.Show("Thêm địa chỉ khác thất bại, xin thử lại lần nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            else
+            {
+                MessageBox.Show("Thêm địa chỉ khác thất bại, xin thử lại lần nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -184,7 +186,28 @@ namespace VegetableShop_DBMS.Views
             {
                 string temp = dr["Street"].ToString() + ", " + dr["Ward"].ToString() + ", " + dr["District"].ToString() + ", " + dr["Province"].ToString();
                 cbbDefalutAddress.Items.Add(temp);
+                string IDAddress_User = dr["IDAddress_User"].ToString();
+                lstAddress.Add(IDAddress_User);
             }
+        }
+
+        private void btnAcceptDefaultAddress_Click(object sender, EventArgs e)
+        {
+            string IDAddress_User = lstAddress[indexCombobox];
+            bool check = OrderItemsController.ChangeDefauleAddress_User(UserName, IDAddress_User, ref err);
+            if(check == true)
+            {
+                MessageBox.Show("Bạn đã đổi địa chỉ mặc định thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Đổi địa chỉ mặc định thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }    
+        }
+
+        private void cbbDefalutAddress_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            indexCombobox = cbbDefalutAddress.SelectedIndex;
         }
     }
 }
