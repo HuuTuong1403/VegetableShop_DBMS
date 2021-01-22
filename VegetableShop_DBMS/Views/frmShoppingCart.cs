@@ -35,6 +35,7 @@ namespace VegetableShop_DBMS.Views
                     string FileName = appPath + ImageTemp;
                     image = Image.FromFile(FileName);
                 }
+                
                 string ItemName = dr["ItemName"].ToString();
                 string Description = dr["Description"].ToString();
                 string PaidPrice = dr["PaidPrice"].ToString();

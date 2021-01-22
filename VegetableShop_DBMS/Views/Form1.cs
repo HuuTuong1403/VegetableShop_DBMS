@@ -144,7 +144,7 @@ namespace VegetableShop_DBMS
                 bool check = OrderItemsController.AddCart(UserName, ItemName, SalePrice, Quantity, ref err);
                 if (check == true)
                 {
-                    MessageBox.Show("Bạn đã thêm món ăn vào giỏ hàng thành công");
+                    MessageBox.Show("Bạn đã thêm " + ItemName + " vào giỏ hàng thành công");
                 }
                 else
                 {
@@ -161,6 +161,7 @@ namespace VegetableShop_DBMS
                     this.Hide();
                     frmSignIn frmSign = new frmSignIn();
                     frmSign.ShowDialog();
+                    this.Close();
                 }
             }
         }
