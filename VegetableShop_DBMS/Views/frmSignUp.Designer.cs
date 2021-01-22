@@ -416,8 +416,8 @@ namespace VegetableShop_DBMS.Views
             this.dtpDateOfBirth.OnPressedColor = System.Drawing.Color.Black;
             this.dtpDateOfBirth.Size = new System.Drawing.Size(294, 35);
             this.dtpDateOfBirth.TabIndex = 55;
-            this.dtpDateOfBirth.Text = "1/15/2021";
-            this.dtpDateOfBirth.Value = new System.DateTime(2021, 1, 15, 0, 24, 5, 673);
+            this.dtpDateOfBirth.Text = "1/1/1980";
+            this.dtpDateOfBirth.Value = new System.DateTime(1980, 1, 1, 0, 24, 0, 0);
             // 
             // gunaLabel5
             // 

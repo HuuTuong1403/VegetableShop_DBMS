@@ -217,6 +217,7 @@ namespace VegetableShop_DBMS.Views.SignIn
             this.Controls.Add(this.lblAccount);
             this.Controls.Add(this.gunaPictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmSignIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";

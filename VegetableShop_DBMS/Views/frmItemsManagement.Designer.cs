@@ -195,7 +195,9 @@ namespace VegetableShop_DBMS.Views
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.dtGVItemsManagement);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmItemsManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thực phẩm";
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();

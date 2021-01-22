@@ -349,8 +349,10 @@ namespace VegetableShop_DBMS
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmSignUp frmSignUp = new frmSignUp();
             frmSignUp.ShowDialog();
+            this.Show();
         }
 
         private void btnAccount_MouseClick(object sender, MouseEventArgs e)
@@ -369,8 +371,10 @@ namespace VegetableShop_DBMS
 
         private void btnInformationAccount_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmInformationAccount frmInfor = new frmInformationAccount(UserName);
             frmInfor.ShowDialog();
+            this.Show();
         }
 
         private void btnShoppingCart_Click(object sender, EventArgs e)
@@ -449,7 +453,7 @@ namespace VegetableShop_DBMS
             this.Hide();
             frmUserManagement frmUser = new frmUserManagement();
             frmUser.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
         private void btnItemsManagement_Click(object sender, EventArgs e)
@@ -457,7 +461,7 @@ namespace VegetableShop_DBMS
             this.Hide();
             frmItemsManagement frmItems = new frmItemsManagement();
             frmItems.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
         private void btnImportItemsManagement_Click(object sender, EventArgs e)
@@ -465,7 +469,7 @@ namespace VegetableShop_DBMS
             this.Hide();
             frmImportItemsManagement frmImport = new frmImportItemsManagement();
             frmImport.ShowDialog();
-            this.Close();
+            this.Show();
         }
     }
 }
