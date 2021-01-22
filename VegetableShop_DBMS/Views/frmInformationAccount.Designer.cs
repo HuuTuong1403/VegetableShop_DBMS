@@ -481,7 +481,6 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaLabel lblAccount;
         private Guna.UI.WinForms.GunaButton btnChangePass;
         private Guna.UI.WinForms.GunaPictureBox ptBImageUser;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI.WinForms.GunaPictureBox ptbImageEdit;
     }
 }
