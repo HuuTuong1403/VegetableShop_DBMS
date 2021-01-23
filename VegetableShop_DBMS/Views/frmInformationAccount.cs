@@ -32,6 +32,7 @@ namespace VegetableShop_DBMS.Views
             txtPhone.Text = dr["PhoneNumber"].ToString();
             txtEmail.Text = dr["Email"].ToString();
             cbbGender.SelectedItem = dr["Gender"].ToString();
+            txtUserName.Text = dr["UserName"].ToString();
             dtpDateOfBirth.Value = DateTime.Parse(dr["DateofBirth"].ToString());
             if (ImageTemp != "")
             {
@@ -123,6 +124,22 @@ namespace VegetableShop_DBMS.Views
             {
                 MessageBox.Show("Chỉnh sửa thất bại, xin thử lại lần nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            this.pnChangePwd.Visible = true;
+            this.ptBOpacity.Visible = true;
+            
+        }
+
+        private void btnCancelChangePwd_Click(object sender, EventArgs e)
+        {
+            this.pnChangePwd.Visible = false;
+            this.ptBOpacity.Visible = false;
+            this.txtOldPwd.Clear();
+            this.txtNewPwd.Clear();
+            this.txtRePwd.Clear();
         }
     }
 }
