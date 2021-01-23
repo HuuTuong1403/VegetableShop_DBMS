@@ -36,18 +36,18 @@ namespace VegetableShop_DBMS
             this.btnSignUp = new Guna.UI.WinForms.GunaButton();
             this.btnSignIn = new Guna.UI.WinForms.GunaButton();
             this.pnGroupMenu = new Guna.UI.WinForms.GunaPanel();
+            this.btnManagement = new Guna.UI.WinForms.GunaButton();
             this.btnAddSeller = new Guna.UI.WinForms.GunaButton();
             this.btnAddItem = new Guna.UI.WinForms.GunaButton();
             this.btnImportItem = new Guna.UI.WinForms.GunaButton();
             this.lblShowCart = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.pnItems = new Guna.UI.WinForms.GunaPanel();
-            this.btnManagement = new Guna.UI.WinForms.GunaButton();
             this.pnManagement = new Guna.UI.WinForms.GunaPanel();
-            this.btnImportItemsManagement = new Guna.UI.WinForms.GunaButton();
-            this.btnOrderManagement = new Guna.UI.WinForms.GunaButton();
             this.btnUserManagement = new Guna.UI.WinForms.GunaButton();
+            this.btnImportItemsManagement = new Guna.UI.WinForms.GunaButton();
             this.btnItemsManagement = new Guna.UI.WinForms.GunaButton();
+            this.btnOrderManagement = new Guna.UI.WinForms.GunaButton();
             this.btnShoppingCart = new Guna.UI.WinForms.GunaButton();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.btnAccount = new Guna.UI.WinForms.GunaButton();
@@ -202,6 +202,34 @@ namespace VegetableShop_DBMS
             this.pnGroupMenu.Size = new System.Drawing.Size(1346, 48);
             this.pnGroupMenu.TabIndex = 15;
             // 
+            // btnManagement
+            // 
+            this.btnManagement.AnimationHoverSpeed = 0.07F;
+            this.btnManagement.AnimationSpeed = 0.03F;
+            this.btnManagement.BackColor = System.Drawing.Color.Transparent;
+            this.btnManagement.BaseColor = System.Drawing.Color.Silver;
+            this.btnManagement.BorderColor = System.Drawing.Color.Black;
+            this.btnManagement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnManagement.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnManagement.FocusedColor = System.Drawing.Color.Empty;
+            this.btnManagement.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManagement.ForeColor = System.Drawing.Color.Black;
+            this.btnManagement.Image = null;
+            this.btnManagement.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnManagement.Location = new System.Drawing.Point(662, 2);
+            this.btnManagement.Name = "btnManagement";
+            this.btnManagement.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnManagement.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnManagement.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnManagement.OnHoverImage = null;
+            this.btnManagement.OnPressedColor = System.Drawing.Color.Black;
+            this.btnManagement.Size = new System.Drawing.Size(170, 42);
+            this.btnManagement.TabIndex = 18;
+            this.btnManagement.Text = "Quản lý ▼";
+            this.btnManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnManagement.Visible = false;
+            this.btnManagement.Click += new System.EventHandler(this.btnManagement_Click);
+            // 
             // btnAddSeller
             // 
             this.btnAddSeller.AnimationHoverSpeed = 0.07F;
@@ -314,34 +342,6 @@ namespace VegetableShop_DBMS
             this.pnItems.Size = new System.Drawing.Size(1346, 468);
             this.pnItems.TabIndex = 22;
             // 
-            // btnManagement
-            // 
-            this.btnManagement.AnimationHoverSpeed = 0.07F;
-            this.btnManagement.AnimationSpeed = 0.03F;
-            this.btnManagement.BackColor = System.Drawing.Color.Transparent;
-            this.btnManagement.BaseColor = System.Drawing.Color.Silver;
-            this.btnManagement.BorderColor = System.Drawing.Color.Black;
-            this.btnManagement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnManagement.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnManagement.FocusedColor = System.Drawing.Color.Empty;
-            this.btnManagement.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManagement.ForeColor = System.Drawing.Color.Black;
-            this.btnManagement.Image = null;
-            this.btnManagement.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnManagement.Location = new System.Drawing.Point(662, 2);
-            this.btnManagement.Name = "btnManagement";
-            this.btnManagement.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnManagement.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnManagement.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnManagement.OnHoverImage = null;
-            this.btnManagement.OnPressedColor = System.Drawing.Color.Black;
-            this.btnManagement.Size = new System.Drawing.Size(170, 42);
-            this.btnManagement.TabIndex = 18;
-            this.btnManagement.Text = "Quản lý ▼";
-            this.btnManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnManagement.Visible = false;
-            this.btnManagement.Click += new System.EventHandler(this.btnManagement_Click);
-            // 
             // pnManagement
             // 
             this.pnManagement.BackColor = System.Drawing.Color.Silver;
@@ -355,61 +355,6 @@ namespace VegetableShop_DBMS
             this.pnManagement.Size = new System.Drawing.Size(204, 201);
             this.pnManagement.TabIndex = 15;
             this.pnManagement.Visible = false;
-            // 
-            // btnImportItemsManagement
-            // 
-            this.btnImportItemsManagement.AnimationHoverSpeed = 0.07F;
-            this.btnImportItemsManagement.AnimationSpeed = 0.03F;
-            this.btnImportItemsManagement.BackColor = System.Drawing.Color.Transparent;
-            this.btnImportItemsManagement.BaseColor = System.Drawing.Color.Silver;
-            this.btnImportItemsManagement.BorderColor = System.Drawing.Color.Black;
-            this.btnImportItemsManagement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnImportItemsManagement.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnImportItemsManagement.FocusedColor = System.Drawing.Color.Empty;
-            this.btnImportItemsManagement.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportItemsManagement.ForeColor = System.Drawing.Color.Black;
-            this.btnImportItemsManagement.Image = null;
-            this.btnImportItemsManagement.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnImportItemsManagement.Location = new System.Drawing.Point(3, 151);
-            this.btnImportItemsManagement.Name = "btnImportItemsManagement";
-            this.btnImportItemsManagement.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnImportItemsManagement.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnImportItemsManagement.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnImportItemsManagement.OnHoverImage = null;
-            this.btnImportItemsManagement.OnPressedColor = System.Drawing.Color.Black;
-            this.btnImportItemsManagement.Radius = 10;
-            this.btnImportItemsManagement.Size = new System.Drawing.Size(196, 42);
-            this.btnImportItemsManagement.TabIndex = 14;
-            this.btnImportItemsManagement.Text = "Quản lý nhập hàng";
-            this.btnImportItemsManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnImportItemsManagement.Click += new System.EventHandler(this.btnImportItemsManagement_Click);
-            // 
-            // btnOrderManagement
-            // 
-            this.btnOrderManagement.AnimationHoverSpeed = 0.07F;
-            this.btnOrderManagement.AnimationSpeed = 0.03F;
-            this.btnOrderManagement.BackColor = System.Drawing.Color.Transparent;
-            this.btnOrderManagement.BaseColor = System.Drawing.Color.Silver;
-            this.btnOrderManagement.BorderColor = System.Drawing.Color.Black;
-            this.btnOrderManagement.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOrderManagement.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnOrderManagement.FocusedColor = System.Drawing.Color.Empty;
-            this.btnOrderManagement.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderManagement.ForeColor = System.Drawing.Color.Black;
-            this.btnOrderManagement.Image = null;
-            this.btnOrderManagement.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnOrderManagement.Location = new System.Drawing.Point(3, 6);
-            this.btnOrderManagement.Name = "btnOrderManagement";
-            this.btnOrderManagement.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnOrderManagement.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnOrderManagement.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnOrderManagement.OnHoverImage = null;
-            this.btnOrderManagement.OnPressedColor = System.Drawing.Color.Black;
-            this.btnOrderManagement.Radius = 10;
-            this.btnOrderManagement.Size = new System.Drawing.Size(196, 42);
-            this.btnOrderManagement.TabIndex = 12;
-            this.btnOrderManagement.Text = "Quản lý đơn hàng";
-            this.btnOrderManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnUserManagement
             // 
@@ -439,6 +384,34 @@ namespace VegetableShop_DBMS
             this.btnUserManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
+            // btnImportItemsManagement
+            // 
+            this.btnImportItemsManagement.AnimationHoverSpeed = 0.07F;
+            this.btnImportItemsManagement.AnimationSpeed = 0.03F;
+            this.btnImportItemsManagement.BackColor = System.Drawing.Color.Transparent;
+            this.btnImportItemsManagement.BaseColor = System.Drawing.Color.Silver;
+            this.btnImportItemsManagement.BorderColor = System.Drawing.Color.Black;
+            this.btnImportItemsManagement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImportItemsManagement.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnImportItemsManagement.FocusedColor = System.Drawing.Color.Empty;
+            this.btnImportItemsManagement.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportItemsManagement.ForeColor = System.Drawing.Color.Black;
+            this.btnImportItemsManagement.Image = null;
+            this.btnImportItemsManagement.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnImportItemsManagement.Location = new System.Drawing.Point(3, 151);
+            this.btnImportItemsManagement.Name = "btnImportItemsManagement";
+            this.btnImportItemsManagement.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnImportItemsManagement.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnImportItemsManagement.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnImportItemsManagement.OnHoverImage = null;
+            this.btnImportItemsManagement.OnPressedColor = System.Drawing.Color.Black;
+            this.btnImportItemsManagement.Radius = 10;
+            this.btnImportItemsManagement.Size = new System.Drawing.Size(196, 42);
+            this.btnImportItemsManagement.TabIndex = 14;
+            this.btnImportItemsManagement.Text = "Quản lý nhập hàng";
+            this.btnImportItemsManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnImportItemsManagement.Click += new System.EventHandler(this.btnImportItemsManagement_Click);
+            // 
             // btnItemsManagement
             // 
             this.btnItemsManagement.AnimationHoverSpeed = 0.07F;
@@ -466,6 +439,34 @@ namespace VegetableShop_DBMS
             this.btnItemsManagement.Text = "Quản lý món ăn";
             this.btnItemsManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnItemsManagement.Click += new System.EventHandler(this.btnItemsManagement_Click);
+            // 
+            // btnOrderManagement
+            // 
+            this.btnOrderManagement.AnimationHoverSpeed = 0.07F;
+            this.btnOrderManagement.AnimationSpeed = 0.03F;
+            this.btnOrderManagement.BackColor = System.Drawing.Color.Transparent;
+            this.btnOrderManagement.BaseColor = System.Drawing.Color.Silver;
+            this.btnOrderManagement.BorderColor = System.Drawing.Color.Black;
+            this.btnOrderManagement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrderManagement.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnOrderManagement.FocusedColor = System.Drawing.Color.Empty;
+            this.btnOrderManagement.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderManagement.ForeColor = System.Drawing.Color.Black;
+            this.btnOrderManagement.Image = null;
+            this.btnOrderManagement.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnOrderManagement.Location = new System.Drawing.Point(3, 6);
+            this.btnOrderManagement.Name = "btnOrderManagement";
+            this.btnOrderManagement.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnOrderManagement.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnOrderManagement.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnOrderManagement.OnHoverImage = null;
+            this.btnOrderManagement.OnPressedColor = System.Drawing.Color.Black;
+            this.btnOrderManagement.Radius = 10;
+            this.btnOrderManagement.Size = new System.Drawing.Size(196, 42);
+            this.btnOrderManagement.TabIndex = 12;
+            this.btnOrderManagement.Text = "Quản lý đơn hàng";
+            this.btnOrderManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnOrderManagement.Click += new System.EventHandler(this.btnOrderManagement_Click);
             // 
             // btnShoppingCart
             // 

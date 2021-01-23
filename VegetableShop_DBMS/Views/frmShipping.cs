@@ -50,10 +50,9 @@ namespace VegetableShop_DBMS.Views
                 dialogResult = MessageBox.Show("Bạn đã đặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.OK)
                 {
+                    this.Hide();
                     string Role = UserController.ShowRole(UserName).Tables[0].Rows[0][0].ToString();
                     this.Close();
-                    frmVegetableShop frm = new frmVegetableShop(UserName, Role);
-                    frm.ShowDialog();
                 }
             }
             else

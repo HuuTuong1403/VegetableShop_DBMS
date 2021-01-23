@@ -25,10 +25,9 @@ namespace VegetableShop_DBMS.Views
 
         private void btnSignIn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmSignIn frm = new frmSignIn();
-            frm.Show();
-            frm.TopMost = true;
-            Visible = false;
+            frm.ShowDialog();
         }
 
         private void cbbProvince_Click(object sender, EventArgs e)

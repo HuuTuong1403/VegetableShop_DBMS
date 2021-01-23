@@ -471,5 +471,13 @@ namespace VegetableShop_DBMS
             frmImport.ShowDialog();
             this.Show();
         }
+
+        private void btnOrderManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmOrderManagement frmOrder = new frmOrderManagement(UserName);
+            frmOrder.ShowDialog();
+            this.Show();
+        }
     }
 }

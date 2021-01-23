@@ -64,7 +64,7 @@ namespace VegetableShop_DBMS.Views
             this.btnDeleteItems.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteItems.Image")));
             this.btnDeleteItems.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnDeleteItems.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDeleteItems.Location = new System.Drawing.Point(614, 487);
+            this.btnDeleteItems.Location = new System.Drawing.Point(680, 508);
             this.btnDeleteItems.Name = "btnDeleteItems";
             this.btnDeleteItems.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDeleteItems.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -127,7 +127,8 @@ namespace VegetableShop_DBMS.Views
             this.dtGVItemsManagement.Location = new System.Drawing.Point(2, 193);
             this.dtGVItemsManagement.Name = "dtGVItemsManagement";
             this.dtGVItemsManagement.RowHeadersWidth = 51;
-            this.dtGVItemsManagement.Size = new System.Drawing.Size(796, 288);
+            this.dtGVItemsManagement.RowTemplate.Height = 80;
+            this.dtGVItemsManagement.Size = new System.Drawing.Size(851, 309);
             this.dtGVItemsManagement.TabIndex = 30;
             // 
             // clItemName
@@ -149,8 +150,9 @@ namespace VegetableShop_DBMS.Views
             // 
             // clDescription
             // 
-            this.clDescription.HeaderText = "Thành phần";
+            this.clDescription.HeaderText = "Mô tả";
             this.clDescription.Name = "clDescription";
+            this.clDescription.Width = 140;
             // 
             // clOrigin
             // 
@@ -188,7 +190,7 @@ namespace VegetableShop_DBMS.Views
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(800, 541);
+            this.ClientSize = new System.Drawing.Size(865, 562);
             this.Controls.Add(this.btnDeleteItems);
             this.Controls.Add(this.gunaPictureBox2);
             this.Controls.Add(this.gunaPictureBox1);

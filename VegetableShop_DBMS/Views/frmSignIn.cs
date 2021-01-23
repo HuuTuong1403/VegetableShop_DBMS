@@ -25,10 +25,9 @@ namespace VegetableShop_DBMS.Views.SignIn
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmSignUp frm = new frmSignUp();
-            frm.Show();
-            frm.TopMost = true;
-            Visible = false;
+            frm.ShowDialog();
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)

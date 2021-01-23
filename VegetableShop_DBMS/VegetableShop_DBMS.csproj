@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AdminSettingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManagementController.cs" />
     <Compile Include="Controllers\OrderItemsController.cs" />
     <Compile Include="Controllers\SellerSettingController.cs" />
     <Compile Include="Controllers\SignInController.cs" />
@@ -100,6 +101,12 @@
     </Compile>
     <Compile Include="Views\frmItemsManagement.Designer.cs">
       <DependentUpon>frmItemsManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmOrderManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmOrderManagement.Designer.cs">
+      <DependentUpon>frmOrderManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\frmRegisterSeller.cs">
       <SubType>Form</SubType>
@@ -167,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmItemsManagement.resx">
       <DependentUpon>frmItemsManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmOrderManagement.resx">
+      <DependentUpon>frmOrderManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\frmRegisterSeller.resx">
       <DependentUpon>frmRegisterSeller.cs</DependentUpon>

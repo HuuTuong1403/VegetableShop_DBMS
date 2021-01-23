@@ -74,6 +74,7 @@ namespace VegetableShop_DBMS.Views
             this.btnDeleteUser.TabIndex = 29;
             this.btnDeleteUser.Text = "Xóa người dùng";
             this.btnDeleteUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
             // 
             // gunaPictureBox2
             // 
@@ -125,6 +126,7 @@ namespace VegetableShop_DBMS.Views
             this.dtGVUserManagement.RowHeadersWidth = 51;
             this.dtGVUserManagement.Size = new System.Drawing.Size(796, 288);
             this.dtGVUserManagement.TabIndex = 24;
+            this.dtGVUserManagement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVUserManagement_CellClick);
             // 
             // clUserName
             // 
