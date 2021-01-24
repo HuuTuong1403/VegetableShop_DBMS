@@ -20,11 +20,13 @@ namespace VegetableShop_DBMS
         private bool flaqMenuManagement = true;
         public string UserName;
         public string Role;
+        public string PassWord;
         DataTable dtItem;
         string err;
-        public frmVegetableShop(string UserName, string Role)
+        public frmVegetableShop(string UserName, string PassWord, string Role)
         {
             this.UserName = UserName;
+            this.PassWord = PassWord;
             this.Role = Role;
             InitializeComponent();
             if (UserName == "")
@@ -424,7 +426,7 @@ namespace VegetableShop_DBMS
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmVegetableShop frm = new frmVegetableShop("", "");
+            frmVegetableShop frm = new frmVegetableShop("", "","");
             frm.ShowDialog();
             this.Close();
         }

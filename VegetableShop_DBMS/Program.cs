@@ -16,7 +16,7 @@ namespace VegetableShop_DBMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmVegetableShop("",""));
+            Application.Run(new frmVegetableShop("","",""));
         }
     }
 }
