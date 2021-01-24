@@ -14,11 +14,13 @@ namespace VegetableShop_DBMS.Views
     {
         public string UserName;
         public string DefaultAddress;
+        public string PassWord;
         string err;
-        public frmShipping(string UserName, string DefaultAddress, string PhoneNumber, string FullName)
+        public frmShipping(string UserName,string PassWord, string DefaultAddress, string PhoneNumber, string FullName)
         {
             this.UserName = UserName;
             this.DefaultAddress = DefaultAddress;
+            this.PassWord = PassWord;
             InitializeComponent();
             this.lblAddress.Text = DefaultAddress;
             this.lblFullName.Text = FullName;
@@ -28,7 +30,7 @@ namespace VegetableShop_DBMS.Views
         private void btnUpdateItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmShoppingCart frmShopping = new frmShoppingCart(UserName);
+            frmShoppingCart frmShopping = new frmShoppingCart(UserName, PassWord);
             frmShopping.ShowDialog();
             this.Close();
         }

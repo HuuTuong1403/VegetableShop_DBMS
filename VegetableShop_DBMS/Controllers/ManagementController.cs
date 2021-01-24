@@ -30,9 +30,9 @@ namespace VegetableShop_DBMS.Controllers
             Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select * from ImportDetailsManagement", CommandType.Text);
         }
-        public static DataSet OrderManagement(string UserName, string OrderStateName)
+        public static DataSet OrderManagement(string UserName, string PassWord,  string OrderStateName)
         {
-            Database_VegetableShop _db = new Database_VegetableShop();
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
             return _db.ExecuteQueryDataSet("select * from dbo.OrderManagement('N" + UserName + "',N'" + OrderStateName + "')",CommandType.Text);
         }
     }

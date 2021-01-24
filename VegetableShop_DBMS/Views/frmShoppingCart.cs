@@ -13,9 +13,11 @@ namespace VegetableShop_DBMS.Views
     public partial class frmShoppingCart : Form
     {
         public string UserName;
-        public frmShoppingCart(string UserName)
+        public string PassWord;
+        public frmShoppingCart(string UserName, string PassWord)
         {
             this.UserName = UserName;
+            this.PassWord = PassWord;
             InitializeComponent();
             DataTable dtCart = OrderItemsController.ShowCart(UserName).Tables[0];
             foreach (DataRow dr in dtCart.Rows)
@@ -63,7 +65,7 @@ namespace VegetableShop_DBMS.Views
                     FullName = dr["FullName"].ToString();
                 }
             }
-            frmShipping frmShip = new frmShipping(UserName, DefaultAddress, PhoneNumber, FullName);
+            frmShipping frmShip = new frmShipping(UserName, PassWord, DefaultAddress, PhoneNumber, FullName);
             frmShip.ShowDialog();
         }
     }

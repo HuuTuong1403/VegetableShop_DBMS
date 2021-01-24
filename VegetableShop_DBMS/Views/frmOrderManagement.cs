@@ -13,14 +13,16 @@ namespace VegetableShop_DBMS.Views
     public partial class frmOrderManagement : Form
     {
         public string UserName;
+        public string PassWord;
         public Image image;
-        public frmOrderManagement(string UserName)
+        public frmOrderManagement(string UserName, string PassWord)
         {
             this.UserName = UserName;
+            this.PassWord = PassWord;
             InitializeComponent();
             
             this.btnAll.BaseColor = Color.DarkGray;
-            DataTable dtAll = ManagementController.OrderManagement(UserName, "Tất cả").Tables[0];
+            DataTable dtAll = ManagementController.OrderManagement(UserName, PassWord, "Tất cả").Tables[0];
             int count = 0;
             foreach(DataRow dr in dtAll.Rows)
             {
@@ -62,7 +64,7 @@ namespace VegetableShop_DBMS.Views
             this.btnRefund.BaseColor = Color.Silver;
             this.btnCancel.BaseColor = Color.Silver;
 
-            DataTable dtAll = ManagementController.OrderManagement(UserName, "Tất cả").Tables[0];
+            DataTable dtAll = ManagementController.OrderManagement(UserName, PassWord, "Tất cả").Tables[0];
             int count = 0;
             foreach (DataRow dr in dtAll.Rows)
             {

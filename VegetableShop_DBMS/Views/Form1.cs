@@ -383,7 +383,7 @@ namespace VegetableShop_DBMS
         {
             if (UserName != "")
             {
-                frmShoppingCart frmCart = new frmShoppingCart(UserName);
+                frmShoppingCart frmCart = new frmShoppingCart(UserName, PassWord);
                 frmCart.ShowDialog();
             }
             else
@@ -477,7 +477,7 @@ namespace VegetableShop_DBMS
         private void btnOrderManagement_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmOrderManagement frmOrder = new frmOrderManagement(UserName);
+            frmOrderManagement frmOrder = new frmOrderManagement(UserName, PassWord);
             frmOrder.ShowDialog();
             this.Show();
         }
