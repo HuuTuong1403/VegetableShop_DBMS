@@ -308,6 +308,7 @@
     <Content Include="images\logo.gif" />
     <Content Include="images\logo1.gif" />
     <Content Include="images\right-arrow.png" />
+    <Content Include="images\search.png" />
     <Content Include="images\shopping cart.jpg" />
     <Content Include="images\shopping-cart %281%29.png" />
     <Content Include="images\shopping-cart.png" />
