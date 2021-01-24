@@ -36,6 +36,8 @@ namespace VegetableShop_DBMS
             this.btnSignUp = new Guna.UI.WinForms.GunaButton();
             this.btnSignIn = new Guna.UI.WinForms.GunaButton();
             this.pnGroupMenu = new Guna.UI.WinForms.GunaPanel();
+            this.btnProductCategory = new Guna.UI.WinForms.GunaButton();
+            this.btnStatistic = new Guna.UI.WinForms.GunaButton();
             this.btnManagement = new Guna.UI.WinForms.GunaButton();
             this.btnAddSeller = new Guna.UI.WinForms.GunaButton();
             this.btnAddItem = new Guna.UI.WinForms.GunaButton();
@@ -52,7 +54,8 @@ namespace VegetableShop_DBMS
             this.btnOrderManagement = new Guna.UI.WinForms.GunaButton();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.btnStatistic = new Guna.UI.WinForms.GunaButton();
+            this.pnCategory = new Guna.UI.WinForms.GunaPanel();
+            this.pnPanel = new Guna.UI.WinForms.GunaPanel();
             this.pnUser.SuspendLayout();
             this.pnGroupMenu.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
@@ -193,6 +196,7 @@ namespace VegetableShop_DBMS
             // 
             this.pnGroupMenu.BackColor = System.Drawing.Color.Silver;
             this.pnGroupMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnGroupMenu.Controls.Add(this.btnProductCategory);
             this.pnGroupMenu.Controls.Add(this.btnStatistic);
             this.pnGroupMenu.Controls.Add(this.btnManagement);
             this.pnGroupMenu.Controls.Add(this.btnAddSeller);
@@ -203,6 +207,61 @@ namespace VegetableShop_DBMS
             this.pnGroupMenu.Name = "pnGroupMenu";
             this.pnGroupMenu.Size = new System.Drawing.Size(1346, 48);
             this.pnGroupMenu.TabIndex = 15;
+            // 
+            // btnProductCategory
+            // 
+            this.btnProductCategory.AnimationHoverSpeed = 0.07F;
+            this.btnProductCategory.AnimationSpeed = 0.03F;
+            this.btnProductCategory.BackColor = System.Drawing.Color.Transparent;
+            this.btnProductCategory.BaseColor = System.Drawing.Color.Silver;
+            this.btnProductCategory.BorderColor = System.Drawing.Color.Black;
+            this.btnProductCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProductCategory.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnProductCategory.FocusedColor = System.Drawing.Color.Empty;
+            this.btnProductCategory.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductCategory.ForeColor = System.Drawing.Color.Black;
+            this.btnProductCategory.Image = null;
+            this.btnProductCategory.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnProductCategory.Location = new System.Drawing.Point(3, 2);
+            this.btnProductCategory.Name = "btnProductCategory";
+            this.btnProductCategory.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnProductCategory.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnProductCategory.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnProductCategory.OnHoverImage = null;
+            this.btnProductCategory.OnPressedColor = System.Drawing.Color.Black;
+            this.btnProductCategory.Size = new System.Drawing.Size(218, 42);
+            this.btnProductCategory.TabIndex = 20;
+            this.btnProductCategory.Text = "Danh mục sản phẩm";
+            this.btnProductCategory.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnProductCategory.Click += new System.EventHandler(this.btnProductCategory_Click);
+            // 
+            // btnStatistic
+            // 
+            this.btnStatistic.AnimationHoverSpeed = 0.07F;
+            this.btnStatistic.AnimationSpeed = 0.03F;
+            this.btnStatistic.BackColor = System.Drawing.Color.Transparent;
+            this.btnStatistic.BaseColor = System.Drawing.Color.Silver;
+            this.btnStatistic.BorderColor = System.Drawing.Color.Black;
+            this.btnStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatistic.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnStatistic.FocusedColor = System.Drawing.Color.Empty;
+            this.btnStatistic.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistic.ForeColor = System.Drawing.Color.Black;
+            this.btnStatistic.Image = null;
+            this.btnStatistic.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnStatistic.Location = new System.Drawing.Point(931, 2);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnStatistic.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnStatistic.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnStatistic.OnHoverImage = null;
+            this.btnStatistic.OnPressedColor = System.Drawing.Color.Black;
+            this.btnStatistic.Size = new System.Drawing.Size(170, 42);
+            this.btnStatistic.TabIndex = 19;
+            this.btnStatistic.Text = "Thống kê";
+            this.btnStatistic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnStatistic.Visible = false;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // btnManagement
             // 
@@ -218,7 +277,7 @@ namespace VegetableShop_DBMS
             this.btnManagement.ForeColor = System.Drawing.Color.Black;
             this.btnManagement.Image = null;
             this.btnManagement.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnManagement.Location = new System.Drawing.Point(662, 2);
+            this.btnManagement.Location = new System.Drawing.Point(755, 2);
             this.btnManagement.Name = "btnManagement";
             this.btnManagement.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnManagement.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -246,7 +305,7 @@ namespace VegetableShop_DBMS
             this.btnAddSeller.ForeColor = System.Drawing.Color.Black;
             this.btnAddSeller.Image = null;
             this.btnAddSeller.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddSeller.Location = new System.Drawing.Point(486, 2);
+            this.btnAddSeller.Location = new System.Drawing.Point(579, 2);
             this.btnAddSeller.Name = "btnAddSeller";
             this.btnAddSeller.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnAddSeller.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -274,7 +333,7 @@ namespace VegetableShop_DBMS
             this.btnAddItem.ForeColor = System.Drawing.Color.Black;
             this.btnAddItem.Image = null;
             this.btnAddItem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddItem.Location = new System.Drawing.Point(310, 2);
+            this.btnAddItem.Location = new System.Drawing.Point(403, 2);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnAddItem.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -302,7 +361,7 @@ namespace VegetableShop_DBMS
             this.btnImportItem.ForeColor = System.Drawing.Color.Black;
             this.btnImportItem.Image = null;
             this.btnImportItem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnImportItem.Location = new System.Drawing.Point(134, 2);
+            this.btnImportItem.Location = new System.Drawing.Point(227, 2);
             this.btnImportItem.Name = "btnImportItem";
             this.btnImportItem.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnImportItem.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -407,7 +466,7 @@ namespace VegetableShop_DBMS
             this.pnManagement.Controls.Add(this.btnImportItemsManagement);
             this.pnManagement.Controls.Add(this.btnItemsManagement);
             this.pnManagement.Controls.Add(this.btnOrderManagement);
-            this.pnManagement.Location = new System.Drawing.Point(675, 214);
+            this.pnManagement.Location = new System.Drawing.Point(768, 214);
             this.pnManagement.Name = "pnManagement";
             this.pnManagement.Size = new System.Drawing.Size(204, 201);
             this.pnManagement.TabIndex = 15;
@@ -547,33 +606,23 @@ namespace VegetableShop_DBMS
             this.gunaPictureBox1.TabIndex = 9;
             this.gunaPictureBox1.TabStop = false;
             // 
-            // btnStatistic
+            // pnCategory
             // 
-            this.btnStatistic.AnimationHoverSpeed = 0.07F;
-            this.btnStatistic.AnimationSpeed = 0.03F;
-            this.btnStatistic.BackColor = System.Drawing.Color.Transparent;
-            this.btnStatistic.BaseColor = System.Drawing.Color.Silver;
-            this.btnStatistic.BorderColor = System.Drawing.Color.Black;
-            this.btnStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStatistic.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnStatistic.FocusedColor = System.Drawing.Color.Empty;
-            this.btnStatistic.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStatistic.ForeColor = System.Drawing.Color.Black;
-            this.btnStatistic.Image = null;
-            this.btnStatistic.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnStatistic.Location = new System.Drawing.Point(838, 2);
-            this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnStatistic.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnStatistic.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnStatistic.OnHoverImage = null;
-            this.btnStatistic.OnPressedColor = System.Drawing.Color.Black;
-            this.btnStatistic.Size = new System.Drawing.Size(170, 42);
-            this.btnStatistic.TabIndex = 19;
-            this.btnStatistic.Text = "Thống kê";
-            this.btnStatistic.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnStatistic.Visible = false;
-            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
+            this.pnCategory.BackColor = System.Drawing.Color.Silver;
+            this.pnCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnCategory.Location = new System.Drawing.Point(12, 214);
+            this.pnCategory.Name = "pnCategory";
+            this.pnCategory.Size = new System.Drawing.Size(222, 194);
+            this.pnCategory.TabIndex = 23;
+            this.pnCategory.Visible = false;
+            // 
+            // pnPanel
+            // 
+            this.pnPanel.Location = new System.Drawing.Point(233, 215);
+            this.pnPanel.Name = "pnPanel";
+            this.pnPanel.Size = new System.Drawing.Size(224, 386);
+            this.pnPanel.TabIndex = 24;
+            this.pnPanel.Visible = false;
             // 
             // frmVegetableShop
             // 
@@ -581,6 +630,8 @@ namespace VegetableShop_DBMS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.pnPanel);
+            this.Controls.Add(this.pnCategory);
             this.Controls.Add(this.pnManagement);
             this.Controls.Add(this.pnUser);
             this.Controls.Add(this.pnItems);
@@ -629,6 +680,9 @@ namespace VegetableShop_DBMS
         private Guna.UI.WinForms.GunaButton btnUserManagement;
         private Guna.UI.WinForms.GunaButton btnItemsManagement;
         private Guna.UI.WinForms.GunaButton btnStatistic;
+        private Guna.UI.WinForms.GunaButton btnProductCategory;
+        private Guna.UI.WinForms.GunaPanel pnCategory;
+        private Guna.UI.WinForms.GunaPanel pnPanel;
     }
 }
 

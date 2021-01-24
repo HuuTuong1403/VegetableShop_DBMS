@@ -18,6 +18,7 @@ namespace VegetableShop_DBMS
     {
         private bool flaqMenuAccount = true;
         private bool flaqMenuManagement = true;
+        private bool flaqMenuCategory = true;
         public string UserName;
         public string Role;
         public string PassWord;
@@ -499,6 +500,124 @@ namespace VegetableShop_DBMS
             frmStatistic frmStatistic = new frmStatistic(UserName, PassWord);
             frmStatistic.ShowDialog();
             this.Show();
+        }
+
+        private void btnProductCategory_Click(object sender, EventArgs e)
+        {
+            int ybtn = 4;
+            if (flaqMenuCategory == true)
+            {
+                this.pnCategory.Visible = true;
+                flaqMenuCategory = false;
+            }
+            else
+            {
+                this.pnCategory.Visible = false;
+                this.pnPanel.Visible = false;
+                flaqMenuCategory = true;
+            }   
+            DataTable dtCategory = AdminSettingController.Category_Show().Tables[0];
+            int count = 0;
+            foreach(DataRow dr in dtCategory.Rows)
+            {
+                Guna.UI.WinForms.GunaButton btnCategory = new Guna.UI.WinForms.GunaButton();
+                btnCategory.Location = new Point(3, ybtn);
+                btnCategory.Size = new Size(215, 35);
+                btnCategory.Animated = true;
+                btnCategory.BackColor = Color.Transparent;
+                btnCategory.BaseColor = Color.Silver;
+                btnCategory.BorderColor = Color.Black;
+                btnCategory.ForeColor = Color.Black;
+                btnCategory.BorderSize = 1;
+                btnCategory.Cursor = Cursors.Hand;
+                btnCategory.Font = new Font("Tahoma", 13, FontStyle.Bold);
+                btnCategory.Image = null;
+                btnCategory.OnHoverBaseColor = Color.DarkGray;
+                btnCategory.Radius = 5;
+                btnCategory.TextAlign = HorizontalAlignment.Center;
+                btnCategory.Text = dr["CategoryName"].ToString();
+                btnCategory.Click += BtnCategory_Click;
+                ybtn += 34;
+                pnCategory.Controls.Add(btnCategory);
+                count++;
+            }
+            pnCategory.Height = 36 * count;
+        }
+        private void BtnCategory_Click(object sender, EventArgs e)
+        {
+            pnPanel.Controls.Clear();
+            this.pnPanel.Visible = true;
+            Guna.UI.WinForms.GunaButton btn = sender as Guna.UI.WinForms.GunaButton;
+            Guna.UI.WinForms.GunaPanel pn = new Guna.UI.WinForms.GunaPanel();
+            string CategoryName = btn.Text;
+            if(CategoryName == "Rau")
+            {
+                pn.Location = new Point(3, 4);
+                pnPanel.Location = new Point(233, 215);
+            }                  
+            if(CategoryName == "Củ")
+            {
+                pn.Location = new Point(3, 4);//38);
+                pnPanel.Location = new Point(233, 249);
+            }
+            if (CategoryName == "Quả")
+            {
+                pn.Location = new Point(3, 4);//72);
+                pnPanel.Location = new Point(233, 283);
+            }
+            if (CategoryName == "Hạt giống")
+            {
+                pn.Location = new Point(3, 4);//106);
+                pnPanel.Location = new Point(233, 317);
+            }
+            if (CategoryName == "Phân bón")
+            {
+                pn.Location = new Point(3, 4);//140);
+                pnPanel.Location = new Point(233, 351);
+            }
+
+            string IDCategory = AdminSettingController.IDCategory_Find(CategoryName).Tables[0].Rows[0][0].ToString();
+            DataTable dtSubCategory = AdminSettingController.SubCategory_Show(IDCategory).Tables[0];       
+            pn.BackColor = Color.Silver;
+            pn.Width = 217;
+
+            pnPanel.Controls.Add(pn);
+            int ybtn = 0;
+            int count = 0;
+            foreach (DataRow dr in dtSubCategory.Rows)
+            {
+                Guna.UI.WinForms.GunaButton btnSubCategory = new Guna.UI.WinForms.GunaButton();
+                btnSubCategory.Location = new Point(0, ybtn);
+                btnSubCategory.Size = new Size(215, 35);
+                btnSubCategory.Animated = true;
+                btnSubCategory.BackColor = Color.Transparent;
+                btnSubCategory.BaseColor = Color.Silver;
+                btnSubCategory.BorderColor = Color.Black;
+                btnSubCategory.ForeColor = Color.Black;
+                btnSubCategory.BorderSize = 1;
+                btnSubCategory.Cursor = Cursors.Hand;
+                btnSubCategory.Font = new Font("Tahoma", 13, FontStyle.Bold);
+                btnSubCategory.Image = null;
+                btnSubCategory.OnHoverBaseColor = Color.DarkGray;
+                btnSubCategory.Radius = 5;
+                btnSubCategory.TextAlign = HorizontalAlignment.Center;
+                btnSubCategory.Text = dr["SubCategoryName"].ToString();
+                btnSubCategory.Click += BtnSubCategory_Click;
+                ybtn += 34;
+                count++;
+                pn.Controls.Add(btnSubCategory);
+            }
+            pn.Height = 35 * count;
+            pnPanel.Height = 37 * count;
+        }
+
+        private void BtnSubCategory_Click(object sender, EventArgs e)
+        {
+            Guna.UI.WinForms.GunaButton btn = sender as Guna.UI.WinForms.GunaButton;
+            MessageBox.Show(btn.Text);
+            this.pnPanel.Visible = false;
+            this.pnCategory.Visible = false;
+            flaqMenuCategory = true;
         }
     }
 }
