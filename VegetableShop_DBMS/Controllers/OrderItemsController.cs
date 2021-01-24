@@ -50,5 +50,10 @@ namespace VegetableShop_DBMS.Controllers
             Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
             return _db.MyExecuteNonQuery("exec DeleteItem_Cart N'" + UserName + "',N'" + ItemName + "'", CommandType.Text, ref err);
         }
+        public static bool UpdateItem_Cart (string UserName, string PassWord, string ItemName, float Quantity, ref string err)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            return _db.MyExecuteNonQuery("exec UpdateItem_Cart N'" + UserName + "',N'" + ItemName + "'," + Quantity, CommandType.Text, ref err);
+        }
     }
 }

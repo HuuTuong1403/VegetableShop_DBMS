@@ -115,5 +115,25 @@ namespace VegetableShop_DBMS.Views
         {
             ItemNameTemp = dtGVShoppingCart.CurrentRow.Cells["colItemName"].Value.ToString();
         }
+
+        private void dtGVShoppingCart_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtGVShoppingCart_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            float Quantity = float.Parse(this.dtGVShoppingCart.CurrentRow.Cells["colQuantity"].Value.ToString());
+            string ItemName = this.dtGVShoppingCart.CurrentRow.Cells["colItemName"].Value.ToString();
+            bool check = OrderItemsController.UpdateItem_Cart(UserName, PassWord, ItemName, Quantity, ref err);
+            if (check == true)
+            {
+                MessageBox.Show("Bạn đã thay đổi số lượng món ăn " + ItemName + " là : " + Quantity, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Bạn đã thay đổi số lượng món ăn " + ItemName + " thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
