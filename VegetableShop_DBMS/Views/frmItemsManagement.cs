@@ -13,11 +13,15 @@ namespace VegetableShop_DBMS.Views
 {
     public partial class frmItemsManagement : Form
     {
-        public frmItemsManagement()
+        public string UserName;
+        public string PassWord;
+        public frmItemsManagement(string UserName, string PassWord)
         {
+            this.UserName = UserName;
+            this.PassWord = PassWord;
             InitializeComponent();
             Image image;
-            DataTable dtItemsManagement = ManagementController.ItemsManagement().Tables[0];
+            DataTable dtItemsManagement = ManagementController.ItemsManagement(UserName, PassWord).Tables[0];
             foreach(DataRow dr in dtItemsManagement.Rows)
             {
                 string ItemName = dr["ItemName"].ToString();

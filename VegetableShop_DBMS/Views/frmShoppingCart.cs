@@ -19,7 +19,7 @@ namespace VegetableShop_DBMS.Views
             this.UserName = UserName;
             this.PassWord = PassWord;
             InitializeComponent();
-            DataTable dtCart = OrderItemsController.ShowCart(UserName).Tables[0];
+            DataTable dtCart = OrderItemsController.ShowCart(UserName, PassWord).Tables[0];
             foreach (DataRow dr in dtCart.Rows)
             {
                 string ImageTemp = dr["Image"].ToString();
@@ -50,9 +50,9 @@ namespace VegetableShop_DBMS.Views
         private void btnOrderCart_Click(object sender, EventArgs e)
         {
             this.Hide();
-            DataTable dtIDUser = OrderItemsController.IDUser_Find(UserName).Tables[0];
+            DataTable dtIDUser = OrderItemsController.IDUser_Find(UserName, PassWord).Tables[0];
             string IDUser = dtIDUser.Rows[0][0].ToString();
-            DataTable dtAddress_User = OrderItemsController.All_Address_Show(IDUser).Tables[0];
+            DataTable dtAddress_User = OrderItemsController.All_Address_Show(IDUser, UserName, PassWord).Tables[0];
             string DefaultAddress = "";
             string PhoneNumber = "";
             string FullName = "";

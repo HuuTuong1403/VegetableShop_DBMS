@@ -11,32 +11,26 @@ namespace VegetableShop_DBMS.Controllers
 {
     class UserController
     {
-        public static DataSet ImageUser(string UserName)
+        public static DataSet ImageUser(string UserName, string PassWord)
         {
-            Database_VegetableShop _db = new Database_VegetableShop();
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
             return _db.ExecuteQueryDataSet("select Users.Image from Users where Users.UserName = N'" + UserName + "'", CommandType.Text);
         }
-        public static DataSet User_Infor(string UserName)
+        public static DataSet User_Infor(string UserName, string PassWord)
         {
-            Database_VegetableShop _db = new Database_VegetableShop();
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
             return _db.ExecuteQueryDataSet("select UserName,FullName,Gender,DateofBirth,PhoneNumber,Email,Image from Users where Users.UserName = N'" + UserName + "'", CommandType.Text);
         }
-        //    @UserName nvarchar(50),@FullName nvarchar(50),
-        //@Gender nvarchar(10),
-        //@DateofBirth date,
-        //                        @PhoneNumber varchar(20),
-        //@Email nvarchar(MAX),
-        //@Image nvarchar(MAX)
-        public static bool EditUser(string UserName, string FullName, string Gender,DateTime DateorBirth, 
+        public static bool EditUser(string UserName, string PassWord, string FullName, string Gender,DateTime DateorBirth, 
                                     string PhoneNumber, string Email, string Image, ref string err)
         {
-            Database_VegetableShop _db = new Database_VegetableShop();
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
             return _db.MyExecuteNonQuery("exec EditUser N'" + UserName + "',N'" + FullName + "',N'" + Gender +
             "','" + DateorBirth + "',N'" + PhoneNumber + "',N'" + Email + "',N'" + Image + "'",CommandType.Text, ref err);
         }
-        public static DataSet ShowRole (string UserName)
+        public static DataSet ShowRole (string UserName, string PassWord)
         {
-            Database_VegetableShop _db = new Database_VegetableShop();
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
             return _db.ExecuteQueryDataSet("select Roles.Role from Users inner join Roles on Users.IDRole = Roles.IDRole where Users.UserName = N'" +
                 UserName + "'", CommandType.Text);
         }

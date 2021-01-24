@@ -60,7 +60,7 @@ namespace VegetableShop_DBMS
             int xbtn = 65;
             int xlbl = 111;
             int count = 0;
-            dtItem = HomeController.ShowItem().Tables[0];
+            dtItem = HomeController.ShowItem(UserName).Tables[0];
             while (count < 6)
             {
                 DataRow dr = dtItem.Rows[count];
@@ -147,7 +147,7 @@ namespace VegetableShop_DBMS
                 string ItemName = btn.Text;
                 float SalePrice = float.Parse(HomeController.PriceItem(ItemName).Tables[0].Rows[0][0].ToString());
                 float Quantity = 1;
-                bool check = OrderItemsController.AddCart(UserName, ItemName, SalePrice, Quantity, ref err); 
+                bool check = OrderItemsController.AddCart(UserName, PassWord, ItemName, SalePrice, Quantity, ref err); 
                 if (check == true)
                 {
                     MessageBox.Show("Bạn đã thêm " + ItemName + " vào giỏ hàng thành công");
@@ -374,7 +374,7 @@ namespace VegetableShop_DBMS
         private void btnInformationAccount_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmInformationAccount frmInfor = new frmInformationAccount(UserName);
+            frmInformationAccount frmInfor = new frmInformationAccount(UserName, PassWord);
             frmInfor.ShowDialog();
             this.Show();
         }
@@ -402,7 +402,7 @@ namespace VegetableShop_DBMS
         private void btnAddSeller_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmRegisterSeller frmRS = new frmRegisterSeller();
+            frmRegisterSeller frmRS = new frmRegisterSeller(UserName, PassWord);
             frmRS.ShowDialog();
             this.Show();
         }
@@ -410,7 +410,7 @@ namespace VegetableShop_DBMS
         private void btnAddItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmAddItem frmAdd = new frmAddItem();
+            frmAddItem frmAdd = new frmAddItem(UserName, PassWord);
             frmAdd.ShowDialog();
             this.Show();
         }
@@ -418,7 +418,7 @@ namespace VegetableShop_DBMS
         private void btnImportItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmImportItem frmImport = new frmImportItem(UserName);
+            frmImportItem frmImport = new frmImportItem(UserName, PassWord);
             frmImport.ShowDialog();
             this.Show();
         }
@@ -453,7 +453,7 @@ namespace VegetableShop_DBMS
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmUserManagement frmUser = new frmUserManagement();
+            frmUserManagement frmUser = new frmUserManagement(UserName, PassWord);
             frmUser.ShowDialog();
             this.Show();
         }
@@ -461,7 +461,7 @@ namespace VegetableShop_DBMS
         private void btnItemsManagement_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmItemsManagement frmItems = new frmItemsManagement();
+            frmItemsManagement frmItems = new frmItemsManagement(UserName, PassWord);
             frmItems.ShowDialog();
             this.Show();
         }
@@ -469,7 +469,7 @@ namespace VegetableShop_DBMS
         private void btnImportItemsManagement_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmImportItemsManagement frmImport = new frmImportItemsManagement();
+            frmImportItemsManagement frmImport = new frmImportItemsManagement(UserName, PassWord);
             frmImport.ShowDialog();
             this.Show();
         }

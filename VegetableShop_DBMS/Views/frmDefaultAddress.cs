@@ -16,13 +16,15 @@ namespace VegetableShop_DBMS.Views
         string err;
         private bool flaqNewAddress = true;
         public string UserName;
+        public string PassWord;
         public string DefaultAddress;
         public List<string> lstAddress = new List<string>();
         public int indexCombobox;
-        public frmDefaultAddress(string UserName, string DefaultAddress)
+        public frmDefaultAddress(string UserName, string PassWord, string DefaultAddress)
         {
             this.UserName = UserName;
-            this.DefaultAddress = DefaultAddress;        
+            this.DefaultAddress = DefaultAddress;
+            this.PassWord = PassWord;
             InitializeComponent();
             this.cbbDefalutAddress.Text = DefaultAddress;
         }
@@ -142,7 +144,7 @@ namespace VegetableShop_DBMS.Views
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            DataTable dtIDUser = OrderItemsController.IDUser_Find(UserName).Tables[0];
+            DataTable dtIDUser = OrderItemsController.IDUser_Find(UserName, PassWord).Tables[0];
             string IDUser = dtIDUser.Rows[0][0].ToString();
 
             string FullName = txtFullName.Text;
@@ -152,7 +154,7 @@ namespace VegetableShop_DBMS.Views
             string Ward = cbbWard.SelectedItem.ToString();
             string Street = txtStreet.Text;
 
-            bool check = OrderItemsController.Add_AddressForUser(IDUser, Province, District, Ward, Street, PhoneNumber, FullName, ref err);
+            bool check = OrderItemsController.Add_AddressForUser(UserName, PassWord, IDUser, Province, District, Ward, Street, PhoneNumber, FullName, ref err);
             if (check == true)
             {
                 DialogResult dialog;
@@ -178,10 +180,10 @@ namespace VegetableShop_DBMS.Views
 
         private void cbbDefalutAddress_Click(object sender, EventArgs e)
         {
-            DataTable dtIDUser = OrderItemsController.IDUser_Find(UserName).Tables[0];
+            DataTable dtIDUser = OrderItemsController.IDUser_Find(UserName, PassWord).Tables[0];
             string IDUser = dtIDUser.Rows[0][0].ToString();
             cbbDefalutAddress.Items.Clear();
-            DataTable dtAddress_User = OrderItemsController.All_Address_Show(IDUser).Tables[0];
+            DataTable dtAddress_User = OrderItemsController.All_Address_Show(IDUser, UserName, PassWord).Tables[0];
             foreach (DataRow dr in dtAddress_User.Rows)
             {
                 string temp = dr["Street"].ToString() + ", " + dr["Ward"].ToString() + ", " + dr["District"].ToString() + ", " + dr["Province"].ToString();
@@ -194,7 +196,7 @@ namespace VegetableShop_DBMS.Views
         private void btnAcceptDefaultAddress_Click(object sender, EventArgs e)
         {
             string IDAddress_User = lstAddress[indexCombobox];
-            bool check = OrderItemsController.ChangeDefauleAddress_User(UserName, IDAddress_User, ref err);
+            bool check = OrderItemsController.ChangeDefauleAddress_User(UserName, PassWord, IDAddress_User, ref err);
             if(check == true)
             {
                 MessageBox.Show("Bạn đã đổi địa chỉ mặc định thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

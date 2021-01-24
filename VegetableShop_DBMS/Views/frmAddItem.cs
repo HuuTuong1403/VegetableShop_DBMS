@@ -14,10 +14,14 @@ namespace VegetableShop_DBMS.Views
 {
     public partial class frmAddItem : Form
     {
+        public string UserName;
+        public string PassWord;
         string ItemImageName = "";
         string err = "";
-        public frmAddItem()
+        public frmAddItem(string UserName, string PassWord)
         {
+            this.UserName = UserName;
+            this.PassWord = PassWord;
             InitializeComponent();
         }
 
@@ -94,7 +98,7 @@ namespace VegetableShop_DBMS.Views
 
             //bool check = SignUpController.Register_Customer(UserName, PassWord, FullName, Gender, 
             //    DateofBirth, PhoneNumber, Email, Image, Province, District, Ward, Street, ref err);
-            bool check = AdminSettingController.AddItem(ItemName, ImportPrice, SalePrice, Description, Orgin, IDCategory, IDSubCategory, Image, ref err);
+            bool check = AdminSettingController.AddItem(UserName, PassWord, ItemName, ImportPrice, SalePrice, Description, Orgin, IDCategory, IDSubCategory, Image, ref err);
             if (check == true)
             {
                 DialogResult dialogResult;

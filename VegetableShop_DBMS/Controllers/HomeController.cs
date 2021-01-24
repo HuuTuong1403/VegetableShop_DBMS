@@ -10,7 +10,7 @@ namespace VegetableShop_DBMS.Controllers
 {
     class HomeController
     {
-        public static DataSet ShowItem()
+        public static DataSet ShowItem(string UserName)
         {
             Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select ItemName, SalePrice, Image from Items", CommandType.Text);

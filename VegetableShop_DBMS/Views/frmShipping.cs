@@ -38,14 +38,14 @@ namespace VegetableShop_DBMS.Views
         private void btnUpdateAddress_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmDefaultAddress frmDefault = new frmDefaultAddress(UserName, DefaultAddress);
+            frmDefaultAddress frmDefault = new frmDefaultAddress(UserName, PassWord, DefaultAddress);
             frmDefault.ShowDialog();
             this.Close();
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
-            bool check = OrderItemsController.OrderItem(UserName, ref err);
+            bool check = OrderItemsController.OrderItem(UserName, PassWord, ref err);
             if (check == true)
             {
                 DialogResult dialogResult;
@@ -53,7 +53,7 @@ namespace VegetableShop_DBMS.Views
                 if (dialogResult == DialogResult.OK)
                 {
                     this.Hide();
-                    string Role = UserController.ShowRole(UserName).Tables[0].Rows[0][0].ToString();
+                    string Role = UserController.ShowRole(UserName, PassWord).Tables[0].Rows[0][0].ToString();
                     this.Close();
                 }
             }

@@ -14,10 +14,12 @@ namespace VegetableShop_DBMS.Views
     public partial class frmImportItem : Form
     {
         public string UserName;
+        public string PassWord;
         string err;
-        public frmImportItem(string UserName)
+        public frmImportItem(string UserName, string PassWord)
         {
             this.UserName = UserName;
+            this.PassWord = PassWord;
             InitializeComponent();
             txtUserName.Text = UserName;
             txtUserName.ReadOnly = true;
@@ -29,7 +31,7 @@ namespace VegetableShop_DBMS.Views
             string UserName = txtUserName.Text.Trim();
             float Quantity = float.Parse(txtQuantity.Text.Trim());
 
-            bool check = SellerSettingController.ImportItems(ItemName, UserName, Quantity, ref err);
+            bool check = SellerSettingController.ImportItems(ItemName, UserName, PassWord, Quantity, ref err);
             if (check == true)
             {
                 DialogResult dialogResult;
@@ -64,7 +66,7 @@ namespace VegetableShop_DBMS.Views
 
         private void cbbItems_Click(object sender, EventArgs e)
         {
-            DataTable dt = SellerSettingController.Items_Show().Tables[0];
+            DataTable dt = SellerSettingController.Items_Show(UserName, PassWord).Tables[0];
             cbbItems.Items.Clear();
             foreach (DataRow dr in dt.Rows)
             {

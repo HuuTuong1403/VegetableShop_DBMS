@@ -16,15 +16,17 @@ namespace VegetableShop_DBMS.Views
     public partial class frmInformationAccount : Form
     {
         string UserName;
+        string PassWord;
         string ImageNameEdit = "1";
         string ImageTemp;
         string err;
-        public frmInformationAccount(string UserName)
+        public frmInformationAccount(string UserName, string PassWord)
         {
             this.UserName = UserName;
+            this.PassWord = PassWord;
             InitializeComponent();
-            ImageTemp = UserController.ImageUser(UserName).Tables[0].Rows[0][0].ToString();
-            DataTable dataTable = UserController.User_Infor(UserName).Tables[0];
+            ImageTemp = UserController.ImageUser(UserName, PassWord).Tables[0].Rows[0][0].ToString();
+            DataTable dataTable = UserController.User_Infor(UserName, PassWord).Tables[0];
             DataRow dr = dataTable.Rows[0];
             txtAccount.Text = dr["UserName"].ToString();
             txtAccount.ReadOnly = true;
@@ -94,14 +96,14 @@ namespace VegetableShop_DBMS.Views
             {
                 ImageName = ImageNameEdit;
             }
-            bool check = UserController.EditUser(UserName, FullName, Gender, DateofBirth, PhoneNumber, Email, ImageName, ref err);
+            bool check = UserController.EditUser(UserName, PassWord, FullName, Gender, DateofBirth, PhoneNumber, Email, ImageName, ref err);
             if (check == true)
             {
                 DialogResult dialogResult;
                 dialogResult = MessageBox.Show("Bạn đã chỉnh sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.OK)
                 {
-                    DataTable dataTable = UserController.User_Infor(UserName).Tables[0];
+                    DataTable dataTable = UserController.User_Infor(UserName, PassWord).Tables[0];
                     DataRow dr = dataTable.Rows[0];
                     txtAccount.Text = dr["UserName"].ToString();
                     txtAccount.ReadOnly = true;
@@ -110,7 +112,7 @@ namespace VegetableShop_DBMS.Views
                     txtEmail.Text = dr["Email"].ToString();
                     cbbGender.SelectedItem = dr["Gender"].ToString();
                     dtpDateOfBirth.Value = DateTime.Parse(dr["DateofBirth"].ToString());
-                    ImageTemp = UserController.ImageUser(UserName).Tables[0].Rows[0][0].ToString();
+                    ImageTemp = UserController.ImageUser(UserName, PassWord).Tables[0].Rows[0][0].ToString();
                     if (ImageTemp != "")
                     {
                         string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesUser\";

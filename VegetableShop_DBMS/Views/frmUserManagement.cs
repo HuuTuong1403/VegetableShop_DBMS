@@ -14,21 +14,24 @@ namespace VegetableShop_DBMS.Views
     public partial class frmUserManagement : Form
     {
         public string UserName;
+        public string PassWord;
         public string err;
-        public frmUserManagement()
+        public frmUserManagement(string UserName, string PassWord)
         {
+            this.UserName = UserName;
+            this.PassWord = PassWord;
             InitializeComponent();
-            DataTable dtUserManagement = ManagementController.UserManagement().Tables[0];
+            DataTable dtUserManagement = ManagementController.UserManagement(UserName, PassWord).Tables[0];
             foreach (DataRow dr in dtUserManagement.Rows)
             {
-                string UserName = dr["UserName"].ToString();
+                string Acccount = dr["UserName"].ToString();
                 string FullName = dr["Fullname"].ToString();
                 string Gender = dr["Gender"].ToString();
                 string DOB = dr["DateofBirth"].ToString();
                 string PhoneNumber = dr["PhoneNumber"].ToString();
                 string Email = dr["Email"].ToString();
                 string Role = dr["Role"].ToString();
-                dtGVUserManagement.Rows.Add(UserName, FullName, Gender, DOB, PhoneNumber, Email, Role);
+                dtGVUserManagement.Rows.Add(Acccount, FullName, Gender, DOB, PhoneNumber, Email, Role);
             }
         }
 
@@ -36,7 +39,7 @@ namespace VegetableShop_DBMS.Views
         {
             if (UserName != null)
             {
-                bool check = ManagementController.DeleteUser(UserName, ref err);
+                bool check = ManagementController.DeleteUser(UserName, PassWord, ref err);
                 if(check == true)
                 {
                     DialogResult dialogResult;
@@ -44,18 +47,18 @@ namespace VegetableShop_DBMS.Views
                     if(dialogResult == DialogResult.OK)
                     {
                         MessageBox.Show("Bạn đã xóa người dùng khỏi hệ thống thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DataTable dtUserManagement = ManagementController.UserManagement().Tables[0];
+                        DataTable dtUserManagement = ManagementController.UserManagement(UserName, PassWord).Tables[0];
                         dtGVUserManagement.Rows.Clear();
                         foreach (DataRow dr in dtUserManagement.Rows)
                         {
-                            string UserName = dr["UserName"].ToString();
+                            string Account = dr["UserName"].ToString();
                             string FullName = dr["Fullname"].ToString();
                             string Gender = dr["Gender"].ToString();
                             string DOB = dr["DateofBirth"].ToString();
                             string PhoneNumber = dr["PhoneNumber"].ToString();
                             string Email = dr["Email"].ToString();
                             string Role = dr["Role"].ToString();
-                            dtGVUserManagement.Rows.Add(UserName, FullName, Gender, DOB, PhoneNumber, Email, Role);
+                            dtGVUserManagement.Rows.Add(Account, FullName, Gender, DOB, PhoneNumber, Email, Role);
                         }
                     }      
                 }

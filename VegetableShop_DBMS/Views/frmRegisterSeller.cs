@@ -12,16 +12,20 @@ namespace VegetableShop_DBMS.Views
 {
     public partial class frmRegisterSeller : Form
     {
+        public string UserName;
+        public string PassWord;
         string err;
-        public frmRegisterSeller()
+        public frmRegisterSeller(string UserName, string PassWord)
         {
+            this.UserName = UserName;
+            this.PassWord = PassWord;
             InitializeComponent();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string UserName = txtUsername.Text.Trim();
-            string PassWord = txtPassword.Text.Trim();
+            string UserNameSeller = txtUsername.Text.Trim();
+            string PassWordSeller = txtPassword.Text.Trim();
             string FullName = txtFullName.Text.Trim();
             string Gender = cbbGender.SelectedItem.ToString();
             DateTime DateofBirth = dtpDateOfBirth.Value;
@@ -29,7 +33,7 @@ namespace VegetableShop_DBMS.Views
             string Email = txtEmail.Text.Trim();
             string Image = "";
 
-            bool check = AdminSettingController.Register_Seller(UserName, PassWord, FullName, Gender, DateofBirth, PhoneNumber, Email, Image, ref err);
+            bool check = AdminSettingController.Register_Seller(UserName, UserNameSeller, PassWord, PassWordSeller, FullName, Gender, DateofBirth, PhoneNumber, Email, Image, ref err);
             if (check == true)
             {
                 DialogResult dialogResult;
