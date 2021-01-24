@@ -50,5 +50,10 @@ namespace VegetableShop_DBMS.Controllers
             Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
             return _db.ExecuteQueryDataSet("select dbo.CountOrder(N'" + UserName + "',N'" + OrderStateName+"')", CommandType.Text);
         }
+        public static bool DeleteItem (string UserName, string PassWord, string ItemName, ref string err)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.MyExecuteNonQuery("exec DeleteItems N'" + ItemName + "'", CommandType.Text, ref err);
+        }
     }
 }

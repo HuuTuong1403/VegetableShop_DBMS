@@ -64,7 +64,8 @@ namespace VegetableShop_DBMS.Views
             this.btnDeleteItems.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteItems.Image")));
             this.btnDeleteItems.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnDeleteItems.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDeleteItems.Location = new System.Drawing.Point(680, 508);
+            this.btnDeleteItems.Location = new System.Drawing.Point(907, 625);
+            this.btnDeleteItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDeleteItems.Name = "btnDeleteItems";
             this.btnDeleteItems.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDeleteItems.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -72,18 +73,20 @@ namespace VegetableShop_DBMS.Views
             this.btnDeleteItems.OnHoverImage = null;
             this.btnDeleteItems.OnPressedColor = System.Drawing.Color.Black;
             this.btnDeleteItems.Radius = 10;
-            this.btnDeleteItems.Size = new System.Drawing.Size(173, 42);
+            this.btnDeleteItems.Size = new System.Drawing.Size(231, 52);
             this.btnDeleteItems.TabIndex = 34;
             this.btnDeleteItems.Text = "Xóa thực phẩm";
             this.btnDeleteItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDeleteItems.Click += new System.EventHandler(this.btnDeleteItems_Click);
             // 
             // gunaPictureBox2
             // 
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
-            this.gunaPictureBox2.Location = new System.Drawing.Point(189, 12);
+            this.gunaPictureBox2.Location = new System.Drawing.Point(252, 15);
+            this.gunaPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(598, 119);
+            this.gunaPictureBox2.Size = new System.Drawing.Size(797, 146);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox2.TabIndex = 33;
             this.gunaPictureBox2.TabStop = false;
@@ -92,9 +95,10 @@ namespace VegetableShop_DBMS.Views
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(11, 12);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(15, 15);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(126, 119);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(168, 146);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 32;
             this.gunaPictureBox1.TabStop = false;
@@ -104,9 +108,10 @@ namespace VegetableShop_DBMS.Views
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel1.Location = new System.Drawing.Point(252, 145);
+            this.gunaLabel1.Location = new System.Drawing.Point(336, 178);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(310, 33);
+            this.gunaLabel1.Size = new System.Drawing.Size(388, 41);
             this.gunaLabel1.TabIndex = 31;
             this.gunaLabel1.Text = "QUẢN LÝ THỰC PHẨM";
             // 
@@ -124,79 +129,93 @@ namespace VegetableShop_DBMS.Views
             this.clSubCategory,
             this.clQuantity,
             this.clImage});
-            this.dtGVItemsManagement.Location = new System.Drawing.Point(2, 193);
+            this.dtGVItemsManagement.Location = new System.Drawing.Point(3, 238);
+            this.dtGVItemsManagement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtGVItemsManagement.Name = "dtGVItemsManagement";
             this.dtGVItemsManagement.RowHeadersWidth = 51;
             this.dtGVItemsManagement.RowTemplate.Height = 80;
-            this.dtGVItemsManagement.Size = new System.Drawing.Size(851, 309);
+            this.dtGVItemsManagement.Size = new System.Drawing.Size(1135, 380);
             this.dtGVItemsManagement.TabIndex = 30;
+            this.dtGVItemsManagement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVItemsManagement_CellClick);
             // 
             // clItemName
             // 
             this.clItemName.HeaderText = "Tên thực phẩm";
+            this.clItemName.MinimumWidth = 6;
             this.clItemName.Name = "clItemName";
+            this.clItemName.Width = 125;
             // 
             // clImportPrice
             // 
             this.clImportPrice.HeaderText = "Giá nhập";
+            this.clImportPrice.MinimumWidth = 6;
             this.clImportPrice.Name = "clImportPrice";
             this.clImportPrice.Width = 80;
             // 
             // clSalePrice
             // 
             this.clSalePrice.HeaderText = "Giá bán";
+            this.clSalePrice.MinimumWidth = 6;
             this.clSalePrice.Name = "clSalePrice";
             this.clSalePrice.Width = 80;
             // 
             // clDescription
             // 
             this.clDescription.HeaderText = "Mô tả";
+            this.clDescription.MinimumWidth = 6;
             this.clDescription.Name = "clDescription";
             this.clDescription.Width = 140;
             // 
             // clOrigin
             // 
             this.clOrigin.HeaderText = "Xuất xứ";
+            this.clOrigin.MinimumWidth = 6;
             this.clOrigin.Name = "clOrigin";
             this.clOrigin.Width = 70;
             // 
             // clCategory
             // 
             this.clCategory.HeaderText = "Phân loại";
+            this.clCategory.MinimumWidth = 6;
             this.clCategory.Name = "clCategory";
             this.clCategory.Width = 80;
             // 
             // clSubCategory
             // 
             this.clSubCategory.HeaderText = "Danh mục";
+            this.clSubCategory.MinimumWidth = 6;
             this.clSubCategory.Name = "clSubCategory";
             this.clSubCategory.Width = 80;
             // 
             // clQuantity
             // 
             this.clQuantity.HeaderText = "Số lượng";
+            this.clQuantity.MinimumWidth = 6;
             this.clQuantity.Name = "clQuantity";
             this.clQuantity.Width = 50;
             // 
             // clImage
             // 
             this.clImage.HeaderText = "Hình ảnh";
+            this.clImage.MinimumWidth = 6;
             this.clImage.Name = "clImage";
             this.clImage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.clImage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clImage.Width = 125;
             // 
             // frmItemsManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(865, 562);
+            this.ClientSize = new System.Drawing.Size(1153, 692);
             this.Controls.Add(this.btnDeleteItems);
             this.Controls.Add(this.gunaPictureBox2);
             this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.dtGVItemsManagement);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmItemsManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
