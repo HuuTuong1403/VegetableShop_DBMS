@@ -56,6 +56,8 @@ namespace VegetableShop_DBMS
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pnCategory = new Guna.UI.WinForms.GunaPanel();
             this.pnPanel = new Guna.UI.WinForms.GunaPanel();
+            this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
+            this.btnSearch = new Guna.UI.WinForms.GunaButton();
             this.pnUser.SuspendLayout();
             this.pnGroupMenu.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
@@ -418,7 +420,7 @@ namespace VegetableShop_DBMS
             // 
             this.gunaPanel1.Controls.Add(this.lblShowCart);
             this.gunaPanel1.Controls.Add(this.btnShoppingCart);
-            this.gunaPanel1.Location = new System.Drawing.Point(1092, 40);
+            this.gunaPanel1.Location = new System.Drawing.Point(1093, 34);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(204, 66);
             this.gunaPanel1.TabIndex = 21;
@@ -624,12 +626,60 @@ namespace VegetableShop_DBMS
             this.pnPanel.TabIndex = 24;
             this.pnPanel.Visible = false;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BaseColor = System.Drawing.Color.White;
+            this.txtSearch.BorderColor = System.Drawing.Color.Black;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtSearch.FocusedBorderColor = System.Drawing.Color.Gray;
+            this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtSearch.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(1005, 126);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.Radius = 5;
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(247, 35);
+            this.txtSearch.TabIndex = 48;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Animated = true;
+            this.btnSearch.AnimationHoverSpeed = 0.07F;
+            this.btnSearch.AnimationSpeed = 0.03F;
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BaseColor = System.Drawing.Color.Silver;
+            this.btnSearch.BorderColor = System.Drawing.Color.Black;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSearch.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSearch.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageSize = new System.Drawing.Size(21, 21);
+            this.btnSearch.Location = new System.Drawing.Point(1258, 128);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.OnHoverBaseColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSearch.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSearch.OnHoverImage = null;
+            this.btnSearch.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSearch.Radius = 10;
+            this.btnSearch.Size = new System.Drawing.Size(96, 31);
+            this.btnSearch.TabIndex = 21;
+            this.btnSearch.Text = "Tìm";
+            this.btnSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // frmVegetableShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.pnPanel);
             this.Controls.Add(this.pnCategory);
             this.Controls.Add(this.pnManagement);
@@ -683,6 +733,8 @@ namespace VegetableShop_DBMS
         private Guna.UI.WinForms.GunaButton btnProductCategory;
         private Guna.UI.WinForms.GunaPanel pnCategory;
         private Guna.UI.WinForms.GunaPanel pnPanel;
+        private Guna.UI.WinForms.GunaTextBox txtSearch;
+        private Guna.UI.WinForms.GunaButton btnSearch;
     }
 }
 
