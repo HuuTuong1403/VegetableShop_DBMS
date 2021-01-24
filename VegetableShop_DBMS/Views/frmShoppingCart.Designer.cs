@@ -31,17 +31,17 @@ namespace VegetableShop_DBMS.Views
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShoppingCart));
             this.dtGVShoppingCart = new System.Windows.Forms.DataGridView();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.btnDeleteCart = new Guna.UI.WinForms.GunaButton();
-            this.btnOrderCart = new Guna.UI.WinForms.GunaButton();
-            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.colImage = new System.Windows.Forms.DataGridViewImageColumn();
             this.colItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSalePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colOrigin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.btnDeleteCart = new Guna.UI.WinForms.GunaButton();
+            this.btnOrderCart = new Guna.UI.WinForms.GunaButton();
+            this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVShoppingCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
@@ -64,6 +64,53 @@ namespace VegetableShop_DBMS.Views
             this.dtGVShoppingCart.RowTemplate.Height = 80;
             this.dtGVShoppingCart.Size = new System.Drawing.Size(796, 288);
             this.dtGVShoppingCart.TabIndex = 0;
+            this.dtGVShoppingCart.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVShoppingCart_CellClick);
+            // 
+            // colImage
+            // 
+            this.colImage.HeaderText = "Image";
+            this.colImage.MinimumWidth = 6;
+            this.colImage.Name = "colImage";
+            this.colImage.ReadOnly = true;
+            this.colImage.Width = 125;
+            // 
+            // colItemName
+            // 
+            this.colItemName.HeaderText = "Tên món ăn";
+            this.colItemName.MinimumWidth = 6;
+            this.colItemName.Name = "colItemName";
+            this.colItemName.ReadOnly = true;
+            this.colItemName.Width = 140;
+            // 
+            // colDescription
+            // 
+            this.colDescription.HeaderText = "Thành phần";
+            this.colDescription.MinimumWidth = 6;
+            this.colDescription.Name = "colDescription";
+            this.colDescription.ReadOnly = true;
+            this.colDescription.Width = 150;
+            // 
+            // colSalePrice
+            // 
+            this.colSalePrice.HeaderText = "Giá";
+            this.colSalePrice.MinimumWidth = 6;
+            this.colSalePrice.Name = "colSalePrice";
+            this.colSalePrice.ReadOnly = true;
+            // 
+            // colOrigin
+            // 
+            this.colOrigin.HeaderText = "Xuất xứ";
+            this.colOrigin.MinimumWidth = 6;
+            this.colOrigin.Name = "colOrigin";
+            this.colOrigin.ReadOnly = true;
+            this.colOrigin.Width = 125;
+            // 
+            // colQuantity
+            // 
+            this.colQuantity.HeaderText = "Số lượng";
+            this.colQuantity.MinimumWidth = 6;
+            this.colQuantity.Name = "colQuantity";
+            this.colQuantity.Width = 80;
             // 
             // gunaLabel1
             // 
@@ -103,6 +150,7 @@ namespace VegetableShop_DBMS.Views
             this.btnDeleteCart.TabIndex = 23;
             this.btnDeleteCart.Text = "Xóa";
             this.btnDeleteCart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDeleteCart.Click += new System.EventHandler(this.btnDeleteCart_Click);
             // 
             // btnOrderCart
             // 
@@ -154,52 +202,6 @@ namespace VegetableShop_DBMS.Views
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 20;
             this.gunaPictureBox1.TabStop = false;
-            // 
-            // colImage
-            // 
-            this.colImage.HeaderText = "Image";
-            this.colImage.MinimumWidth = 6;
-            this.colImage.Name = "colImage";
-            this.colImage.ReadOnly = true;
-            this.colImage.Width = 125;
-            // 
-            // colItemName
-            // 
-            this.colItemName.HeaderText = "Tên món ăn";
-            this.colItemName.MinimumWidth = 6;
-            this.colItemName.Name = "colItemName";
-            this.colItemName.ReadOnly = true;
-            this.colItemName.Width = 140;
-            // 
-            // colDescription
-            // 
-            this.colDescription.HeaderText = "Thành phần";
-            this.colDescription.MinimumWidth = 6;
-            this.colDescription.Name = "colDescription";
-            this.colDescription.ReadOnly = true;
-            this.colDescription.Width = 150;
-            // 
-            // colSalePrice
-            // 
-            this.colSalePrice.HeaderText = "Giá";
-            this.colSalePrice.MinimumWidth = 6;
-            this.colSalePrice.Name = "colSalePrice";
-            this.colSalePrice.ReadOnly = true;
-            // 
-            // colOrigin
-            // 
-            this.colOrigin.HeaderText = "Xuất xứ";
-            this.colOrigin.MinimumWidth = 6;
-            this.colOrigin.Name = "colOrigin";
-            this.colOrigin.ReadOnly = true;
-            this.colOrigin.Width = 125;
-            // 
-            // colQuantity
-            // 
-            this.colQuantity.HeaderText = "Số lượng";
-            this.colQuantity.MinimumWidth = 6;
-            this.colQuantity.Name = "colQuantity";
-            this.colQuantity.Width = 80;
             // 
             // frmShoppingCart
             // 

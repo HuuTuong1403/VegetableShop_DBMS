@@ -513,6 +513,7 @@ namespace VegetableShop_DBMS.Views
             this.btnAcceptChangePwd.TabIndex = 71;
             this.btnAcceptChangePwd.Text = "ĐỒNG Ý";
             this.btnAcceptChangePwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAcceptChangePwd.Click += new System.EventHandler(this.btnAcceptChangePwd_Click);
             // 
             // txtRePwd
             // 

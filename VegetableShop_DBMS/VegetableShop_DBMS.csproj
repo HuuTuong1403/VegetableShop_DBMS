@@ -56,6 +56,7 @@
     <Compile Include="Controllers\SellerSettingController.cs" />
     <Compile Include="Controllers\SignInController.cs" />
     <Compile Include="Controllers\SignUpController.cs" />
+    <Compile Include="Controllers\StatisticController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Models\Database_VegetableShop.cs" />
     <Compile Include="Views\Form1.cs">

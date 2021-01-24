@@ -21,6 +21,7 @@ namespace VegetableShop_DBMS
         public string UserName;
         public string Role;
         public string PassWord;
+        public string ImageUser;
         DataTable dtItem;
         string err;
         public frmVegetableShop(string UserName, string PassWord, string Role)
@@ -29,12 +30,20 @@ namespace VegetableShop_DBMS
             this.PassWord = PassWord;
             this.Role = Role;
             InitializeComponent();
+            
             if (UserName == "")
             {
                 btnAccount.Text = "Username ▼";
             }
             else
             {
+                ImageUser = UserController.ImageUser(UserName).Tables[0].Rows[0][0].ToString();
+                if (ImageUser != "")
+                {
+                    string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesUser\";
+                    string FileName = appPath + ImageUser;
+                    btnAccount.Image = Image.FromFile(FileName);
+                }
                 this.btnLogOut.Visible = true;
                 btnAccount.Text = UserName + "▼";
                 this.btnSignIn.Visible = false;
@@ -42,6 +51,7 @@ namespace VegetableShop_DBMS
                 this.btnInformationAccount.Visible = true;
                 this.btnInformationAccount.Location = new Point(3, 6);
                 this.btnLogOut.Location = new Point(3, 54);
+                
             }
             if (Role == "Admin")
             {
@@ -49,6 +59,7 @@ namespace VegetableShop_DBMS
                 this.btnAddSeller.Visible = true;
                 this.btnImportItem.Visible = true;
                 this.btnManagement.Visible = true;
+                this.btnStatistic.Visible = true;
             }
             if (Role == "Seller")
             {
@@ -346,7 +357,7 @@ namespace VegetableShop_DBMS
             this.Hide();
             frmSignIn frmSignIn = new frmSignIn();
             frmSignIn.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
@@ -479,6 +490,14 @@ namespace VegetableShop_DBMS
             this.Hide();
             frmOrderManagement frmOrder = new frmOrderManagement(UserName, PassWord);
             frmOrder.ShowDialog();
+            this.Show();
+        }
+
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmStatistic frmStatistic = new frmStatistic(UserName, PassWord);
+            frmStatistic.ShowDialog();
             this.Show();
         }
     }

@@ -15,13 +15,14 @@ namespace VegetableShop_DBMS.Views
     {
         public string UserName;
         public string PassWord;
+        public string UserNameUser;
         public string err;
         public frmUserManagement(string UserName, string PassWord)
         {
             this.UserName = UserName;
             this.PassWord = PassWord;
             InitializeComponent();
-            DataTable dtUserManagement = ManagementController.UserManagement(UserName, PassWord).Tables[0];
+            DataTable dtUserManagement = ManagementController.UserManagement().Tables[0];
             foreach (DataRow dr in dtUserManagement.Rows)
             {
                 string Acccount = dr["UserName"].ToString();
@@ -37,17 +38,17 @@ namespace VegetableShop_DBMS.Views
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
         {
-            if (UserName != null)
+            if (UserNameUser != null)
             {
-                bool check = ManagementController.DeleteUser(UserName, PassWord, ref err);
+                bool check = ManagementController.DeleteUser(UserNameUser, UserName, PassWord, ref err);
                 if(check == true)
                 {
                     DialogResult dialogResult;
-                    dialogResult = MessageBox.Show("Bạn có muốn xóa người dùng có tài khoản " + UserName, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    dialogResult = MessageBox.Show("Bạn có muốn xóa người dùng có tài khoản " + UserNameUser, "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                     if(dialogResult == DialogResult.OK)
                     {
                         MessageBox.Show("Bạn đã xóa người dùng khỏi hệ thống thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        DataTable dtUserManagement = ManagementController.UserManagement(UserName, PassWord).Tables[0];
+                        DataTable dtUserManagement = ManagementController.UserManagement().Tables[0];
                         dtGVUserManagement.Rows.Clear();
                         foreach (DataRow dr in dtUserManagement.Rows)
                         {
@@ -71,7 +72,7 @@ namespace VegetableShop_DBMS.Views
 
         private void dtGVUserManagement_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            UserName = dtGVUserManagement.CurrentRow.Cells["clUserName"].Value.ToString();
+            UserNameUser = dtGVUserManagement.CurrentRow.Cells["clUserName"].Value.ToString();
         }
     }
 }

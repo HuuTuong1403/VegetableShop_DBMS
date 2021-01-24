@@ -11,14 +11,14 @@ namespace VegetableShop_DBMS.Controllers
 {
     class UserController
     {
-        public static DataSet ImageUser(string UserName, string PassWord)
+        public static DataSet ImageUser(string UserName)
         {
-            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select Users.Image from Users where Users.UserName = N'" + UserName + "'", CommandType.Text);
         }
-        public static DataSet User_Infor(string UserName, string PassWord)
+        public static DataSet User_Infor(string UserName)
         {
-            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select UserName,FullName,Gender,DateofBirth,PhoneNumber,Email,Image from Users where Users.UserName = N'" + UserName + "'", CommandType.Text);
         }
         public static bool EditUser(string UserName, string PassWord, string FullName, string Gender,DateTime DateorBirth, 
@@ -28,11 +28,16 @@ namespace VegetableShop_DBMS.Controllers
             return _db.MyExecuteNonQuery("exec EditUser N'" + UserName + "',N'" + FullName + "',N'" + Gender +
             "','" + DateorBirth + "',N'" + PhoneNumber + "',N'" + Email + "',N'" + Image + "'",CommandType.Text, ref err);
         }
-        public static DataSet ShowRole (string UserName, string PassWord)
+        public static DataSet ShowRole (string UserName)
         {
-            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select Roles.Role from Users inner join Roles on Users.IDRole = Roles.IDRole where Users.UserName = N'" +
                 UserName + "'", CommandType.Text);
+        }
+        public static bool ChangePassWord(string UserName, string PassWordOld, string PassWordNew, string err)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.MyExecuteNonQuery("exec ChangePassWord N'" + UserName + "',N'" + PassWordOld + "',N'" + PassWordNew + "'", CommandType.Text, ref err);
         }
     }
 }

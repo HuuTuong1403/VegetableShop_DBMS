@@ -10,15 +10,15 @@ namespace VegetableShop_DBMS.Controllers
 {
     class ManagementController
     {
-        public static DataSet UserManagement(string UserName, string PassWord)
+        public static DataSet UserManagement()
         {
-            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select * from UserManagement", CommandType.Text);
         }
-        public static bool DeleteUser(string UserName, string PassWord, ref string err)
+        public static bool DeleteUser(string UserNameUser, string UserName, string PassWord, ref string err)
         {
             Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
-            return _db.MyExecuteNonQuery("exec DeleteUser N'" + UserName + "'", CommandType.Text, ref err);
+            return _db.MyExecuteNonQuery("exec DeleteUser N'" + UserNameUser + "'", CommandType.Text, ref err);
         }
         public static DataSet ItemsManagement(string UserName, string PassWord)
         {
@@ -33,8 +33,22 @@ namespace VegetableShop_DBMS.Controllers
         public static DataSet OrderManagement(string UserName, string PassWord,  string OrderStateName)
         {
             Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
-            //return _db.ExecuteQueryDataSet("select * from dbo.OrderManagement('N" + UserName + "',N'" + OrderStateName + "')",CommandType.Text);
-            return _db.ExecuteQueryDataSet("select* from dbo.OrderManagement (N'" + UserName + "',N'" + OrderStateName + "')", CommandType.Text);
+            return _db.ExecuteQueryDataSet("select * from dbo.OrderManagement (N'" + UserName + "',N'" + OrderStateName + "')", CommandType.Text);
+        }
+        public static DataSet OrderManagementDetail(string UserName, string PassWord, string IDBill)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            return _db.ExecuteQueryDataSet("select * from dbo.OrderManagementDetail (N'" + IDBill + "')", CommandType.Text);
+        }
+        public static bool ChangeState(string UserName, string PassWord, string IDBill, string OrderStateName, ref string err)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            return _db.MyExecuteNonQuery("exec ChangeState N'" + UserName + "', N'" + IDBill + "',N'" + OrderStateName + "'", CommandType.Text, ref err);
+        }
+        public static DataSet ShowCountOrder(string UserName, string PassWord, string OrderStateName)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            return _db.ExecuteQueryDataSet("select dbo.CountOrder(N'" + UserName + "',N'" + OrderStateName+"')", CommandType.Text);
         }
     }
 }

@@ -35,15 +35,20 @@ namespace VegetableShop_DBMS.Controllers
             Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
             return _db.MyExecuteNonQuery("exec AddCart N'" + UserName + "',N'" + ItemName + "'," + SalePrice + ", " + Quantity, CommandType.Text, ref err);
         }
-        public static DataSet ShowCart(string UserName, string PassWord)
+        public static DataSet ShowCart(string UserName)
         {
-            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select * from dbo.ShowCart(N'" + UserName + "')", CommandType.Text);
         }
         public static bool OrderItem (string UserName, string PassWord, ref string err)
         {
             Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
             return _db.MyExecuteNonQuery("exec OrderItem N'" + UserName + "'", CommandType.Text, ref err);
+        }
+        public static bool DeleteItem_Cart(string UserName, string PassWord, string ItemName, ref string err)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            return _db.MyExecuteNonQuery("exec DeleteItem_Cart N'" + UserName + "',N'" + ItemName + "'", CommandType.Text, ref err);
         }
     }
 }

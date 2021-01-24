@@ -38,7 +38,7 @@ namespace VegetableShop_DBMS.Views
                 dialogResult = MessageBox.Show("Bạn đã nhập hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.OK)
                 {
-                    cbbItems.Items.Clear();
+                    cbbItems.Text = "Chọn món";
                     txtQuantity.Clear();
                 }
             }

@@ -15,18 +15,18 @@ namespace VegetableShop_DBMS.Views
 {
     public partial class frmInformationAccount : Form
     {
-        string UserName;
-        string PassWord;
-        string ImageNameEdit = "1";
-        string ImageTemp;
-        string err;
+        public string UserName;
+        public string PassWord;
+        public string ImageNameEdit = "1";
+        public string ImageTemp;
+        public string err;
         public frmInformationAccount(string UserName, string PassWord)
         {
             this.UserName = UserName;
             this.PassWord = PassWord;
             InitializeComponent();
-            ImageTemp = UserController.ImageUser(UserName, PassWord).Tables[0].Rows[0][0].ToString();
-            DataTable dataTable = UserController.User_Infor(UserName, PassWord).Tables[0];
+            ImageTemp = UserController.ImageUser(UserName).Tables[0].Rows[0][0].ToString();
+            DataTable dataTable = UserController.User_Infor(UserName).Tables[0];
             DataRow dr = dataTable.Rows[0];
             txtAccount.Text = dr["UserName"].ToString();
             txtAccount.ReadOnly = true;
@@ -103,7 +103,7 @@ namespace VegetableShop_DBMS.Views
                 dialogResult = MessageBox.Show("Bạn đã chỉnh sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.OK)
                 {
-                    DataTable dataTable = UserController.User_Infor(UserName, PassWord).Tables[0];
+                    DataTable dataTable = UserController.User_Infor(UserName).Tables[0];
                     DataRow dr = dataTable.Rows[0];
                     txtAccount.Text = dr["UserName"].ToString();
                     txtAccount.ReadOnly = true;
@@ -112,7 +112,7 @@ namespace VegetableShop_DBMS.Views
                     txtEmail.Text = dr["Email"].ToString();
                     cbbGender.SelectedItem = dr["Gender"].ToString();
                     dtpDateOfBirth.Value = DateTime.Parse(dr["DateofBirth"].ToString());
-                    ImageTemp = UserController.ImageUser(UserName, PassWord).Tables[0].Rows[0][0].ToString();
+                    ImageTemp = UserController.ImageUser(UserName).Tables[0].Rows[0][0].ToString();
                     if (ImageTemp != "")
                     {
                         string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesUser\";
@@ -132,7 +132,6 @@ namespace VegetableShop_DBMS.Views
         {
             this.pnChangePwd.Visible = true;
             this.ptBOpacity.Visible = true;
-            
         }
 
         private void btnCancelChangePwd_Click(object sender, EventArgs e)
@@ -142,6 +141,36 @@ namespace VegetableShop_DBMS.Views
             this.txtOldPwd.Clear();
             this.txtNewPwd.Clear();
             this.txtRePwd.Clear();
+        }
+
+        private void btnAcceptChangePwd_Click(object sender, EventArgs e)
+        {
+            string PassWordOld = this.txtOldPwd.Text;
+            string PassWordNew = this.txtNewPwd.Text;
+            string RePwd = this.txtRePwd.Text;
+            if (RePwd != PassWordNew)
+            {
+                MessageBox.Show("Mật khẩu nhập lại không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.txtRePwd.Text = "";        
+            }
+            else
+            {
+                bool check = UserController.ChangePassWord(UserName, PassWordOld, PassWordNew, err);
+                if (check == true)
+                {
+                    MessageBox.Show("Đổi mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.txtNewPwd.Text = "";
+                    this.txtOldPwd.Text = "";
+                    this.txtRePwd.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Mật khẩu cũ không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.txtNewPwd.Text = "";
+                    this.txtOldPwd.Text = "";
+                    this.txtRePwd.Text = "";
+                }
+            }    
         }
     }
 }

@@ -53,7 +53,6 @@ namespace VegetableShop_DBMS.Views
                 if (dialogResult == DialogResult.OK)
                 {
                     this.Hide();
-                    string Role = UserController.ShowRole(UserName, PassWord).Tables[0].Rows[0][0].ToString();
                     this.Close();
                 }
             }
