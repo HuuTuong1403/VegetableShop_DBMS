@@ -52,11 +52,26 @@ namespace VegetableShop_DBMS.Views
             this.txtAccount = new Guna.UI.WinForms.GunaTextBox();
             this.lblAccount = new Guna.UI.WinForms.GunaLabel();
             this.ptBImageUser = new Guna.UI.WinForms.GunaPictureBox();
+            this.ptBOpacity = new Guna.UI.WinForms.GunaTransfarantPictureBox();
+            this.pnChangePwd = new Guna.UI.WinForms.GunaPanel();
+            this.btnCancelChangePwd = new Guna.UI.WinForms.GunaButton();
+            this.btnAcceptChangePwd = new Guna.UI.WinForms.GunaButton();
+            this.txtRePwd = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
+            this.txtNewPwd = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
+            this.txtOldPwd = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
+            this.txtUserName = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImageEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptBImageUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptBOpacity)).BeginInit();
+            this.pnChangePwd.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaPictureBox2
@@ -156,6 +171,7 @@ namespace VegetableShop_DBMS.Views
             this.btnChangePass.TabIndex = 70;
             this.btnChangePass.Text = "ĐỔI MẬT KHẨU";
             this.btnChangePass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
             // btnSaveInfor
             // 
@@ -408,12 +424,227 @@ namespace VegetableShop_DBMS.Views
             this.ptBImageUser.TabIndex = 24;
             this.ptBImageUser.TabStop = false;
             // 
+            // ptBOpacity
+            // 
+            this.ptBOpacity.BackColor = System.Drawing.Color.Transparent;
+            this.ptBOpacity.BaseColor = System.Drawing.Color.White;
+            this.ptBOpacity.BaseDepth = 200;
+            this.ptBOpacity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ptBOpacity.Location = new System.Drawing.Point(0, 0);
+            this.ptBOpacity.Name = "ptBOpacity";
+            this.ptBOpacity.Size = new System.Drawing.Size(1028, 609);
+            this.ptBOpacity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptBOpacity.TabIndex = 74;
+            this.ptBOpacity.TabStop = false;
+            this.ptBOpacity.Visible = false;
+            // 
+            // pnChangePwd
+            // 
+            this.pnChangePwd.Controls.Add(this.btnCancelChangePwd);
+            this.pnChangePwd.Controls.Add(this.btnAcceptChangePwd);
+            this.pnChangePwd.Controls.Add(this.txtRePwd);
+            this.pnChangePwd.Controls.Add(this.gunaLabel12);
+            this.pnChangePwd.Controls.Add(this.txtNewPwd);
+            this.pnChangePwd.Controls.Add(this.gunaLabel11);
+            this.pnChangePwd.Controls.Add(this.txtOldPwd);
+            this.pnChangePwd.Controls.Add(this.gunaLabel10);
+            this.pnChangePwd.Controls.Add(this.gunaLabel9);
+            this.pnChangePwd.Controls.Add(this.txtUserName);
+            this.pnChangePwd.Controls.Add(this.gunaLabel8);
+            this.pnChangePwd.Location = new System.Drawing.Point(186, 133);
+            this.pnChangePwd.Name = "pnChangePwd";
+            this.pnChangePwd.Size = new System.Drawing.Size(694, 349);
+            this.pnChangePwd.TabIndex = 75;
+            this.pnChangePwd.Visible = false;
+            // 
+            // btnCancelChangePwd
+            // 
+            this.btnCancelChangePwd.Animated = true;
+            this.btnCancelChangePwd.AnimationHoverSpeed = 0.07F;
+            this.btnCancelChangePwd.AnimationSpeed = 0.03F;
+            this.btnCancelChangePwd.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelChangePwd.BaseColor = System.Drawing.Color.Silver;
+            this.btnCancelChangePwd.BorderColor = System.Drawing.Color.Black;
+            this.btnCancelChangePwd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelChangePwd.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCancelChangePwd.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCancelChangePwd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelChangePwd.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelChangePwd.Image = null;
+            this.btnCancelChangePwd.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnCancelChangePwd.Location = new System.Drawing.Point(345, 290);
+            this.btnCancelChangePwd.Name = "btnCancelChangePwd";
+            this.btnCancelChangePwd.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnCancelChangePwd.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnCancelChangePwd.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnCancelChangePwd.OnHoverImage = null;
+            this.btnCancelChangePwd.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCancelChangePwd.Radius = 10;
+            this.btnCancelChangePwd.Size = new System.Drawing.Size(302, 40);
+            this.btnCancelChangePwd.TabIndex = 72;
+            this.btnCancelChangePwd.Text = "HỦY";
+            this.btnCancelChangePwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCancelChangePwd.Click += new System.EventHandler(this.btnCancelChangePwd_Click);
+            // 
+            // btnAcceptChangePwd
+            // 
+            this.btnAcceptChangePwd.Animated = true;
+            this.btnAcceptChangePwd.AnimationHoverSpeed = 0.07F;
+            this.btnAcceptChangePwd.AnimationSpeed = 0.03F;
+            this.btnAcceptChangePwd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAcceptChangePwd.BaseColor = System.Drawing.Color.Silver;
+            this.btnAcceptChangePwd.BorderColor = System.Drawing.Color.Black;
+            this.btnAcceptChangePwd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAcceptChangePwd.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAcceptChangePwd.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAcceptChangePwd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceptChangePwd.ForeColor = System.Drawing.Color.Black;
+            this.btnAcceptChangePwd.Image = null;
+            this.btnAcceptChangePwd.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAcceptChangePwd.Location = new System.Drawing.Point(31, 290);
+            this.btnAcceptChangePwd.Name = "btnAcceptChangePwd";
+            this.btnAcceptChangePwd.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnAcceptChangePwd.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnAcceptChangePwd.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnAcceptChangePwd.OnHoverImage = null;
+            this.btnAcceptChangePwd.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAcceptChangePwd.Radius = 10;
+            this.btnAcceptChangePwd.Size = new System.Drawing.Size(302, 40);
+            this.btnAcceptChangePwd.TabIndex = 71;
+            this.btnAcceptChangePwd.Text = "ĐỒNG Ý";
+            this.btnAcceptChangePwd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtRePwd
+            // 
+            this.txtRePwd.BackColor = System.Drawing.Color.Transparent;
+            this.txtRePwd.BaseColor = System.Drawing.Color.White;
+            this.txtRePwd.BorderColor = System.Drawing.Color.Transparent;
+            this.txtRePwd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRePwd.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtRePwd.FocusedBorderColor = System.Drawing.Color.Gray;
+            this.txtRePwd.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtRePwd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRePwd.Location = new System.Drawing.Point(236, 238);
+            this.txtRePwd.Name = "txtRePwd";
+            this.txtRePwd.PasswordChar = '*';
+            this.txtRePwd.Radius = 5;
+            this.txtRePwd.SelectedText = "";
+            this.txtRePwd.Size = new System.Drawing.Size(411, 35);
+            this.txtRePwd.TabIndex = 57;
+            // 
+            // gunaLabel12
+            // 
+            this.gunaLabel12.AutoSize = true;
+            this.gunaLabel12.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel12.Location = new System.Drawing.Point(39, 243);
+            this.gunaLabel12.Name = "gunaLabel12";
+            this.gunaLabel12.Size = new System.Drawing.Size(191, 23);
+            this.gunaLabel12.TabIndex = 56;
+            this.gunaLabel12.Text = "Nhập lại mật khẩu:";
+            // 
+            // txtNewPwd
+            // 
+            this.txtNewPwd.BackColor = System.Drawing.Color.Transparent;
+            this.txtNewPwd.BaseColor = System.Drawing.Color.White;
+            this.txtNewPwd.BorderColor = System.Drawing.Color.Transparent;
+            this.txtNewPwd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNewPwd.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtNewPwd.FocusedBorderColor = System.Drawing.Color.Gray;
+            this.txtNewPwd.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtNewPwd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPwd.Location = new System.Drawing.Point(236, 192);
+            this.txtNewPwd.Name = "txtNewPwd";
+            this.txtNewPwd.PasswordChar = '*';
+            this.txtNewPwd.Radius = 5;
+            this.txtNewPwd.SelectedText = "";
+            this.txtNewPwd.Size = new System.Drawing.Size(411, 35);
+            this.txtNewPwd.TabIndex = 55;
+            // 
+            // gunaLabel11
+            // 
+            this.gunaLabel11.AutoSize = true;
+            this.gunaLabel11.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel11.Location = new System.Drawing.Point(83, 196);
+            this.gunaLabel11.Name = "gunaLabel11";
+            this.gunaLabel11.Size = new System.Drawing.Size(147, 23);
+            this.gunaLabel11.TabIndex = 54;
+            this.gunaLabel11.Text = "Mật khẩu mới:";
+            // 
+            // txtOldPwd
+            // 
+            this.txtOldPwd.BackColor = System.Drawing.Color.Transparent;
+            this.txtOldPwd.BaseColor = System.Drawing.Color.White;
+            this.txtOldPwd.BorderColor = System.Drawing.Color.Transparent;
+            this.txtOldPwd.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtOldPwd.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtOldPwd.FocusedBorderColor = System.Drawing.Color.Gray;
+            this.txtOldPwd.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtOldPwd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOldPwd.Location = new System.Drawing.Point(236, 142);
+            this.txtOldPwd.Name = "txtOldPwd";
+            this.txtOldPwd.PasswordChar = '*';
+            this.txtOldPwd.Radius = 5;
+            this.txtOldPwd.SelectedText = "";
+            this.txtOldPwd.Size = new System.Drawing.Size(411, 35);
+            this.txtOldPwd.TabIndex = 53;
+            // 
+            // gunaLabel10
+            // 
+            this.gunaLabel10.AutoSize = true;
+            this.gunaLabel10.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel10.Location = new System.Drawing.Point(97, 146);
+            this.gunaLabel10.Name = "gunaLabel10";
+            this.gunaLabel10.Size = new System.Drawing.Size(133, 23);
+            this.gunaLabel10.TabIndex = 52;
+            this.gunaLabel10.Text = "Mật khẩu cũ:";
+            // 
+            // gunaLabel9
+            // 
+            this.gunaLabel9.AutoSize = true;
+            this.gunaLabel9.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel9.ForeColor = System.Drawing.Color.Gray;
+            this.gunaLabel9.Location = new System.Drawing.Point(253, 33);
+            this.gunaLabel9.Name = "gunaLabel9";
+            this.gunaLabel9.Size = new System.Drawing.Size(223, 33);
+            this.gunaLabel9.TabIndex = 50;
+            this.gunaLabel9.Text = "ĐỔI MẬT KHẨU";
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.BackColor = System.Drawing.Color.Transparent;
+            this.txtUserName.BaseColor = System.Drawing.Color.Gainsboro;
+            this.txtUserName.BorderColor = System.Drawing.Color.Transparent;
+            this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserName.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtUserName.FocusedBorderColor = System.Drawing.Color.Gray;
+            this.txtUserName.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtUserName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(236, 88);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.PasswordChar = '\0';
+            this.txtUserName.Radius = 5;
+            this.txtUserName.SelectedText = "";
+            this.txtUserName.Size = new System.Drawing.Size(411, 35);
+            this.txtUserName.TabIndex = 49;
+            // 
+            // gunaLabel8
+            // 
+            this.gunaLabel8.AutoSize = true;
+            this.gunaLabel8.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel8.Location = new System.Drawing.Point(120, 93);
+            this.gunaLabel8.Name = "gunaLabel8";
+            this.gunaLabel8.Size = new System.Drawing.Size(110, 23);
+            this.gunaLabel8.TabIndex = 48;
+            this.gunaLabel8.Text = "Tài khoản:";
+            // 
             // frmInformationAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1028, 609);
+            this.Controls.Add(this.pnChangePwd);
+            this.Controls.Add(this.ptBOpacity);
             this.Controls.Add(this.ptBImageUser);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.gunaPictureBox2);
@@ -431,6 +662,9 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImageEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptBImageUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptBOpacity)).EndInit();
+            this.pnChangePwd.ResumeLayout(false);
+            this.pnChangePwd.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,5 +694,18 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaButton btnChangePass;
         private Guna.UI.WinForms.GunaPictureBox ptBImageUser;
         private Guna.UI.WinForms.GunaPictureBox ptbImageEdit;
+        private Guna.UI.WinForms.GunaTransfarantPictureBox ptBOpacity;
+        private Guna.UI.WinForms.GunaPanel pnChangePwd;
+        private Guna.UI.WinForms.GunaButton btnCancelChangePwd;
+        private Guna.UI.WinForms.GunaButton btnAcceptChangePwd;
+        private Guna.UI.WinForms.GunaTextBox txtRePwd;
+        private Guna.UI.WinForms.GunaLabel gunaLabel12;
+        private Guna.UI.WinForms.GunaTextBox txtNewPwd;
+        private Guna.UI.WinForms.GunaLabel gunaLabel11;
+        private Guna.UI.WinForms.GunaTextBox txtOldPwd;
+        private Guna.UI.WinForms.GunaLabel gunaLabel10;
+        private Guna.UI.WinForms.GunaLabel gunaLabel9;
+        private Guna.UI.WinForms.GunaTextBox txtUserName;
+        private Guna.UI.WinForms.GunaLabel gunaLabel8;
     }
 }
