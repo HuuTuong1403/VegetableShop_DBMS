@@ -25,5 +25,20 @@ namespace VegetableShop_DBMS.Controllers
             Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
             return _db.ExecuteQueryDataSet("select * from dbo.Statistic_Revenue('" + DateStart + "','" + DateEnd + "')", CommandType.Text);
         }
+        public static DataSet Top5BestSeller()
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.ExecuteQueryDataSet("select * from dbo.Top5BestSeller ()", CommandType.Text);
+        }
+        public static DataSet Top5Seller()
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.ExecuteQueryDataSet("select * from dbo.Top5Seller ()", CommandType.Text);
+        }
+        public static DataSet Top5Customer()
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.ExecuteQueryDataSet("select * from dbo.Top5Customer()", CommandType.Text);
+        }
     }
 }

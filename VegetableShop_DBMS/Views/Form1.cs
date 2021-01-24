@@ -67,7 +67,12 @@ namespace VegetableShop_DBMS
                 this.btnImportItem.Visible = true;
                 this.btnManagement.Visible = true;
                 this.pnManagement.Height = 56;
+                this.btnStatistic.Visible = true;
             }
+            if(Role == "Customer")
+            {
+                this.btnStatistic.Visible = true;
+            }    
             int xptb = 65;
             int xbtn = 65;
             int xlbl = 111;
