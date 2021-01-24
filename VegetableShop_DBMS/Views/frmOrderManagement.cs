@@ -22,7 +22,8 @@ namespace VegetableShop_DBMS.Views
             InitializeComponent();
             
             this.btnAll.BaseColor = Color.DarkGray;
-            DataTable dtAll = ManagementController.OrderManagement(UserName, PassWord, "Tất cả").Tables[0];
+            string Temp = "Tất cả";
+            DataTable dtAll = ManagementController.OrderManagement(UserName, PassWord, Temp).Tables[0];
             int count = 0;
             foreach(DataRow dr in dtAll.Rows)
             {
@@ -52,6 +53,26 @@ namespace VegetableShop_DBMS.Views
             this.btnRefund.BaseColor = Color.Silver;
             this.btnCancel.BaseColor = Color.Silver;
             dtGVOrderManagement.Rows.Clear();
+
+            string Temp = btnPreparing.Text;
+            DataTable dtAll = ManagementController.OrderManagement(UserName, PassWord, Temp).Tables[0];
+            int count = 0;
+            foreach (DataRow dr in dtAll.Rows)
+            {
+                string ImageTemp = dr["Image"].ToString();
+                string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\";
+                string FileName = appPath + ImageTemp;
+                image = Image.FromFile(FileName);
+                image = new Bitmap(image, new Size(70, 70));
+                string ItemName = dr["ItemName"].ToString();
+                string Description = dr["Description"].ToString();
+                string Quantity = dr["Quantity"].ToString();
+                string PaidPrice = dr["PaidPrice"].ToString() + "₫";
+                string UserNameTemp = dr["UserName"].ToString();
+                dtGVOrderManagement.Rows.Add(image, ItemName, Description, Quantity, PaidPrice, UserNameTemp);
+                count++;
+            }
+            this.lblPreparing.Text = count.ToString();
         }
 
         private void btnAll_Click(object sender, EventArgs e)
@@ -95,6 +116,25 @@ namespace VegetableShop_DBMS.Views
             this.btnCancel.BaseColor = Color.Silver;
 
             dtGVOrderManagement.Rows.Clear();
+            string Temp = btnDelivering.Text;
+            DataTable dtAll = ManagementController.OrderManagement(UserName, PassWord, Temp).Tables[0];
+            int count = 0;
+            foreach (DataRow dr in dtAll.Rows)
+            {
+                string ImageTemp = dr["Image"].ToString();
+                string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\";
+                string FileName = appPath + ImageTemp;
+                image = Image.FromFile(FileName);
+                image = new Bitmap(image, new Size(70, 70));
+                string ItemName = dr["ItemName"].ToString();
+                string Description = dr["Description"].ToString();
+                string Quantity = dr["Quantity"].ToString();
+                string PaidPrice = dr["PaidPrice"].ToString() + "₫";
+                string UserNameTemp = dr["UserName"].ToString();
+                dtGVOrderManagement.Rows.Add(image, ItemName, Description, Quantity, PaidPrice, UserNameTemp);
+                count++;
+            }
+            this.lblDilivery.Text = count.ToString();
         }
 
         private void btnPaid_Click(object sender, EventArgs e)
@@ -108,6 +148,26 @@ namespace VegetableShop_DBMS.Views
             this.btnCancel.BaseColor = Color.Silver;
 
             dtGVOrderManagement.Rows.Clear();
+
+            string Temp = btnPaid.Text;
+            DataTable dtAll = ManagementController.OrderManagement(UserName, PassWord, Temp).Tables[0];
+            int count = 0;
+            foreach (DataRow dr in dtAll.Rows)
+            {
+                string ImageTemp = dr["Image"].ToString();
+                string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\";
+                string FileName = appPath + ImageTemp;
+                image = Image.FromFile(FileName);
+                image = new Bitmap(image, new Size(70, 70));
+                string ItemName = dr["ItemName"].ToString();
+                string Description = dr["Description"].ToString();
+                string Quantity = dr["Quantity"].ToString();
+                string PaidPrice = dr["PaidPrice"].ToString() + "₫";
+                string UserNameTemp = dr["UserName"].ToString();
+                dtGVOrderManagement.Rows.Add(image, ItemName, Description, Quantity, PaidPrice, UserNameTemp);
+                count++;
+            }
+            this.lblPaid.Text = count.ToString();
         }
 
         private void btnCompletion_Click(object sender, EventArgs e)
@@ -121,6 +181,25 @@ namespace VegetableShop_DBMS.Views
             this.btnCancel.BaseColor = Color.Silver;
 
             dtGVOrderManagement.Rows.Clear();
+            string Temp = btnCompletion.Text;
+            DataTable dtAll = ManagementController.OrderManagement(UserName, PassWord, Temp).Tables[0];
+            int count = 0;
+            foreach (DataRow dr in dtAll.Rows)
+            {
+                string ImageTemp = dr["Image"].ToString();
+                string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\";
+                string FileName = appPath + ImageTemp;
+                image = Image.FromFile(FileName);
+                image = new Bitmap(image, new Size(70, 70));
+                string ItemName = dr["ItemName"].ToString();
+                string Description = dr["Description"].ToString();
+                string Quantity = dr["Quantity"].ToString();
+                string PaidPrice = dr["PaidPrice"].ToString() + "₫";
+                string UserNameTemp = dr["UserName"].ToString();
+                dtGVOrderManagement.Rows.Add(image, ItemName, Description, Quantity, PaidPrice, UserNameTemp);
+                count++;
+            }
+            this.lblCompletion.Text = count.ToString();
         }
 
         private void btnRefund_Click(object sender, EventArgs e)
@@ -134,6 +213,25 @@ namespace VegetableShop_DBMS.Views
             this.btnCancel.BaseColor = Color.Silver;
 
             dtGVOrderManagement.Rows.Clear();
+            string Temp = btnRefund.Text;
+            DataTable dtAll = ManagementController.OrderManagement(UserName, PassWord, Temp).Tables[0];
+            int count = 0;
+            foreach (DataRow dr in dtAll.Rows)
+            {
+                string ImageTemp = dr["Image"].ToString();
+                string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\";
+                string FileName = appPath + ImageTemp;
+                image = Image.FromFile(FileName);
+                image = new Bitmap(image, new Size(70, 70));
+                string ItemName = dr["ItemName"].ToString();
+                string Description = dr["Description"].ToString();
+                string Quantity = dr["Quantity"].ToString();
+                string PaidPrice = dr["PaidPrice"].ToString() + "₫";
+                string UserNameTemp = dr["UserName"].ToString();
+                dtGVOrderManagement.Rows.Add(image, ItemName, Description, Quantity, PaidPrice, UserNameTemp);
+                count++;
+            }
+            this.lblRefund.Text = count.ToString();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -147,6 +245,25 @@ namespace VegetableShop_DBMS.Views
             this.btnCancel.BaseColor = Color.DarkGray;
 
             dtGVOrderManagement.Rows.Clear();
+            string Temp = btnCancel.Text;
+            DataTable dtAll = ManagementController.OrderManagement(UserName, PassWord, Temp).Tables[0];
+            int count = 0;
+            foreach (DataRow dr in dtAll.Rows)
+            {
+                string ImageTemp = dr["Image"].ToString();
+                string appPath = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\";
+                string FileName = appPath + ImageTemp;
+                image = Image.FromFile(FileName);
+                image = new Bitmap(image, new Size(70, 70));
+                string ItemName = dr["ItemName"].ToString();
+                string Description = dr["Description"].ToString();
+                string Quantity = dr["Quantity"].ToString();
+                string PaidPrice = dr["PaidPrice"].ToString() + "₫";
+                string UserNameTemp = dr["UserName"].ToString();
+                dtGVOrderManagement.Rows.Add(image, ItemName, Description, Quantity, PaidPrice, UserNameTemp);
+                count++;
+            }
+            this.lblCancel.Text = count.ToString();
         }
     }
 }
