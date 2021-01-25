@@ -37,10 +37,8 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel6 = new Guna.UI.WinForms.GunaPanel();
             this.lblShowPrice = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel15 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel14 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
-            this.lblShowQuantityxItem = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.btnUpdateItem = new Guna.UI.WinForms.GunaButton();
@@ -67,6 +65,7 @@ namespace VegetableShop_DBMS.Views
             this.lblFullName = new Guna.UI.WinForms.GunaLabel();
             this.lblAddress = new Guna.UI.WinForms.GunaLabel();
             this.btnUpdateAddress = new Guna.UI.WinForms.GunaButton();
+            this.pnAllBillDetails = new Guna.UI.WinForms.GunaPanel();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaPanel2.SuspendLayout();
@@ -132,12 +131,11 @@ namespace VegetableShop_DBMS.Views
             // gunaPanel6
             // 
             this.gunaPanel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gunaPanel6.Controls.Add(this.pnAllBillDetails);
             this.gunaPanel6.Controls.Add(this.lblShowPrice);
             this.gunaPanel6.Controls.Add(this.gunaLabel15);
-            this.gunaPanel6.Controls.Add(this.gunaLabel14);
             this.gunaPanel6.Controls.Add(this.gunaLabel10);
             this.gunaPanel6.Controls.Add(this.gunaLabel8);
-            this.gunaPanel6.Controls.Add(this.lblShowQuantityxItem);
             this.gunaPanel6.Controls.Add(this.gunaLabel3);
             this.gunaPanel6.Controls.Add(this.gunaLabel2);
             this.gunaPanel6.Controls.Add(this.btnUpdateItem);
@@ -167,16 +165,6 @@ namespace VegetableShop_DBMS.Views
             this.gunaLabel15.TabIndex = 36;
             this.gunaLabel15.Text = "Thành tiền:";
             // 
-            // gunaLabel14
-            // 
-            this.gunaLabel14.AutoSize = true;
-            this.gunaLabel14.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel14.Location = new System.Drawing.Point(9, 189);
-            this.gunaLabel14.Name = "gunaLabel14";
-            this.gunaLabel14.Size = new System.Drawing.Size(175, 17);
-            this.gunaLabel14.TabIndex = 35;
-            this.gunaLabel14.Text = "Phí vận chuyển: 10000đ";
-            // 
             // gunaLabel10
             // 
             this.gunaLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -196,16 +184,6 @@ namespace VegetableShop_DBMS.Views
             this.gunaLabel8.Name = "gunaLabel8";
             this.gunaLabel8.Size = new System.Drawing.Size(232, 6);
             this.gunaLabel8.TabIndex = 33;
-            // 
-            // lblShowQuantityxItem
-            // 
-            this.lblShowQuantityxItem.AutoSize = true;
-            this.lblShowQuantityxItem.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShowQuantityxItem.Location = new System.Drawing.Point(8, 62);
-            this.lblShowQuantityxItem.Name = "lblShowQuantityxItem";
-            this.lblShowQuantityxItem.Size = new System.Drawing.Size(210, 17);
-            this.lblShowQuantityxItem.TabIndex = 32;
-            this.lblShowQuantityxItem.Text = "Số lượng x Tên món: 10000đ";
             // 
             // gunaLabel3
             // 
@@ -533,6 +511,14 @@ namespace VegetableShop_DBMS.Views
             this.btnUpdateAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnUpdateAddress.Click += new System.EventHandler(this.btnUpdateAddress_Click);
             // 
+            // pnAllBillDetails
+            // 
+            this.pnAllBillDetails.AutoScroll = true;
+            this.pnAllBillDetails.Location = new System.Drawing.Point(10, 54);
+            this.pnAllBillDetails.Name = "pnAllBillDetails";
+            this.pnAllBillDetails.Size = new System.Drawing.Size(227, 150);
+            this.pnAllBillDetails.TabIndex = 38;
+            // 
             // frmShipping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -602,13 +588,12 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaPanel gunaPanel6;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaButton btnUpdateItem;
-        private Guna.UI.WinForms.GunaLabel lblShowQuantityxItem;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel lblShowPrice;
         private Guna.UI.WinForms.GunaLabel gunaLabel15;
-        private Guna.UI.WinForms.GunaLabel gunaLabel14;
         private Guna.UI.WinForms.GunaLabel gunaLabel10;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaRadioButton radiobtnCOD;
+        private Guna.UI.WinForms.GunaPanel pnAllBillDetails;
     }
 }

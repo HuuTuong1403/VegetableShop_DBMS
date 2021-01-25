@@ -25,6 +25,20 @@ namespace VegetableShop_DBMS.Views
             this.lblAddress.Text = DefaultAddress;
             this.lblFullName.Text = FullName;
             this.lblPhoneNumber.Text = PhoneNumber;
+            this.lblShowPrice.Text = OrderItemsController.ShowTotalPrice(UserName, PassWord).Tables[0].Rows[0][0].ToString();
+            DataTable dtAllBillDetails = OrderItemsController.ShowCart(UserName).Tables[0];
+            int ylbl = 10;
+            foreach(DataRow dr in dtAllBillDetails.Rows)
+            {
+                Guna.UI.WinForms.GunaLabel lbl = new Guna.UI.WinForms.GunaLabel();
+                lbl.Location = new Point(8, ylbl);
+                lbl.Font = new Font("Tahoma", 9, FontStyle.Bold);
+                lbl.Text = dr["ItemName"].ToString() + " x " + dr["Quantity"].ToString() + " : \t" + dr["PaidPrice"].ToString();
+                lbl.AutoSize = true;
+                pnAllBillDetails.Controls.Add(lbl);
+
+                ylbl += 24;
+            }
         }
 
         private void btnUpdateItem_Click(object sender, EventArgs e)

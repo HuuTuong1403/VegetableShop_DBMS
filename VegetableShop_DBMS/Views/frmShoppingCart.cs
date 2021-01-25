@@ -116,11 +116,6 @@ namespace VegetableShop_DBMS.Views
             ItemNameTemp = dtGVShoppingCart.CurrentRow.Cells["colItemName"].Value.ToString();
         }
 
-        private void dtGVShoppingCart_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dtGVShoppingCart_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             float Quantity = float.Parse(this.dtGVShoppingCart.CurrentRow.Cells["colQuantity"].Value.ToString());

@@ -35,9 +35,11 @@ namespace VegetableShop_DBMS
             if (UserName == "")
             {
                 btnAccount.Text = "Username ▼";
+                this.lblShowCart.Visible = false;
             }
             else
             {
+                this.lblShowCart.Text = OrderItemsController.ShowTotalDetails(UserName, PassWord).Tables[0].Rows[0][0].ToString();
                 ImageUser = UserController.ImageUser(UserName).Tables[0].Rows[0][0].ToString();
                 if (ImageUser != "")
                 {
@@ -51,8 +53,7 @@ namespace VegetableShop_DBMS
                 this.btnSignUp.Visible = false;
                 this.btnInformationAccount.Visible = true;
                 this.btnInformationAccount.Location = new Point(3, 6);
-                this.btnLogOut.Location = new Point(3, 54);
-                
+                this.btnLogOut.Location = new Point(3, 54); 
             }
             if (Role == "Admin")
             {
@@ -156,7 +157,7 @@ namespace VegetableShop_DBMS
 
         private void Btn_Click(object sender, EventArgs e)
         {
-            
+            this.lblShowCart.Text = OrderItemsController.ShowTotalDetails(UserName, PassWord).Tables[0].Rows[0][0].ToString();
             Guna.UI.WinForms.GunaButton btn = sender as Guna.UI.WinForms.GunaButton;
             if (UserName != "")
             {
@@ -398,7 +399,7 @@ namespace VegetableShop_DBMS
 
         private void btnShoppingCart_Click(object sender, EventArgs e)
         {
-            if (UserName != "")
+                if (UserName != "")
             {
                 frmShoppingCart frmCart = new frmShoppingCart(UserName, PassWord);
                 frmCart.ShowDialog();

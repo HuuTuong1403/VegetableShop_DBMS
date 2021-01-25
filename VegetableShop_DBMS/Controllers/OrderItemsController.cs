@@ -55,5 +55,15 @@ namespace VegetableShop_DBMS.Controllers
             Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
             return _db.MyExecuteNonQuery("exec UpdateItem_Cart N'" + UserName + "',N'" + ItemName + "'," + Quantity, CommandType.Text, ref err);
         }
+        public static DataSet ShowTotalPrice(string UserName, string PassWord)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            return _db.ExecuteQueryDataSet("select dbo.ShowTotalPrice(N'"+UserName+"')", CommandType.Text);
+        }
+        public static DataSet ShowTotalDetails(string UserName, string PassWord)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop(UserName, PassWord);
+            return _db.ExecuteQueryDataSet("select dbo.CountOrderDetails(N'" + UserName + "')", CommandType.Text);
+        }
     }
 }

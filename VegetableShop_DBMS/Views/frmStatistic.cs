@@ -16,11 +16,17 @@ namespace VegetableShop_DBMS.Views
         public string UserName;
         public string PassWord;
         public Image image;
+        public string Role;
         public frmStatistic(string UserName, string PassWord)
         {
             this.UserName = UserName;
             this.PassWord = PassWord;
             InitializeComponent();
+            this.Role = UserController.ShowRole(UserName).Tables[0].Rows[0][0].ToString();
+            if(Role == "Customer")
+            {
+                this.btnStatisticReveneu.Visible = false;
+            }
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
