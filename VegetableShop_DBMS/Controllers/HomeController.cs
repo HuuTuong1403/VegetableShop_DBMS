@@ -20,6 +20,20 @@ namespace VegetableShop_DBMS.Controllers
             Database_VegetableShop _db = new Database_VegetableShop();
             return _db.ExecuteQueryDataSet("select SalePrice from Items where Items.ItemName = N'" + ItemName + "'", CommandType.Text);
         }
-
+        public static DataSet FindItems_ItemName(string ItemName)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.ExecuteQueryDataSet("select * from dbo.FindItems_ItemName(N'" + ItemName + "')", CommandType.Text);
+        }
+        public static DataSet FindItems_Category (string Category)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.ExecuteQueryDataSet("select * from dbo.FindItems_Category(N'" + Category + "')", CommandType.Text);
+        }
+        public static DataSet FindItems_SubCategory (string SubCategory)
+        {
+            Database_VegetableShop _db = new Database_VegetableShop();
+            return _db.ExecuteQueryDataSet("select * from dbo.FindItems_SubCategory(N'" + SubCategory + "')", CommandType.Text);
+        }
     }
 }

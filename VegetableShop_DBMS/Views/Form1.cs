@@ -78,7 +78,7 @@ namespace VegetableShop_DBMS
             int xlbl = 111;
             int count = 0;
             dtItem = HomeController.ShowItem(UserName).Tables[0];
-            while (count < 6)
+            while (count < 6 && count < dtItem.Rows.Count)
             {
                 DataRow dr = dtItem.Rows[count];
                 Guna.UI.WinForms.GunaPictureBox ptb = new Guna.UI.WinForms.GunaPictureBox();
@@ -199,7 +199,7 @@ namespace VegetableShop_DBMS
                 int xptb = 65;
                 int xbtn = 65;
                 int xlbl = 111;
-                while (i < 6)
+                while (i < 6 && i < dtItem.Rows.Count)
                 {
                     DataRow dr = dtItem.Rows[i];
                     Guna.UI.WinForms.GunaPictureBox ptb = new Guna.UI.WinForms.GunaPictureBox();
@@ -281,7 +281,7 @@ namespace VegetableShop_DBMS
                 int xbtn = 65;
                 int xlbl = 111;
                 int index = (int.Parse(btnPagingTemp.Text) - 1) * 6;
-                while (i < 6)
+                while (i < 6 && index < dtItem.Rows.Count)
                 {
                     DataRow dr = dtItem.Rows[index];
                     Guna.UI.WinForms.GunaPictureBox ptb = new Guna.UI.WinForms.GunaPictureBox();
@@ -542,12 +542,103 @@ namespace VegetableShop_DBMS
                 btnCategory.TextAlign = HorizontalAlignment.Center;
                 btnCategory.Text = dr["CategoryName"].ToString();
                 btnCategory.Click += BtnCategory_Click;
+                btnCategory.DoubleClick += BtnCategory_DoubleClick;
                 ybtn += 34;
                 pnCategory.Controls.Add(btnCategory);
                 count++;
             }
             pnCategory.Height = 36 * count;
         }
+
+        private void BtnCategory_DoubleClick(object sender, EventArgs e)
+        {
+            Guna.UI.WinForms.GunaButton btntemp = sender as Guna.UI.WinForms.GunaButton;
+            string ItemName = btntemp.Text.Trim();
+
+            int xptb = 65;
+            int xbtn = 65;
+            int xlbl = 111;
+            int count = 0;
+            dtItem.Clear();
+            dtItem = HomeController.FindItems_Category(ItemName).Tables[0];
+            pnItems.Controls.Clear();
+            while (count < 6 && count < dtItem.Rows.Count)
+            {
+                DataRow dr = dtItem.Rows[count];
+                Guna.UI.WinForms.GunaPictureBox ptb = new Guna.UI.WinForms.GunaPictureBox();
+                Guna.UI.WinForms.GunaButton btn = new Guna.UI.WinForms.GunaButton();
+                Guna.UI.WinForms.GunaLabel lbl = new Guna.UI.WinForms.GunaLabel();
+                string ImageTemp = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\" + dr["Image"].ToString();
+
+                //PictureBox
+                ptb.Location = new Point(xptb, 33);
+                ptb.Size = new Size(162, 162);
+                ptb.Image = Image.FromFile(ImageTemp);
+                ptb.SizeMode = PictureBoxSizeMode.StretchImage;
+                ptb.BorderStyle = BorderStyle.FixedSingle;
+
+                //Button
+                btn.Location = new Point(xbtn, 220);
+                btn.Size = new Size(162, 36);
+                string image = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\cart-plus.png";
+                btn.Image = Image.FromFile(image);
+                btn.Text = dr["ItemName"].ToString();
+                btn.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                btn.ForeColor = Color.Black;
+                btn.OnHoverForeColor = Color.Black;
+                btn.ImageAlign = HorizontalAlignment.Right;
+                btn.ImageSize = new Size(20, 20);
+                btn.BaseColor = Color.Transparent;
+                btn.Cursor = Cursors.Hand;
+                btn.OnHoverBaseColor = Color.LightGray;
+                btn.Click += Btn_Click;
+
+                //Label
+                lbl.Location = new Point(xlbl, 198);
+                lbl.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                lbl.Text = dr["SalePrice"].ToString() + "₫";
+
+
+
+                xlbl += 212;
+                xptb += 212;
+                xbtn += 212;
+
+
+                pnItems.Controls.Add(ptb);
+                pnItems.Controls.Add(btn);
+                pnItems.Controls.Add(lbl);
+
+                count = count + 1;
+
+            }
+            int i = dtItem.Rows.Count / 6;
+            int xbtnPaing = 450;
+            for (int j = 1; j <= i; j++)
+            {
+                //Button Paging
+                Guna.UI.WinForms.GunaButton btnPaging = new Guna.UI.WinForms.GunaButton();
+                btnPaging.Location = new Point(xbtnPaing, 327);
+                btnPaging.Size = new Size(35, 35);
+                btnPaging.BaseColor = Color.Silver;
+                btnPaging.BorderColor = Color.Black;
+                btnPaging.BorderSize = 1;
+                btnPaging.Font = new Font("Tahoma", 9, FontStyle.Bold);
+                btnPaging.ForeColor = Color.Black;
+                btnPaging.Image = null;
+                btnPaging.Text = j.ToString();
+                btnPaging.Cursor = Cursors.Hand;
+                btnPaging.TextAlign = HorizontalAlignment.Center;
+                btnPaging.OnHoverBaseColor = Color.LightGray;
+                btnPaging.OnHoverForeColor = Color.Black;
+                btnPaging.Click += BtnPaging_Click;
+                xbtnPaing += 34;
+
+                pnItems.Controls.Add(btnPaging);
+
+            }
+        }
+
         private void BtnCategory_Click(object sender, EventArgs e)
         {
             pnPanel.Controls.Clear();
@@ -618,11 +709,183 @@ namespace VegetableShop_DBMS
 
         private void BtnSubCategory_Click(object sender, EventArgs e)
         {
-            Guna.UI.WinForms.GunaButton btn = sender as Guna.UI.WinForms.GunaButton;
-            MessageBox.Show(btn.Text);
+            Guna.UI.WinForms.GunaButton btntemp = sender as Guna.UI.WinForms.GunaButton;
+            string ItemName = btntemp.Text.Trim();
+
+            int xptb = 65;
+            int xbtn = 65;
+            int xlbl = 111;
+            int count = 0;
+            dtItem.Clear();
+            dtItem = HomeController.FindItems_SubCategory(ItemName).Tables[0];
+            pnItems.Controls.Clear();
+            while (count < 6 && count < dtItem.Rows.Count)
+            {
+                DataRow dr = dtItem.Rows[count];
+                Guna.UI.WinForms.GunaPictureBox ptb = new Guna.UI.WinForms.GunaPictureBox();
+                Guna.UI.WinForms.GunaButton btn = new Guna.UI.WinForms.GunaButton();
+                Guna.UI.WinForms.GunaLabel lbl = new Guna.UI.WinForms.GunaLabel();
+                string ImageTemp = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\" + dr["Image"].ToString();
+
+                //PictureBox
+                ptb.Location = new Point(xptb, 33);
+                ptb.Size = new Size(162, 162);
+                ptb.Image = Image.FromFile(ImageTemp);
+                ptb.SizeMode = PictureBoxSizeMode.StretchImage;
+                ptb.BorderStyle = BorderStyle.FixedSingle;
+
+                //Button
+                btn.Location = new Point(xbtn, 220);
+                btn.Size = new Size(162, 36);
+                string image = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\cart-plus.png";
+                btn.Image = Image.FromFile(image);
+                btn.Text = dr["ItemName"].ToString();
+                btn.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                btn.ForeColor = Color.Black;
+                btn.OnHoverForeColor = Color.Black;
+                btn.ImageAlign = HorizontalAlignment.Right;
+                btn.ImageSize = new Size(20, 20);
+                btn.BaseColor = Color.Transparent;
+                btn.Cursor = Cursors.Hand;
+                btn.OnHoverBaseColor = Color.LightGray;
+                btn.Click += Btn_Click;
+
+                //Label
+                lbl.Location = new Point(xlbl, 198);
+                lbl.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                lbl.Text = dr["SalePrice"].ToString() + "₫";
+
+
+
+                xlbl += 212;
+                xptb += 212;
+                xbtn += 212;
+
+
+                pnItems.Controls.Add(ptb);
+                pnItems.Controls.Add(btn);
+                pnItems.Controls.Add(lbl);
+
+                count = count + 1;
+
+            }
+            int i = dtItem.Rows.Count / 6;
+            int xbtnPaing = 450;
+            for (int j = 1; j <= i; j++)
+            {
+                //Button Paging
+                Guna.UI.WinForms.GunaButton btnPaging = new Guna.UI.WinForms.GunaButton();
+                btnPaging.Location = new Point(xbtnPaing, 327);
+                btnPaging.Size = new Size(35, 35);
+                btnPaging.BaseColor = Color.Silver;
+                btnPaging.BorderColor = Color.Black;
+                btnPaging.BorderSize = 1;
+                btnPaging.Font = new Font("Tahoma", 9, FontStyle.Bold);
+                btnPaging.ForeColor = Color.Black;
+                btnPaging.Image = null;
+                btnPaging.Text = j.ToString();
+                btnPaging.Cursor = Cursors.Hand;
+                btnPaging.TextAlign = HorizontalAlignment.Center;
+                btnPaging.OnHoverBaseColor = Color.LightGray;
+                btnPaging.OnHoverForeColor = Color.Black;
+                btnPaging.Click += BtnPaging_Click;
+                xbtnPaing += 34;
+
+                pnItems.Controls.Add(btnPaging);
+
+            }
             this.pnPanel.Visible = false;
             this.pnCategory.Visible = false;
             flaqMenuCategory = true;
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string ItemName = txtSearch.Text.Trim();
+
+            int xptb = 65;
+            int xbtn = 65;
+            int xlbl = 111;
+            int count = 0;
+            dtItem.Clear();
+            dtItem = HomeController.FindItems_ItemName(ItemName).Tables[0];
+            pnItems.Controls.Clear();
+            while (count < 6  && count < dtItem.Rows.Count)
+            {
+                DataRow dr = dtItem.Rows[count];
+                Guna.UI.WinForms.GunaPictureBox ptb = new Guna.UI.WinForms.GunaPictureBox();
+                Guna.UI.WinForms.GunaButton btn = new Guna.UI.WinForms.GunaButton();
+                Guna.UI.WinForms.GunaLabel lbl = new Guna.UI.WinForms.GunaLabel();
+                string ImageTemp = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\" + dr["Image"].ToString();
+
+                //PictureBox
+                ptb.Location = new Point(xptb, 33);
+                ptb.Size = new Size(162, 162);
+                ptb.Image = Image.FromFile(ImageTemp);
+                ptb.SizeMode = PictureBoxSizeMode.StretchImage;
+                ptb.BorderStyle = BorderStyle.FixedSingle;
+
+                //Button
+                btn.Location = new Point(xbtn, 220);
+                btn.Size = new Size(162, 36);
+                string image = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\cart-plus.png";
+                btn.Image = Image.FromFile(image);
+                btn.Text = dr["ItemName"].ToString();
+                btn.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                btn.ForeColor = Color.Black;
+                btn.OnHoverForeColor = Color.Black;
+                btn.ImageAlign = HorizontalAlignment.Right;
+                btn.ImageSize = new Size(20, 20);
+                btn.BaseColor = Color.Transparent;
+                btn.Cursor = Cursors.Hand;
+                btn.OnHoverBaseColor = Color.LightGray;
+                btn.Click += Btn_Click;
+
+                //Label
+                lbl.Location = new Point(xlbl, 198);
+                lbl.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                lbl.Text = dr["SalePrice"].ToString() + "₫";
+
+
+
+                xlbl += 212;
+                xptb += 212;
+                xbtn += 212;
+
+
+                pnItems.Controls.Add(ptb);
+                pnItems.Controls.Add(btn);
+                pnItems.Controls.Add(lbl);
+
+                count = count + 1;
+
+            }
+            int i = dtItem.Rows.Count / 6;
+            int xbtnPaing = 450;
+            for (int j = 1; j <= i; j++)
+            {
+                //Button Paging
+                Guna.UI.WinForms.GunaButton btnPaging = new Guna.UI.WinForms.GunaButton();
+                btnPaging.Location = new Point(xbtnPaing, 327);
+                btnPaging.Size = new Size(35, 35);
+                btnPaging.BaseColor = Color.Silver;
+                btnPaging.BorderColor = Color.Black;
+                btnPaging.BorderSize = 1;
+                btnPaging.Font = new Font("Tahoma", 9, FontStyle.Bold);
+                btnPaging.ForeColor = Color.Black;
+                btnPaging.Image = null;
+                btnPaging.Text = j.ToString();
+                btnPaging.Cursor = Cursors.Hand;
+                btnPaging.TextAlign = HorizontalAlignment.Center;
+                btnPaging.OnHoverBaseColor = Color.LightGray;
+                btnPaging.OnHoverForeColor = Color.Black;
+                btnPaging.Click += BtnPaging_Click;
+                xbtnPaing += 34;
+
+                pnItems.Controls.Add(btnPaging);
+
+            }
         }
     }
 }
