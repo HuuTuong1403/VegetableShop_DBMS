@@ -30,11 +30,15 @@ namespace VegetableShop_DBMS.Views
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmItemsManagement));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDeleteItems = new Guna.UI.WinForms.GunaButton();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.dtGVItemsManagement = new System.Windows.Forms.DataGridView();
+            this.dtGVItemsManagement = new Guna.UI.WinForms.GunaDataGridView();
             this.clItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clImportPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clSalePrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +47,7 @@ namespace VegetableShop_DBMS.Views
             this.clCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clSubCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clImage = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colImageTop5Customer = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGVItemsManagement)).BeginInit();
@@ -64,8 +68,7 @@ namespace VegetableShop_DBMS.Views
             this.btnDeleteItems.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteItems.Image")));
             this.btnDeleteItems.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnDeleteItems.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDeleteItems.Location = new System.Drawing.Point(907, 625);
-            this.btnDeleteItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDeleteItems.Location = new System.Drawing.Point(680, 508);
             this.btnDeleteItems.Name = "btnDeleteItems";
             this.btnDeleteItems.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnDeleteItems.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -73,7 +76,7 @@ namespace VegetableShop_DBMS.Views
             this.btnDeleteItems.OnHoverImage = null;
             this.btnDeleteItems.OnPressedColor = System.Drawing.Color.Black;
             this.btnDeleteItems.Radius = 10;
-            this.btnDeleteItems.Size = new System.Drawing.Size(231, 52);
+            this.btnDeleteItems.Size = new System.Drawing.Size(173, 42);
             this.btnDeleteItems.TabIndex = 34;
             this.btnDeleteItems.Text = "Xóa thực phẩm";
             this.btnDeleteItems.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -83,10 +86,9 @@ namespace VegetableShop_DBMS.Views
             // 
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
-            this.gunaPictureBox2.Location = new System.Drawing.Point(252, 15);
-            this.gunaPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaPictureBox2.Location = new System.Drawing.Point(189, 12);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(797, 146);
+            this.gunaPictureBox2.Size = new System.Drawing.Size(598, 119);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox2.TabIndex = 33;
             this.gunaPictureBox2.TabStop = false;
@@ -95,10 +97,9 @@ namespace VegetableShop_DBMS.Views
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(15, 15);
-            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(11, 12);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(168, 146);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(126, 119);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 32;
             this.gunaPictureBox1.TabStop = false;
@@ -108,17 +109,30 @@ namespace VegetableShop_DBMS.Views
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel1.Location = new System.Drawing.Point(336, 178);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel1.Location = new System.Drawing.Point(252, 145);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(388, 41);
+            this.gunaLabel1.Size = new System.Drawing.Size(310, 33);
             this.gunaLabel1.TabIndex = 31;
             this.gunaLabel1.Text = "QUẢN LÝ THỰC PHẨM";
             // 
             // dtGVItemsManagement
             // 
-            this.dtGVItemsManagement.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dtGVItemsManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dtGVItemsManagement.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtGVItemsManagement.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtGVItemsManagement.BackgroundColor = System.Drawing.Color.White;
+            this.dtGVItemsManagement.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtGVItemsManagement.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtGVItemsManagement.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGVItemsManagement.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtGVItemsManagement.ColumnHeadersHeight = 41;
             this.dtGVItemsManagement.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clItemName,
             this.clImportPrice,
@@ -128,94 +142,118 @@ namespace VegetableShop_DBMS.Views
             this.clCategory,
             this.clSubCategory,
             this.clQuantity,
-            this.clImage});
-            this.dtGVItemsManagement.Location = new System.Drawing.Point(3, 238);
-            this.dtGVItemsManagement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.colImageTop5Customer});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtGVItemsManagement.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dtGVItemsManagement.EnableHeadersVisualStyles = false;
+            this.dtGVItemsManagement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtGVItemsManagement.Location = new System.Drawing.Point(11, 181);
             this.dtGVItemsManagement.Name = "dtGVItemsManagement";
-            this.dtGVItemsManagement.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtGVItemsManagement.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtGVItemsManagement.RowHeadersVisible = false;
+            this.dtGVItemsManagement.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dtGVItemsManagement.RowTemplate.Height = 80;
-            this.dtGVItemsManagement.Size = new System.Drawing.Size(1135, 380);
-            this.dtGVItemsManagement.TabIndex = 30;
+            this.dtGVItemsManagement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtGVItemsManagement.Size = new System.Drawing.Size(842, 321);
+            this.dtGVItemsManagement.TabIndex = 36;
+            this.dtGVItemsManagement.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.dtGVItemsManagement.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtGVItemsManagement.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dtGVItemsManagement.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dtGVItemsManagement.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dtGVItemsManagement.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dtGVItemsManagement.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dtGVItemsManagement.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtGVItemsManagement.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtGVItemsManagement.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dtGVItemsManagement.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dtGVItemsManagement.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dtGVItemsManagement.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dtGVItemsManagement.ThemeStyle.HeaderStyle.Height = 41;
+            this.dtGVItemsManagement.ThemeStyle.ReadOnly = false;
+            this.dtGVItemsManagement.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dtGVItemsManagement.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtGVItemsManagement.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.dtGVItemsManagement.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtGVItemsManagement.ThemeStyle.RowsStyle.Height = 80;
+            this.dtGVItemsManagement.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dtGVItemsManagement.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtGVItemsManagement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVItemsManagement_CellClick);
             // 
             // clItemName
             // 
+            this.clItemName.FillWeight = 140F;
             this.clItemName.HeaderText = "Tên thực phẩm";
-            this.clItemName.MinimumWidth = 6;
             this.clItemName.Name = "clItemName";
-            this.clItemName.Width = 125;
             // 
             // clImportPrice
             // 
             this.clImportPrice.HeaderText = "Giá nhập";
-            this.clImportPrice.MinimumWidth = 6;
             this.clImportPrice.Name = "clImportPrice";
-            this.clImportPrice.Width = 80;
             // 
             // clSalePrice
             // 
+            this.clSalePrice.FillWeight = 80F;
             this.clSalePrice.HeaderText = "Giá bán";
-            this.clSalePrice.MinimumWidth = 6;
             this.clSalePrice.Name = "clSalePrice";
-            this.clSalePrice.Width = 80;
             // 
             // clDescription
             // 
+            this.clDescription.FillWeight = 200F;
             this.clDescription.HeaderText = "Mô tả";
-            this.clDescription.MinimumWidth = 6;
             this.clDescription.Name = "clDescription";
-            this.clDescription.Width = 140;
             // 
             // clOrigin
             // 
+            this.clOrigin.FillWeight = 120F;
             this.clOrigin.HeaderText = "Xuất xứ";
-            this.clOrigin.MinimumWidth = 6;
             this.clOrigin.Name = "clOrigin";
-            this.clOrigin.Width = 70;
             // 
             // clCategory
             // 
             this.clCategory.HeaderText = "Phân loại";
-            this.clCategory.MinimumWidth = 6;
             this.clCategory.Name = "clCategory";
-            this.clCategory.Width = 80;
             // 
             // clSubCategory
             // 
             this.clSubCategory.HeaderText = "Danh mục";
-            this.clSubCategory.MinimumWidth = 6;
             this.clSubCategory.Name = "clSubCategory";
-            this.clSubCategory.Width = 80;
             // 
             // clQuantity
             // 
             this.clQuantity.HeaderText = "Số lượng";
-            this.clQuantity.MinimumWidth = 6;
             this.clQuantity.Name = "clQuantity";
-            this.clQuantity.Width = 50;
             // 
-            // clImage
+            // colImageTop5Customer
             // 
-            this.clImage.HeaderText = "Hình ảnh";
-            this.clImage.MinimumWidth = 6;
-            this.clImage.Name = "clImage";
-            this.clImage.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clImage.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.clImage.Width = 125;
+            this.colImageTop5Customer.HeaderText = "Hình ảnh";
+            this.colImageTop5Customer.Name = "colImageTop5Customer";
             // 
             // frmItemsManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1153, 692);
+            this.ClientSize = new System.Drawing.Size(865, 562);
+            this.Controls.Add(this.dtGVItemsManagement);
             this.Controls.Add(this.btnDeleteItems);
             this.Controls.Add(this.gunaPictureBox2);
             this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.gunaLabel1);
-            this.Controls.Add(this.dtGVItemsManagement);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmItemsManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -234,7 +272,7 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private System.Windows.Forms.DataGridView dtGVItemsManagement;
+        private Guna.UI.WinForms.GunaDataGridView dtGVItemsManagement;
         private System.Windows.Forms.DataGridViewTextBoxColumn clItemName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clImportPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn clSalePrice;
@@ -243,6 +281,6 @@ namespace VegetableShop_DBMS.Views
         private System.Windows.Forms.DataGridViewTextBoxColumn clCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn clSubCategory;
         private System.Windows.Forms.DataGridViewTextBoxColumn clQuantity;
-        private System.Windows.Forms.DataGridViewImageColumn clImage;
+        private System.Windows.Forms.DataGridViewImageColumn colImageTop5Customer;
     }
 }

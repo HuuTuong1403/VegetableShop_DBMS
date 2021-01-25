@@ -67,18 +67,24 @@ namespace VegetableShop_DBMS.Views
             this.btnStatisticReveneu = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.pnTop5BestSeller = new Guna.UI.WinForms.GunaPanel();
+            this.dtGVTop5BestSeller = new Guna.UI.WinForms.GunaDataGridView();
+            this.colItemNameTop5BestSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colImageTop5BestSeller = new System.Windows.Forms.DataGridViewImageColumn();
+            this.colDescriptionTop5BestSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSalePriceTop5BestSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colOriginTop5BestSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSumOrderTop5BestSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.btnTop5Seller = new Guna.UI.WinForms.GunaButton();
-            this.dtGVTop5BestSeller = new Guna.UI.WinForms.GunaDataGridView();
             this.pnTop5Seller = new Guna.UI.WinForms.GunaPanel();
             this.dtGVTop5Seller = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.colUserNameTop5Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFullNameTop5Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colImageTop5Seller = new System.Windows.Forms.DataGridViewImageColumn();
             this.colTotalPriceTop5Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPhoneNumberTop5Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmailTop5Seller = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.pnTop5Customer = new Guna.UI.WinForms.GunaPanel();
             this.dtGVTop5Customer = new Guna.UI.WinForms.GunaDataGridView();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
@@ -88,12 +94,6 @@ namespace VegetableShop_DBMS.Views
             this.colTotalPriceTop5Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colPhoneNumberTop5Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmailTop5Customer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colItemNameTop5BestSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colImageTop5BestSeller = new System.Windows.Forms.DataGridViewImageColumn();
-            this.colDescriptionTop5BestSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSalePriceTop5BestSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colOriginTop5BestSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSumOrderTop5BestSeller = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.pnStatisticReveneu.SuspendLayout();
@@ -475,46 +475,6 @@ namespace VegetableShop_DBMS.Views
             this.pnTop5BestSeller.TabIndex = 71;
             this.pnTop5BestSeller.Visible = false;
             // 
-            // gunaLabel11
-            // 
-            this.gunaLabel11.AutoSize = true;
-            this.gunaLabel11.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel11.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel11.Location = new System.Drawing.Point(266, 20);
-            this.gunaLabel11.Name = "gunaLabel11";
-            this.gunaLabel11.Size = new System.Drawing.Size(483, 33);
-            this.gunaLabel11.TabIndex = 26;
-            this.gunaLabel11.Text = "TOP 5 SẢN PHẨM BÁN CHẠY NHẤT";
-            // 
-            // btnTop5Seller
-            // 
-            this.btnTop5Seller.Animated = true;
-            this.btnTop5Seller.AnimationHoverSpeed = 0.07F;
-            this.btnTop5Seller.AnimationSpeed = 0.03F;
-            this.btnTop5Seller.BackColor = System.Drawing.Color.Transparent;
-            this.btnTop5Seller.BaseColor = System.Drawing.Color.Silver;
-            this.btnTop5Seller.BorderColor = System.Drawing.Color.Black;
-            this.btnTop5Seller.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTop5Seller.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnTop5Seller.FocusedColor = System.Drawing.Color.Empty;
-            this.btnTop5Seller.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTop5Seller.ForeColor = System.Drawing.Color.Black;
-            this.btnTop5Seller.Image = null;
-            this.btnTop5Seller.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTop5Seller.Location = new System.Drawing.Point(255, 153);
-            this.btnTop5Seller.Name = "btnTop5Seller";
-            this.btnTop5Seller.OnHoverBaseColor = System.Drawing.Color.Gray;
-            this.btnTop5Seller.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btnTop5Seller.OnHoverForeColor = System.Drawing.Color.Black;
-            this.btnTop5Seller.OnHoverImage = null;
-            this.btnTop5Seller.OnPressedColor = System.Drawing.Color.Black;
-            this.btnTop5Seller.Radius = 10;
-            this.btnTop5Seller.Size = new System.Drawing.Size(214, 43);
-            this.btnTop5Seller.TabIndex = 74;
-            this.btnTop5Seller.Text = "Top 5 nhân viên tốt";
-            this.btnTop5Seller.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnTop5Seller.Click += new System.EventHandler(this.btnTop5Seller_Click);
-            // 
             // dtGVTop5BestSeller
             // 
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -522,17 +482,17 @@ namespace VegetableShop_DBMS.Views
             this.dtGVTop5BestSeller.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGVTop5BestSeller.BackgroundColor = System.Drawing.Color.White;
             this.dtGVTop5BestSeller.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtGVTop5BestSeller.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            this.dtGVTop5BestSeller.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtGVTop5BestSeller.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 11F);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtGVTop5BestSeller.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtGVTop5BestSeller.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVTop5BestSeller.ColumnHeadersHeight = 41;
             this.dtGVTop5BestSeller.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colItemNameTop5BestSeller,
             this.colImageTop5BestSeller,
@@ -578,7 +538,7 @@ namespace VegetableShop_DBMS.Views
             this.dtGVTop5BestSeller.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dtGVTop5BestSeller.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dtGVTop5BestSeller.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtGVTop5BestSeller.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGVTop5BestSeller.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dtGVTop5BestSeller.ThemeStyle.HeaderStyle.Height = 41;
             this.dtGVTop5BestSeller.ThemeStyle.ReadOnly = false;
             this.dtGVTop5BestSeller.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -588,6 +548,79 @@ namespace VegetableShop_DBMS.Views
             this.dtGVTop5BestSeller.ThemeStyle.RowsStyle.Height = 80;
             this.dtGVTop5BestSeller.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtGVTop5BestSeller.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // colItemNameTop5BestSeller
+            // 
+            this.colItemNameTop5BestSeller.HeaderText = "Tên thực phẩm";
+            this.colItemNameTop5BestSeller.Name = "colItemNameTop5BestSeller";
+            // 
+            // colImageTop5BestSeller
+            // 
+            this.colImageTop5BestSeller.HeaderText = "Hình ảnh";
+            this.colImageTop5BestSeller.Name = "colImageTop5BestSeller";
+            // 
+            // colDescriptionTop5BestSeller
+            // 
+            this.colDescriptionTop5BestSeller.HeaderText = "Mô tả";
+            this.colDescriptionTop5BestSeller.Name = "colDescriptionTop5BestSeller";
+            // 
+            // colSalePriceTop5BestSeller
+            // 
+            this.colSalePriceTop5BestSeller.FillWeight = 80F;
+            this.colSalePriceTop5BestSeller.HeaderText = "Giá";
+            this.colSalePriceTop5BestSeller.Name = "colSalePriceTop5BestSeller";
+            // 
+            // colOriginTop5BestSeller
+            // 
+            this.colOriginTop5BestSeller.FillWeight = 80F;
+            this.colOriginTop5BestSeller.HeaderText = "Xuất xứ";
+            this.colOriginTop5BestSeller.Name = "colOriginTop5BestSeller";
+            // 
+            // colSumOrderTop5BestSeller
+            // 
+            this.colSumOrderTop5BestSeller.FillWeight = 120F;
+            this.colSumOrderTop5BestSeller.HeaderText = "Tổng số lượng đặt hàng";
+            this.colSumOrderTop5BestSeller.Name = "colSumOrderTop5BestSeller";
+            // 
+            // gunaLabel11
+            // 
+            this.gunaLabel11.AutoSize = true;
+            this.gunaLabel11.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel11.ForeColor = System.Drawing.Color.Gray;
+            this.gunaLabel11.Location = new System.Drawing.Point(266, 20);
+            this.gunaLabel11.Name = "gunaLabel11";
+            this.gunaLabel11.Size = new System.Drawing.Size(483, 33);
+            this.gunaLabel11.TabIndex = 26;
+            this.gunaLabel11.Text = "TOP 5 SẢN PHẨM BÁN CHẠY NHẤT";
+            // 
+            // btnTop5Seller
+            // 
+            this.btnTop5Seller.Animated = true;
+            this.btnTop5Seller.AnimationHoverSpeed = 0.07F;
+            this.btnTop5Seller.AnimationSpeed = 0.03F;
+            this.btnTop5Seller.BackColor = System.Drawing.Color.Transparent;
+            this.btnTop5Seller.BaseColor = System.Drawing.Color.Silver;
+            this.btnTop5Seller.BorderColor = System.Drawing.Color.Black;
+            this.btnTop5Seller.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTop5Seller.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnTop5Seller.FocusedColor = System.Drawing.Color.Empty;
+            this.btnTop5Seller.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTop5Seller.ForeColor = System.Drawing.Color.Black;
+            this.btnTop5Seller.Image = null;
+            this.btnTop5Seller.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnTop5Seller.Location = new System.Drawing.Point(255, 153);
+            this.btnTop5Seller.Name = "btnTop5Seller";
+            this.btnTop5Seller.OnHoverBaseColor = System.Drawing.Color.Gray;
+            this.btnTop5Seller.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btnTop5Seller.OnHoverForeColor = System.Drawing.Color.Black;
+            this.btnTop5Seller.OnHoverImage = null;
+            this.btnTop5Seller.OnPressedColor = System.Drawing.Color.Black;
+            this.btnTop5Seller.Radius = 10;
+            this.btnTop5Seller.Size = new System.Drawing.Size(214, 43);
+            this.btnTop5Seller.TabIndex = 74;
+            this.btnTop5Seller.Text = "Top 5 nhân viên tốt";
+            this.btnTop5Seller.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnTop5Seller.Click += new System.EventHandler(this.btnTop5Seller_Click);
             // 
             // pnTop5Seller
             // 
@@ -673,17 +706,6 @@ namespace VegetableShop_DBMS.Views
             this.dtGVTop5Seller.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtGVTop5Seller.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // gunaLabel7
-            // 
-            this.gunaLabel7.AutoSize = true;
-            this.gunaLabel7.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel7.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel7.Location = new System.Drawing.Point(307, 20);
-            this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(325, 33);
-            this.gunaLabel7.TabIndex = 26;
-            this.gunaLabel7.Text = "TOP 5 NHÂN VIÊN TỐT";
-            // 
             // colUserNameTop5Seller
             // 
             this.colUserNameTop5Seller.FillWeight = 140F;
@@ -717,6 +739,17 @@ namespace VegetableShop_DBMS.Views
             this.colEmailTop5Seller.FillWeight = 120F;
             this.colEmailTop5Seller.HeaderText = "Email";
             this.colEmailTop5Seller.Name = "colEmailTop5Seller";
+            // 
+            // gunaLabel7
+            // 
+            this.gunaLabel7.AutoSize = true;
+            this.gunaLabel7.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel7.ForeColor = System.Drawing.Color.Gray;
+            this.gunaLabel7.Location = new System.Drawing.Point(307, 20);
+            this.gunaLabel7.Name = "gunaLabel7";
+            this.gunaLabel7.Size = new System.Drawing.Size(325, 33);
+            this.gunaLabel7.TabIndex = 26;
+            this.gunaLabel7.Text = "TOP 5 NHÂN VIÊN TỐT";
             // 
             // pnTop5Customer
             // 
@@ -832,7 +865,7 @@ namespace VegetableShop_DBMS.Views
             // colTotalPriceTop5Customer
             // 
             this.colTotalPriceTop5Customer.FillWeight = 80F;
-            this.colTotalPriceTop5Customer.HeaderText = "Tổng doanh thu";
+            this.colTotalPriceTop5Customer.HeaderText = "Tổng tiền";
             this.colTotalPriceTop5Customer.Name = "colTotalPriceTop5Customer";
             // 
             // colPhoneNumberTop5Customer
@@ -846,39 +879,6 @@ namespace VegetableShop_DBMS.Views
             this.colEmailTop5Customer.FillWeight = 120F;
             this.colEmailTop5Customer.HeaderText = "Email";
             this.colEmailTop5Customer.Name = "colEmailTop5Customer";
-            // 
-            // colItemNameTop5BestSeller
-            // 
-            this.colItemNameTop5BestSeller.HeaderText = "Tên thực phẩm";
-            this.colItemNameTop5BestSeller.Name = "colItemNameTop5BestSeller";
-            // 
-            // colImageTop5BestSeller
-            // 
-            this.colImageTop5BestSeller.HeaderText = "Hình ảnh";
-            this.colImageTop5BestSeller.Name = "colImageTop5BestSeller";
-            // 
-            // colDescriptionTop5BestSeller
-            // 
-            this.colDescriptionTop5BestSeller.HeaderText = "Mô tả";
-            this.colDescriptionTop5BestSeller.Name = "colDescriptionTop5BestSeller";
-            // 
-            // colSalePriceTop5BestSeller
-            // 
-            this.colSalePriceTop5BestSeller.FillWeight = 80F;
-            this.colSalePriceTop5BestSeller.HeaderText = "Giá";
-            this.colSalePriceTop5BestSeller.Name = "colSalePriceTop5BestSeller";
-            // 
-            // colOriginTop5BestSeller
-            // 
-            this.colOriginTop5BestSeller.FillWeight = 80F;
-            this.colOriginTop5BestSeller.HeaderText = "Xuất xứ";
-            this.colOriginTop5BestSeller.Name = "colOriginTop5BestSeller";
-            // 
-            // colSumOrderTop5BestSeller
-            // 
-            this.colSumOrderTop5BestSeller.FillWeight = 120F;
-            this.colSumOrderTop5BestSeller.HeaderText = "Tổng số lượng đặt hàng";
-            this.colSumOrderTop5BestSeller.Name = "colSumOrderTop5BestSeller";
             // 
             // frmStatistic
             // 
@@ -951,12 +951,6 @@ namespace VegetableShop_DBMS.Views
         private Guna.UI.WinForms.GunaPanel pnTop5Seller;
         private Guna.UI.WinForms.GunaPanel pnTop5Customer;
         private Guna.UI.WinForms.GunaDataGridView dtGVTop5Customer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colUserNameTop5Customer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFullNameTop5Customer;
-        private System.Windows.Forms.DataGridViewImageColumn colImageTop5Customer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTotalPriceTop5Customer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPhoneNumberTop5Customer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEmailTop5Customer;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaDataGridView dtGVTop5Seller;
         private System.Windows.Forms.DataGridViewTextBoxColumn colUserNameTop5Seller;
@@ -972,5 +966,11 @@ namespace VegetableShop_DBMS.Views
         private System.Windows.Forms.DataGridViewTextBoxColumn colSalePriceTop5BestSeller;
         private System.Windows.Forms.DataGridViewTextBoxColumn colOriginTop5BestSeller;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSumOrderTop5BestSeller;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colUserNameTop5Customer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFullNameTop5Customer;
+        private System.Windows.Forms.DataGridViewImageColumn colImageTop5Customer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTotalPriceTop5Customer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPhoneNumberTop5Customer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmailTop5Customer;
     }
 }
