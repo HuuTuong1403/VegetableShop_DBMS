@@ -31,7 +31,7 @@ namespace VegetableShop_DBMS
             this.PassWord = PassWord;
             this.Role = Role;
             InitializeComponent();
-            
+
             if (UserName == "")
             {
                 btnAccount.Text = "Username ▼";
@@ -53,7 +53,7 @@ namespace VegetableShop_DBMS
                 this.btnSignUp.Visible = false;
                 this.btnInformationAccount.Visible = true;
                 this.btnInformationAccount.Location = new Point(3, 6);
-                this.btnLogOut.Location = new Point(3, 54); 
+                this.btnLogOut.Location = new Point(3, 54);
             }
             if (Role == "Admin")
             {
@@ -70,10 +70,10 @@ namespace VegetableShop_DBMS
                 this.pnManagement.Height = 56;
                 this.btnStatistic.Visible = true;
             }
-            if(Role == "Customer")
+            if (Role == "Customer")
             {
                 this.btnStatistic.Visible = true;
-            }    
+            }
             int xptb = 65;
             int xbtn = 65;
             int xlbl = 111;
@@ -86,7 +86,7 @@ namespace VegetableShop_DBMS
                 Guna.UI.WinForms.GunaButton btn = new Guna.UI.WinForms.GunaButton();
                 Guna.UI.WinForms.GunaLabel lbl = new Guna.UI.WinForms.GunaLabel();
                 string ImageTemp = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesProduct\" + dr["Image"].ToString();
-                
+
                 //PictureBox
                 ptb.Location = new Point(xptb, 33);
                 ptb.Size = new Size(162, 162);
@@ -115,23 +115,23 @@ namespace VegetableShop_DBMS
                 lbl.Font = new Font("Tahoma", 12, FontStyle.Bold);
                 lbl.Text = dr["SalePrice"].ToString() + "₫";
 
-                
+
 
                 xlbl += 212;
                 xptb += 212;
                 xbtn += 212;
-                
+
 
                 pnItems.Controls.Add(ptb);
                 pnItems.Controls.Add(btn);
                 pnItems.Controls.Add(lbl);
 
                 count = count + 1;
-                
+
             }
             int i = dtItem.Rows.Count / 6;
             int xbtnPaing = 450;
-            for (int j = 1; j <= i; j++) 
+            for (int j = 1; j <= i; j++)
             {
                 //Button Paging
                 Guna.UI.WinForms.GunaButton btnPaging = new Guna.UI.WinForms.GunaButton();
@@ -152,12 +152,11 @@ namespace VegetableShop_DBMS
                 xbtnPaing += 34;
 
                 pnItems.Controls.Add(btnPaging);
-            }    
+            }
         }
 
         private void Btn_Click(object sender, EventArgs e)
         {
-            this.lblShowCart.Text = OrderItemsController.ShowTotalDetails(UserName, PassWord).Tables[0].Rows[0][0].ToString();
             Guna.UI.WinForms.GunaButton btn = sender as Guna.UI.WinForms.GunaButton;
             if (UserName != "")
             {
@@ -165,10 +164,11 @@ namespace VegetableShop_DBMS
                 string ItemName = btn.Text;
                 float SalePrice = float.Parse(HomeController.PriceItem(ItemName).Tables[0].Rows[0][0].ToString());
                 float Quantity = 1;
-                bool check = OrderItemsController.AddCart(UserName, PassWord, ItemName, SalePrice, Quantity, ref err); 
+                bool check = OrderItemsController.AddCart(UserName, PassWord, ItemName, SalePrice, Quantity, ref err);
                 if (check == true)
                 {
                     MessageBox.Show("Bạn đã thêm " + ItemName + " vào giỏ hàng thành công");
+                    this.lblShowCart.Text = OrderItemsController.ShowTotalDetails(UserName, PassWord).Tables[0].Rows[0][0].ToString();
                 }
                 else
                 {
@@ -399,10 +399,13 @@ namespace VegetableShop_DBMS
 
         private void btnShoppingCart_Click(object sender, EventArgs e)
         {
-                if (UserName != "")
+            if (UserName != "")
             {
+                this.Hide();
                 frmShoppingCart frmCart = new frmShoppingCart(UserName, PassWord);
                 frmCart.ShowDialog();
+                this.lblShowCart.Text = OrderItemsController.ShowTotalDetails(UserName, PassWord).Tables[0].Rows[0][0].ToString();
+                this.Show();
             }
             else
             {
@@ -444,7 +447,7 @@ namespace VegetableShop_DBMS
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmVegetableShop frm = new frmVegetableShop("", "","");
+            frmVegetableShop frm = new frmVegetableShop("", "", "");
             frm.ShowDialog();
             this.Close();
         }
@@ -521,10 +524,10 @@ namespace VegetableShop_DBMS
                 this.pnCategory.Visible = false;
                 this.pnPanel.Visible = false;
                 flaqMenuCategory = true;
-            }   
+            }
             DataTable dtCategory = AdminSettingController.Category_Show().Tables[0];
             int count = 0;
-            foreach(DataRow dr in dtCategory.Rows)
+            foreach (DataRow dr in dtCategory.Rows)
             {
                 Guna.UI.WinForms.GunaButton btnCategory = new Guna.UI.WinForms.GunaButton();
                 btnCategory.Location = new Point(3, ybtn);
@@ -647,12 +650,12 @@ namespace VegetableShop_DBMS
             Guna.UI.WinForms.GunaButton btn = sender as Guna.UI.WinForms.GunaButton;
             Guna.UI.WinForms.GunaPanel pn = new Guna.UI.WinForms.GunaPanel();
             string CategoryName = btn.Text;
-            if(CategoryName == "Rau")
+            if (CategoryName == "Rau")
             {
                 pn.Location = new Point(3, 4);
                 pnPanel.Location = new Point(233, 215);
-            }                  
-            if(CategoryName == "Củ")
+            }
+            if (CategoryName == "Củ")
             {
                 pn.Location = new Point(3, 4);//38);
                 pnPanel.Location = new Point(233, 249);
@@ -674,7 +677,7 @@ namespace VegetableShop_DBMS
             }
 
             string IDCategory = AdminSettingController.IDCategory_Find(CategoryName).Tables[0].Rows[0][0].ToString();
-            DataTable dtSubCategory = AdminSettingController.SubCategory_Show(IDCategory).Tables[0];       
+            DataTable dtSubCategory = AdminSettingController.SubCategory_Show(IDCategory).Tables[0];
             pn.BackColor = Color.Silver;
             pn.Width = 217;
 
@@ -812,7 +815,7 @@ namespace VegetableShop_DBMS
             dtItem.Clear();
             dtItem = HomeController.FindItems_ItemName(ItemName).Tables[0];
             pnItems.Controls.Clear();
-            while (count < 6  && count < dtItem.Rows.Count)
+            while (count < 6 && count < dtItem.Rows.Count)
             {
                 DataRow dr = dtItem.Rows[count];
                 Guna.UI.WinForms.GunaPictureBox ptb = new Guna.UI.WinForms.GunaPictureBox();
