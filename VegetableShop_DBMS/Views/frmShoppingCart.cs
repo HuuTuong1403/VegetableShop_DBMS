@@ -77,9 +77,6 @@ namespace VegetableShop_DBMS.Views
                         FullName = dr["FullName"].ToString();
                     }
                 }
-                DefaultAddress = "";
-                PhoneNumber = "";
-                FullName = "";
             }         
             frmShipping frmShip = new frmShipping(UserName, PassWord, DefaultAddress, PhoneNumber, FullName);
             frmShip.ShowDialog();

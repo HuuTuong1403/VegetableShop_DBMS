@@ -369,7 +369,7 @@ namespace VegetableShop_DBMS
             this.Hide();
             frmSignIn frmSignIn = new frmSignIn();
             frmSignIn.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
@@ -377,7 +377,7 @@ namespace VegetableShop_DBMS
             this.Hide();
             frmSignUp frmSignUp = new frmSignUp();
             frmSignUp.ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void btnAccount_MouseClick(object sender, MouseEventArgs e)
@@ -421,6 +421,7 @@ namespace VegetableShop_DBMS
                     this.Hide();
                     frmSignIn frmSign = new frmSignIn();
                     frmSign.ShowDialog();
+                    this.Close();
                 }
             }
         }
