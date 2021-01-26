@@ -277,11 +277,11 @@ namespace VegetableShop_DBMS.Views
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(28, 170);
+            this.gunaLabel2.Location = new System.Drawing.Point(82, 173);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(129, 23);
+            this.gunaLabel2.Size = new System.Drawing.Size(71, 23);
             this.gunaLabel2.TabIndex = 50;
-            this.gunaLabel2.Text = "Thành phần:";
+            this.gunaLabel2.Text = "Mô tả:";
             // 
             // gunaLabel3
             // 
