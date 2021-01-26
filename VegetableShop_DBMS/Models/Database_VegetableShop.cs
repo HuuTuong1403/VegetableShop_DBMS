@@ -10,8 +10,8 @@ namespace VegetableShop_DBMS.Models
 {
     class Database_VegetableShop
     {
-        //string strConnectionString = "Data Source=DESKTOP-30KMJ3I;Initial Catalog=Database_VegetableStore;Integrated Security=True";
-        string strConnectionString = "Data Source=192.168.43.14;Initial Catalog=Database_VegetableStore;User ID = tuongkl01;Password = 123456789;Integrated Security=False";
+        string strConnectionString = "Data Source=DESKTOP-30KMJ3I;Initial Catalog=Database_VegetableStore;Integrated Security=True";
+        //string strConnectionString = "Data Source=192.168.43.14;Initial Catalog=Database_VegetableStore;User ID = tuongkl01;Password = 123456789;Integrated Security=False";
 
         //Tạo kết nối
         SqlConnection conn = null;
@@ -31,8 +31,8 @@ namespace VegetableShop_DBMS.Models
         {
             if (tk != null && mk != null)
             {
-               //strConnectionString = @"Data Source=DESKTOP-30KMJ3I; Initial Catalog=Database_VegetableStore;User ID=" + tk + ";Password=" + mk + ";";
-               strConnectionString = @"Data Source=192.168.43.14; Initial Catalog=Database_VegetableStore;User ID=" + tk + ";Password=" + mk + ";";
+               strConnectionString = @"Data Source=DESKTOP-30KMJ3I; Initial Catalog=Database_VegetableStore;User ID=" + tk + ";Password=" + mk + ";";
+               //strConnectionString = @"Data Source=192.168.43.14; Initial Catalog=Database_VegetableStore;User ID=" + tk + ";Password=" + mk + ";";
             }
             //Gán chuỗi kết nối để kết nối với SQL sever
             conn = new SqlConnection(strConnectionString);

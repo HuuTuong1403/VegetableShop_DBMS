@@ -27,6 +27,10 @@ namespace VegetableShop_DBMS.Views
             {
                 this.btnStatisticReveneu.Visible = false;
             }
+            if(Role == "Seller")
+            {
+                this.btnStatisticReveneu.Visible = false;
+            }    
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -92,7 +96,13 @@ namespace VegetableShop_DBMS.Views
             foreach(DataRow dr in dtTop5Seller.Rows)
             {
                 string Account = dr["UserName"].ToString();
-                string ImageTemp = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesUser\" + dr["Image"].ToString();
+                string ImageTemp;
+                if (dr["Image"].ToString() == "")
+                {
+                    ImageTemp = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesUser\Default.png";
+                }
+                else
+                    ImageTemp = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\imagesUser\" + dr["Image"].ToString();
                 image = Image.FromFile(ImageTemp);
                 image = new Bitmap(image, new Size(70, 70));
                 string FullName = dr["FullName"].ToString();
@@ -102,7 +112,6 @@ namespace VegetableShop_DBMS.Views
                 dtGVTop5Seller.Rows.Add(Account, FullName, image, TotalPrice, PhoneNumber, Email);
             }
         }
-
         private void btnTop5Customer_Click(object sender, EventArgs e)
         {
             this.pnTop5Seller.Visible = false;

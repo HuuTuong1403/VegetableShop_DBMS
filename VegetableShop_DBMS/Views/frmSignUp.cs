@@ -122,10 +122,10 @@ namespace VegetableShop_DBMS.Views
                 dialogResult = MessageBox.Show("Bạn đã tạo tài khoản thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (dialogResult == DialogResult.OK)
                 {
+                    this.Hide();
                     frmSignIn form = new frmSignIn();
                     form.ShowDialog();
                     this.Close();
-                    Application.Exit();
                 }
             }
             else

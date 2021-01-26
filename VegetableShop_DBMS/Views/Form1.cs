@@ -563,7 +563,9 @@ namespace VegetableShop_DBMS
         {
             Guna.UI.WinForms.GunaButton btntemp = sender as Guna.UI.WinForms.GunaButton;
             string ItemName = btntemp.Text.Trim();
-
+            this.pnCategory.Visible = false;
+            this.pnPanel.Visible = false;
+            flaqMenuCategory = true;
             int xptb = 65;
             int xbtn = 65;
             int xlbl = 111;

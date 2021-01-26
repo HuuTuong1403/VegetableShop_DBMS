@@ -54,19 +54,33 @@ namespace VegetableShop_DBMS.Views
             this.Hide();
             DataTable dtIDUser = OrderItemsController.IDUser_Find(UserName, PassWord).Tables[0];
             string IDUser = dtIDUser.Rows[0][0].ToString();
-            DataTable dtAddress_User = OrderItemsController.All_Address_Show(IDUser, UserName, PassWord).Tables[0];
+
+            string Roles = UserController.ShowRole(UserName).Tables[0].Rows[0][0].ToString();
             string DefaultAddress = "";
             string PhoneNumber = "";
             string FullName = "";
-            foreach (DataRow dr in dtAddress_User.Rows)
+            if (Roles == "Seller")
             {
-                if (dr["IsDefault"].ToString() == "1")
-                {
-                    DefaultAddress = dr["Street"].ToString() + ", " + dr["Ward"].ToString() + ", " + dr["District"].ToString() + ", " + dr["Province"].ToString();
-                    PhoneNumber = dr["PhoneNumber"].ToString();
-                    FullName = dr["FullName"].ToString();
-                }
+                DefaultAddress = "105 Đường 11, phường Tăng Nhơn Phú B, Quận 9, Thành phố Hồ Chí Minh";
+                PhoneNumber = "0333963285";
+                FullName = UserName;
             }
+            else
+            {
+                DataTable dtAddress_User = OrderItemsController.All_Address_Show(IDUser, UserName, PassWord).Tables[0];
+                foreach (DataRow dr in dtAddress_User.Rows)
+                {
+                    if (dr["IsDefault"].ToString() == "1")
+                    {
+                        DefaultAddress = dr["Street"].ToString() + ", " + dr["Ward"].ToString() + ", " + dr["District"].ToString() + ", " + dr["Province"].ToString();
+                        PhoneNumber = dr["PhoneNumber"].ToString();
+                        FullName = dr["FullName"].ToString();
+                    }
+                }
+                DefaultAddress = "";
+                PhoneNumber = "";
+                FullName = "";
+            }         
             frmShipping frmShip = new frmShipping(UserName, PassWord, DefaultAddress, PhoneNumber, FullName);
             frmShip.ShowDialog();
         }
@@ -74,7 +88,7 @@ namespace VegetableShop_DBMS.Views
         private void btnDeleteCart_Click(object sender, EventArgs e)
         {
             DialogResult dialog = MessageBox.Show("Bạn muốn xóa " + ItemNameTemp + " khỏi giỏ hàng", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            if(dialog == DialogResult.OK)
+            if (dialog == DialogResult.OK)
             {
                 bool check = OrderItemsController.DeleteItem_Cart(UserName, PassWord, ItemNameTemp, ref err);
                 if (check == true)
@@ -108,7 +122,7 @@ namespace VegetableShop_DBMS.Views
                         dtGVShoppingCart.Rows.Add(image, ItemName, Description, PaidPrice, Orgin, Quantity);
                     }
                 }
-            }      
+            }
         }
 
         private void dtGVShoppingCart_CellClick(object sender, DataGridViewCellEventArgs e)

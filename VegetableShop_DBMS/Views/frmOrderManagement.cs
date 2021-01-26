@@ -238,12 +238,12 @@ namespace VegetableShop_DBMS.Views
 
         private void dtGVBillManagement_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            IDBill = dtGVBillManagement.CurrentRow.Cells["clIDBill"].Value.ToString();
             DialogResult dialog = MessageBox.Show("Bạn muốn xem đơn hàng chi tiết?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if(dialog == DialogResult.OK)
             {
                 this.pnBillDetail.Visible = true;
-                this.ptBOpacity.Visible = true;
-                IDBill = dtGVBillManagement.CurrentRow.Cells["clIDBill"].Value.ToString();  
+                this.ptBOpacity.Visible = true;    
                 DataTable dtBillDetail = ManagementController.OrderManagementDetail(UserName, PassWord, IDBill).Tables[0];
                 dtGVBillDetailManagement.Rows.Clear();
                 foreach(DataRow dr in dtBillDetail.Rows)
