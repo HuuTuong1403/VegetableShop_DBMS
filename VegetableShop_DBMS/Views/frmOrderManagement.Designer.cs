@@ -82,9 +82,10 @@ namespace VegetableShop_DBMS.Views
             // 
             this.gunaPictureBox2.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox2.Image")));
-            this.gunaPictureBox2.Location = new System.Drawing.Point(187, 12);
+            this.gunaPictureBox2.Location = new System.Drawing.Point(249, 15);
+            this.gunaPictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaPictureBox2.Name = "gunaPictureBox2";
-            this.gunaPictureBox2.Size = new System.Drawing.Size(686, 137);
+            this.gunaPictureBox2.Size = new System.Drawing.Size(915, 169);
             this.gunaPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox2.TabIndex = 31;
             this.gunaPictureBox2.TabStop = false;
@@ -93,9 +94,10 @@ namespace VegetableShop_DBMS.Views
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(16, 15);
+            this.gunaPictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(141, 137);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(188, 169);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 30;
             this.gunaPictureBox1.TabStop = false;
@@ -105,9 +107,10 @@ namespace VegetableShop_DBMS.Views
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel1.Location = new System.Drawing.Point(301, 152);
+            this.gunaLabel1.Location = new System.Drawing.Point(401, 187);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(297, 33);
+            this.gunaLabel1.Size = new System.Drawing.Size(371, 41);
             this.gunaLabel1.TabIndex = 29;
             this.gunaLabel1.Text = "QUẢN LÝ ĐƠN HÀNG";
             // 
@@ -127,9 +130,10 @@ namespace VegetableShop_DBMS.Views
             this.gunaPanel1.Controls.Add(this.btnDelivering);
             this.gunaPanel1.Controls.Add(this.btnPreparing);
             this.gunaPanel1.Controls.Add(this.btnAll);
-            this.gunaPanel1.Location = new System.Drawing.Point(12, 198);
+            this.gunaPanel1.Location = new System.Drawing.Point(16, 244);
+            this.gunaPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(868, 48);
+            this.gunaPanel1.Size = new System.Drawing.Size(1157, 59);
             this.gunaPanel1.TabIndex = 32;
             // 
             // lblCancel
@@ -138,9 +142,10 @@ namespace VegetableShop_DBMS.Views
             this.lblCancel.BackColor = System.Drawing.Color.Silver;
             this.lblCancel.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lblCancel.ForeColor = System.Drawing.Color.Red;
-            this.lblCancel.Location = new System.Drawing.Point(834, 3);
+            this.lblCancel.Location = new System.Drawing.Point(1112, 4);
+            this.lblCancel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCancel.Name = "lblCancel";
-            this.lblCancel.Size = new System.Drawing.Size(17, 17);
+            this.lblCancel.Size = new System.Drawing.Size(21, 21);
             this.lblCancel.TabIndex = 50;
             this.lblCancel.Text = "1";
             // 
@@ -150,9 +155,10 @@ namespace VegetableShop_DBMS.Views
             this.lblRefund.BackColor = System.Drawing.Color.Silver;
             this.lblRefund.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lblRefund.ForeColor = System.Drawing.Color.Red;
-            this.lblRefund.Location = new System.Drawing.Point(707, 3);
+            this.lblRefund.Location = new System.Drawing.Point(943, 4);
+            this.lblRefund.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRefund.Name = "lblRefund";
-            this.lblRefund.Size = new System.Drawing.Size(17, 17);
+            this.lblRefund.Size = new System.Drawing.Size(21, 21);
             this.lblRefund.TabIndex = 49;
             this.lblRefund.Text = "1";
             // 
@@ -162,9 +168,10 @@ namespace VegetableShop_DBMS.Views
             this.lblCompletion.BackColor = System.Drawing.Color.Silver;
             this.lblCompletion.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lblCompletion.ForeColor = System.Drawing.Color.Red;
-            this.lblCompletion.Location = new System.Drawing.Point(609, 3);
+            this.lblCompletion.Location = new System.Drawing.Point(812, 4);
+            this.lblCompletion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompletion.Name = "lblCompletion";
-            this.lblCompletion.Size = new System.Drawing.Size(17, 17);
+            this.lblCompletion.Size = new System.Drawing.Size(21, 21);
             this.lblCompletion.TabIndex = 48;
             this.lblCompletion.Text = "1";
             // 
@@ -174,9 +181,10 @@ namespace VegetableShop_DBMS.Views
             this.lblPaid.BackColor = System.Drawing.Color.Silver;
             this.lblPaid.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lblPaid.ForeColor = System.Drawing.Color.Red;
-            this.lblPaid.Location = new System.Drawing.Point(488, 3);
+            this.lblPaid.Location = new System.Drawing.Point(651, 4);
+            this.lblPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaid.Name = "lblPaid";
-            this.lblPaid.Size = new System.Drawing.Size(17, 17);
+            this.lblPaid.Size = new System.Drawing.Size(21, 21);
             this.lblPaid.TabIndex = 47;
             this.lblPaid.Text = "1";
             // 
@@ -186,9 +194,10 @@ namespace VegetableShop_DBMS.Views
             this.lblDelivery.BackColor = System.Drawing.Color.Silver;
             this.lblDelivery.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lblDelivery.ForeColor = System.Drawing.Color.Red;
-            this.lblDelivery.Location = new System.Drawing.Point(358, 3);
+            this.lblDelivery.Location = new System.Drawing.Point(477, 4);
+            this.lblDelivery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDelivery.Name = "lblDelivery";
-            this.lblDelivery.Size = new System.Drawing.Size(17, 17);
+            this.lblDelivery.Size = new System.Drawing.Size(21, 21);
             this.lblDelivery.TabIndex = 46;
             this.lblDelivery.Text = "1";
             // 
@@ -198,9 +207,10 @@ namespace VegetableShop_DBMS.Views
             this.lblPreparing.BackColor = System.Drawing.Color.Silver;
             this.lblPreparing.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lblPreparing.ForeColor = System.Drawing.Color.Red;
-            this.lblPreparing.Location = new System.Drawing.Point(244, 3);
+            this.lblPreparing.Location = new System.Drawing.Point(325, 4);
+            this.lblPreparing.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPreparing.Name = "lblPreparing";
-            this.lblPreparing.Size = new System.Drawing.Size(17, 17);
+            this.lblPreparing.Size = new System.Drawing.Size(21, 21);
             this.lblPreparing.TabIndex = 45;
             this.lblPreparing.Text = "1";
             // 
@@ -210,9 +220,10 @@ namespace VegetableShop_DBMS.Views
             this.lblAll.BackColor = System.Drawing.Color.Silver;
             this.lblAll.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lblAll.ForeColor = System.Drawing.Color.Red;
-            this.lblAll.Location = new System.Drawing.Point(119, 3);
+            this.lblAll.Location = new System.Drawing.Point(159, 4);
+            this.lblAll.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAll.Name = "lblAll";
-            this.lblAll.Size = new System.Drawing.Size(17, 17);
+            this.lblAll.Size = new System.Drawing.Size(21, 21);
             this.lblAll.TabIndex = 33;
             this.lblAll.Text = "1";
             // 
@@ -230,14 +241,15 @@ namespace VegetableShop_DBMS.Views
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
             this.btnCancel.Image = null;
             this.btnCancel.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCancel.Location = new System.Drawing.Point(741, 3);
+            this.btnCancel.Location = new System.Drawing.Point(988, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnCancel.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnCancel.OnHoverForeColor = System.Drawing.Color.White;
             this.btnCancel.OnHoverImage = null;
             this.btnCancel.OnPressedColor = System.Drawing.Color.Black;
-            this.btnCancel.Size = new System.Drawing.Size(120, 38);
+            this.btnCancel.Size = new System.Drawing.Size(160, 47);
             this.btnCancel.TabIndex = 44;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -257,14 +269,15 @@ namespace VegetableShop_DBMS.Views
             this.btnRefund.ForeColor = System.Drawing.Color.Black;
             this.btnRefund.Image = null;
             this.btnRefund.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnRefund.Location = new System.Drawing.Point(621, 3);
+            this.btnRefund.Location = new System.Drawing.Point(828, 4);
+            this.btnRefund.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefund.Name = "btnRefund";
             this.btnRefund.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnRefund.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnRefund.OnHoverForeColor = System.Drawing.Color.White;
             this.btnRefund.OnHoverImage = null;
             this.btnRefund.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRefund.Size = new System.Drawing.Size(120, 38);
+            this.btnRefund.Size = new System.Drawing.Size(160, 47);
             this.btnRefund.TabIndex = 43;
             this.btnRefund.Text = "Refund";
             this.btnRefund.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -284,14 +297,15 @@ namespace VegetableShop_DBMS.Views
             this.btnCompletion.ForeColor = System.Drawing.Color.Black;
             this.btnCompletion.Image = null;
             this.btnCompletion.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCompletion.Location = new System.Drawing.Point(501, 3);
+            this.btnCompletion.Location = new System.Drawing.Point(668, 4);
+            this.btnCompletion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCompletion.Name = "btnCompletion";
             this.btnCompletion.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnCompletion.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnCompletion.OnHoverForeColor = System.Drawing.Color.White;
             this.btnCompletion.OnHoverImage = null;
             this.btnCompletion.OnPressedColor = System.Drawing.Color.Black;
-            this.btnCompletion.Size = new System.Drawing.Size(120, 38);
+            this.btnCompletion.Size = new System.Drawing.Size(160, 47);
             this.btnCompletion.TabIndex = 42;
             this.btnCompletion.Text = "Completion";
             this.btnCompletion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -311,14 +325,15 @@ namespace VegetableShop_DBMS.Views
             this.btnPaid.ForeColor = System.Drawing.Color.Black;
             this.btnPaid.Image = null;
             this.btnPaid.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPaid.Location = new System.Drawing.Point(381, 3);
+            this.btnPaid.Location = new System.Drawing.Point(508, 4);
+            this.btnPaid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPaid.Name = "btnPaid";
             this.btnPaid.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnPaid.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnPaid.OnHoverForeColor = System.Drawing.Color.White;
             this.btnPaid.OnHoverImage = null;
             this.btnPaid.OnPressedColor = System.Drawing.Color.Black;
-            this.btnPaid.Size = new System.Drawing.Size(120, 38);
+            this.btnPaid.Size = new System.Drawing.Size(160, 47);
             this.btnPaid.TabIndex = 41;
             this.btnPaid.Text = "Paid";
             this.btnPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -338,14 +353,15 @@ namespace VegetableShop_DBMS.Views
             this.btnDelivering.ForeColor = System.Drawing.Color.Black;
             this.btnDelivering.Image = null;
             this.btnDelivering.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDelivering.Location = new System.Drawing.Point(261, 3);
+            this.btnDelivering.Location = new System.Drawing.Point(348, 4);
+            this.btnDelivering.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelivering.Name = "btnDelivering";
             this.btnDelivering.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnDelivering.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnDelivering.OnHoverForeColor = System.Drawing.Color.White;
             this.btnDelivering.OnHoverImage = null;
             this.btnDelivering.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDelivering.Size = new System.Drawing.Size(120, 38);
+            this.btnDelivering.Size = new System.Drawing.Size(160, 47);
             this.btnDelivering.TabIndex = 40;
             this.btnDelivering.Text = "Delivering";
             this.btnDelivering.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -365,14 +381,15 @@ namespace VegetableShop_DBMS.Views
             this.btnPreparing.ForeColor = System.Drawing.Color.Black;
             this.btnPreparing.Image = null;
             this.btnPreparing.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPreparing.Location = new System.Drawing.Point(141, 3);
+            this.btnPreparing.Location = new System.Drawing.Point(188, 4);
+            this.btnPreparing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPreparing.Name = "btnPreparing";
             this.btnPreparing.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnPreparing.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnPreparing.OnHoverForeColor = System.Drawing.Color.White;
             this.btnPreparing.OnHoverImage = null;
             this.btnPreparing.OnPressedColor = System.Drawing.Color.Black;
-            this.btnPreparing.Size = new System.Drawing.Size(120, 38);
+            this.btnPreparing.Size = new System.Drawing.Size(160, 47);
             this.btnPreparing.TabIndex = 39;
             this.btnPreparing.Text = "Preparing";
             this.btnPreparing.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -392,14 +409,15 @@ namespace VegetableShop_DBMS.Views
             this.btnAll.ForeColor = System.Drawing.Color.Black;
             this.btnAll.Image = null;
             this.btnAll.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAll.Location = new System.Drawing.Point(21, 3);
+            this.btnAll.Location = new System.Drawing.Point(28, 4);
+            this.btnAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAll.Name = "btnAll";
             this.btnAll.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnAll.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAll.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAll.OnHoverImage = null;
             this.btnAll.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAll.Size = new System.Drawing.Size(120, 38);
+            this.btnAll.Size = new System.Drawing.Size(160, 47);
             this.btnAll.TabIndex = 38;
             this.btnAll.Text = "Tất cả";
             this.btnAll.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -416,17 +434,19 @@ namespace VegetableShop_DBMS.Views
             this.clTotalQuantity,
             this.clOrderStateName,
             this.clTime});
-            this.dtGVBillManagement.Location = new System.Drawing.Point(12, 262);
+            this.dtGVBillManagement.Location = new System.Drawing.Point(16, 322);
+            this.dtGVBillManagement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtGVBillManagement.Name = "dtGVBillManagement";
             this.dtGVBillManagement.RowHeadersWidth = 51;
             this.dtGVBillManagement.RowTemplate.Height = 23;
-            this.dtGVBillManagement.Size = new System.Drawing.Size(868, 287);
+            this.dtGVBillManagement.Size = new System.Drawing.Size(1157, 353);
             this.dtGVBillManagement.TabIndex = 33;
             this.dtGVBillManagement.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGVBillManagement_CellClick);
             // 
             // clIDBill
             // 
             this.clIDBill.HeaderText = "IDBill";
+            this.clIDBill.MinimumWidth = 6;
             this.clIDBill.Name = "clIDBill";
             this.clIDBill.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.clIDBill.Width = 150;
@@ -434,28 +454,35 @@ namespace VegetableShop_DBMS.Views
             // clUserName
             // 
             this.clUserName.HeaderText = "Tên tài khoản";
+            this.clUserName.MinimumWidth = 6;
             this.clUserName.Name = "clUserName";
             this.clUserName.Width = 150;
             // 
             // clTotalPrice
             // 
             this.clTotalPrice.HeaderText = "Tổng giá";
+            this.clTotalPrice.MinimumWidth = 6;
             this.clTotalPrice.Name = "clTotalPrice";
             this.clTotalPrice.Width = 150;
             // 
             // clTotalQuantity
             // 
             this.clTotalQuantity.HeaderText = "Tổng số lượng";
+            this.clTotalQuantity.MinimumWidth = 6;
             this.clTotalQuantity.Name = "clTotalQuantity";
+            this.clTotalQuantity.Width = 125;
             // 
             // clOrderStateName
             // 
             this.clOrderStateName.HeaderText = "Trạng thái";
+            this.clOrderStateName.MinimumWidth = 6;
             this.clOrderStateName.Name = "clOrderStateName";
+            this.clOrderStateName.Width = 125;
             // 
             // clTime
             // 
             this.clTime.HeaderText = "Thời gian";
+            this.clTime.MinimumWidth = 6;
             this.clTime.Name = "clTime";
             this.clTime.Width = 150;
             // 
@@ -473,14 +500,15 @@ namespace VegetableShop_DBMS.Views
             this.btnState.ForeColor = System.Drawing.Color.Black;
             this.btnState.Image = null;
             this.btnState.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnState.Location = new System.Drawing.Point(753, 555);
+            this.btnState.Location = new System.Drawing.Point(1004, 683);
+            this.btnState.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnState.Name = "btnState";
             this.btnState.OnHoverBaseColor = System.Drawing.Color.Gray;
             this.btnState.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnState.OnHoverForeColor = System.Drawing.Color.White;
             this.btnState.OnHoverImage = null;
             this.btnState.OnPressedColor = System.Drawing.Color.Black;
-            this.btnState.Size = new System.Drawing.Size(120, 38);
+            this.btnState.Size = new System.Drawing.Size(160, 47);
             this.btnState.TabIndex = 77;
             this.btnState.Text = "Chuyển state";
             this.btnState.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -493,8 +521,9 @@ namespace VegetableShop_DBMS.Views
             this.ptBOpacity.BaseDepth = 200;
             this.ptBOpacity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ptBOpacity.Location = new System.Drawing.Point(0, 0);
+            this.ptBOpacity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ptBOpacity.Name = "ptBOpacity";
-            this.ptBOpacity.Size = new System.Drawing.Size(892, 599);
+            this.ptBOpacity.Size = new System.Drawing.Size(1189, 737);
             this.ptBOpacity.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptBOpacity.TabIndex = 78;
             this.ptBOpacity.TabStop = false;
@@ -506,9 +535,10 @@ namespace VegetableShop_DBMS.Views
             this.pnBillDetail.Controls.Add(this.btnExit);
             this.pnBillDetail.Controls.Add(this.dtGVBillDetailManagement);
             this.pnBillDetail.Controls.Add(this.gunaLabel2);
-            this.pnBillDetail.Location = new System.Drawing.Point(15, 108);
+            this.pnBillDetail.Location = new System.Drawing.Point(20, 133);
+            this.pnBillDetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnBillDetail.Name = "pnBillDetail";
-            this.pnBillDetail.Size = new System.Drawing.Size(862, 382);
+            this.pnBillDetail.Size = new System.Drawing.Size(1149, 470);
             this.pnBillDetail.TabIndex = 79;
             this.pnBillDetail.Visible = false;
             // 
@@ -526,14 +556,15 @@ namespace VegetableShop_DBMS.Views
             this.btnExit.ForeColor = System.Drawing.Color.Silver;
             this.btnExit.Image = null;
             this.btnExit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnExit.Location = new System.Drawing.Point(819, 3);
+            this.btnExit.Location = new System.Drawing.Point(1092, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnExit.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btnExit.OnHoverForeColor = System.Drawing.Color.Gray;
             this.btnExit.OnHoverImage = null;
             this.btnExit.OnPressedColor = System.Drawing.Color.Black;
-            this.btnExit.Size = new System.Drawing.Size(33, 28);
+            this.btnExit.Size = new System.Drawing.Size(44, 34);
             this.btnExit.TabIndex = 32;
             this.btnExit.Text = "X";
             this.btnExit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -573,12 +604,14 @@ namespace VegetableShop_DBMS.Views
             this.dtGVBillDetailManagement.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtGVBillDetailManagement.EnableHeadersVisualStyles = false;
             this.dtGVBillDetailManagement.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dtGVBillDetailManagement.Location = new System.Drawing.Point(12, 72);
+            this.dtGVBillDetailManagement.Location = new System.Drawing.Point(16, 89);
+            this.dtGVBillDetailManagement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtGVBillDetailManagement.Name = "dtGVBillDetailManagement";
             this.dtGVBillDetailManagement.RowHeadersVisible = false;
+            this.dtGVBillDetailManagement.RowHeadersWidth = 51;
             this.dtGVBillDetailManagement.RowTemplate.Height = 80;
             this.dtGVBillDetailManagement.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtGVBillDetailManagement.Size = new System.Drawing.Size(836, 292);
+            this.dtGVBillDetailManagement.Size = new System.Drawing.Size(1115, 359);
             this.dtGVBillDetailManagement.TabIndex = 31;
             this.dtGVBillDetailManagement.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dtGVBillDetailManagement.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -606,26 +639,31 @@ namespace VegetableShop_DBMS.Views
             // clImage
             // 
             this.clImage.HeaderText = "Hình ảnh";
+            this.clImage.MinimumWidth = 6;
             this.clImage.Name = "clImage";
             // 
             // clItemName
             // 
             this.clItemName.HeaderText = "Tên thực phẩm";
+            this.clItemName.MinimumWidth = 6;
             this.clItemName.Name = "clItemName";
             // 
             // clDescription
             // 
             this.clDescription.HeaderText = "Mô tả";
+            this.clDescription.MinimumWidth = 6;
             this.clDescription.Name = "clDescription";
             // 
             // clQuantity
             // 
             this.clQuantity.HeaderText = "Số lượng";
+            this.clQuantity.MinimumWidth = 6;
             this.clQuantity.Name = "clQuantity";
             // 
             // clPaidPrice
             // 
             this.clPaidPrice.HeaderText = "Giá";
+            this.clPaidPrice.MinimumWidth = 6;
             this.clPaidPrice.Name = "clPaidPrice";
             // 
             // gunaLabel2
@@ -633,18 +671,19 @@ namespace VegetableShop_DBMS.Views
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Gray;
-            this.gunaLabel2.Location = new System.Drawing.Point(295, 21);
+            this.gunaLabel2.Location = new System.Drawing.Point(393, 26);
+            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(300, 33);
+            this.gunaLabel2.Size = new System.Drawing.Size(373, 41);
             this.gunaLabel2.TabIndex = 30;
             this.gunaLabel2.Text = "ĐƠN HÀNG CHI TIẾT";
             // 
             // frmOrderManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(892, 599);
+            this.ClientSize = new System.Drawing.Size(1189, 737);
             this.Controls.Add(this.pnBillDetail);
             this.Controls.Add(this.ptBOpacity);
             this.Controls.Add(this.btnState);
@@ -654,6 +693,8 @@ namespace VegetableShop_DBMS.Views
             this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.gunaLabel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
             this.Name = "frmOrderManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý đơn hàng";
