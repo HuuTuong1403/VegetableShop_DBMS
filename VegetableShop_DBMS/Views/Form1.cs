@@ -24,6 +24,7 @@ namespace VegetableShop_DBMS
         public string PassWord;
         public string ImageUser;
         DataTable dtItem;
+        public int countPaging;
         string err;
         public frmVegetableShop(string UserName, string PassWord, string Role)
         {
@@ -79,6 +80,8 @@ namespace VegetableShop_DBMS
             int xlbl = 111;
             int count = 0;
             dtItem = HomeController.ShowItem(UserName).Tables[0];
+            countPaging = dtItem.Rows.Count / 6;
+            this.lblShowPage.Text =  "1 / " + countPaging.ToString();
             while (count < 6 && count < dtItem.Rows.Count)
             {
                 DataRow dr = dtItem.Rows[count];
@@ -100,7 +103,7 @@ namespace VegetableShop_DBMS
                 string image = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\cart-plus.png";
                 btn.Image = Image.FromFile(image);
                 btn.Text = dr["ItemName"].ToString();
-                btn.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                btn.Font = new Font("Tahoma", 10, FontStyle.Bold);
                 btn.ForeColor = Color.Black;
                 btn.OnHoverForeColor = Color.Black;
                 btn.ImageAlign = HorizontalAlignment.Right;
@@ -130,6 +133,7 @@ namespace VegetableShop_DBMS
 
             }
             int i = dtItem.Rows.Count / 6;
+            countPaging = i;
             int xbtnPaing = 450;
             for (int j = 1; j <= i; j++)
             {
@@ -221,7 +225,7 @@ namespace VegetableShop_DBMS
                     string image = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\cart-plus.png";
                     btn.Image = Image.FromFile(image);
                     btn.Text = dr["ItemName"].ToString();
-                    btn.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                    btn.Font = new Font("Tahoma", 10, FontStyle.Bold);
                     btn.ForeColor = Color.Black;
                     btn.OnHoverForeColor = Color.Black;
                     btn.ImageAlign = HorizontalAlignment.Right;
@@ -303,7 +307,7 @@ namespace VegetableShop_DBMS
                     string image = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\cart-plus.png";
                     btn.Image = Image.FromFile(image);
                     btn.Text = dr["ItemName"].ToString();
-                    btn.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                    btn.Font = new Font("Tahoma", 10, FontStyle.Bold);
                     btn.ForeColor = Color.Black;
                     btn.OnHoverForeColor = Color.Black;
                     btn.ImageAlign = HorizontalAlignment.Right;
@@ -357,6 +361,7 @@ namespace VegetableShop_DBMS
                     index = index + 1;
                 }
             }
+            this.lblShowPage.Text = btnPagingTemp.Text + " / " + countPaging.ToString();
         }
 
         private void btnSignIn_Click(object sender, EventArgs e)
@@ -566,6 +571,20 @@ namespace VegetableShop_DBMS
             dtItem.Clear();
             dtItem = HomeController.FindItems_Category(ItemName).Tables[0];
             pnItems.Controls.Clear();
+            countPaging = dtItem.Rows.Count / 6;
+            
+            if(countPaging < 1)
+            {
+                this.lblShowPage.Visible = false;
+                this.lblPage.Visible = false;
+            }
+            else
+            {
+                this.lblShowPage.Visible = true;
+                this.lblPage.Visible = true;
+            }    
+            this.lblShowPage.Text = "1 / " + countPaging.ToString();
+
             while (count < 6 && count < dtItem.Rows.Count)
             {
                 DataRow dr = dtItem.Rows[count];
@@ -587,7 +606,7 @@ namespace VegetableShop_DBMS
                 string image = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\cart-plus.png";
                 btn.Image = Image.FromFile(image);
                 btn.Text = dr["ItemName"].ToString();
-                btn.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                btn.Font = new Font("Tahoma", 10, FontStyle.Bold);
                 btn.ForeColor = Color.Black;
                 btn.OnHoverForeColor = Color.Black;
                 btn.ImageAlign = HorizontalAlignment.Right;
@@ -641,6 +660,7 @@ namespace VegetableShop_DBMS
                 pnItems.Controls.Add(btnPaging);
 
             }
+            
         }
 
         private void BtnCategory_Click(object sender, EventArgs e)
@@ -723,6 +743,20 @@ namespace VegetableShop_DBMS
             dtItem.Clear();
             dtItem = HomeController.FindItems_SubCategory(ItemName).Tables[0];
             pnItems.Controls.Clear();
+            countPaging = dtItem.Rows.Count / 6;
+
+            if (countPaging < 1)
+            {
+                this.lblShowPage.Visible = false;
+                this.lblPage.Visible = false;
+            }
+            else
+            {
+                this.lblShowPage.Visible = true;
+                this.lblPage.Visible = true;
+            }
+            this.lblShowPage.Text = "1 / " + countPaging.ToString();
+
             while (count < 6 && count < dtItem.Rows.Count)
             {
                 DataRow dr = dtItem.Rows[count];
@@ -744,7 +778,7 @@ namespace VegetableShop_DBMS
                 string image = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\cart-plus.png";
                 btn.Image = Image.FromFile(image);
                 btn.Text = dr["ItemName"].ToString();
-                btn.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                btn.Font = new Font("Tahoma", 10, FontStyle.Bold);
                 btn.ForeColor = Color.Black;
                 btn.OnHoverForeColor = Color.Black;
                 btn.ImageAlign = HorizontalAlignment.Right;
@@ -836,7 +870,7 @@ namespace VegetableShop_DBMS
                 string image = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10)) + @"\images\cart-plus.png";
                 btn.Image = Image.FromFile(image);
                 btn.Text = dr["ItemName"].ToString();
-                btn.Font = new Font("Tahoma", 12, FontStyle.Bold);
+                btn.Font = new Font("Tahoma", 10, FontStyle.Bold);
                 btn.ForeColor = Color.Black;
                 btn.OnHoverForeColor = Color.Black;
                 btn.ImageAlign = HorizontalAlignment.Right;

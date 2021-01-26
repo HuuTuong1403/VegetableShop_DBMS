@@ -58,6 +58,8 @@ namespace VegetableShop_DBMS
             this.pnPanel = new Guna.UI.WinForms.GunaPanel();
             this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
             this.btnSearch = new Guna.UI.WinForms.GunaButton();
+            this.lblPage = new Guna.UI.WinForms.GunaLabel();
+            this.lblShowPage = new Guna.UI.WinForms.GunaLabel();
             this.pnUser.SuspendLayout();
             this.pnGroupMenu.SuspendLayout();
             this.gunaPanel1.SuspendLayout();
@@ -457,7 +459,7 @@ namespace VegetableShop_DBMS
             // 
             this.pnItems.Location = new System.Drawing.Point(12, 269);
             this.pnItems.Name = "pnItems";
-            this.pnItems.Size = new System.Drawing.Size(1346, 468);
+            this.pnItems.Size = new System.Drawing.Size(1346, 373);
             this.pnItems.TabIndex = 22;
             // 
             // pnManagement
@@ -673,12 +675,33 @@ namespace VegetableShop_DBMS
             this.btnSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // lblPage
+            // 
+            this.lblPage.AutoSize = true;
+            this.lblPage.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPage.Location = new System.Drawing.Point(606, 655);
+            this.lblPage.Name = "lblPage";
+            this.lblPage.Size = new System.Drawing.Size(63, 19);
+            this.lblPage.TabIndex = 49;
+            this.lblPage.Text = "Trang:";
+            // 
+            // lblShowPage
+            // 
+            this.lblShowPage.AutoSize = true;
+            this.lblShowPage.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
+            this.lblShowPage.Location = new System.Drawing.Point(665, 656);
+            this.lblShowPage.Name = "lblShowPage";
+            this.lblShowPage.Size = new System.Drawing.Size(0, 19);
+            this.lblShowPage.TabIndex = 50;
+            // 
             // frmVegetableShop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.lblShowPage);
+            this.Controls.Add(this.lblPage);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.pnPanel);
@@ -704,6 +727,7 @@ namespace VegetableShop_DBMS
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -736,6 +760,8 @@ namespace VegetableShop_DBMS
         private Guna.UI.WinForms.GunaPanel pnPanel;
         private Guna.UI.WinForms.GunaTextBox txtSearch;
         private Guna.UI.WinForms.GunaButton btnSearch;
+        private Guna.UI.WinForms.GunaLabel lblPage;
+        private Guna.UI.WinForms.GunaLabel lblShowPage;
     }
 }
 
