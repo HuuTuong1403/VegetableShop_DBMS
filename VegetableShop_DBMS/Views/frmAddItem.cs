@@ -88,7 +88,12 @@ namespace VegetableShop_DBMS.Views
             float SalePrice = float.Parse(txtSalePrice.Text.Trim());
             string Description = txtDescription.Text.Trim();
             string Orgin = txtOrgin.Text.Trim();
+            if (ItemImageName == "")
+            {
+                ItemImageName = "noImage.png";
+            }
             string Image = ItemImageName;
+
             string CategoryName = cbbCategory.SelectedItem.ToString();
             DataTable dtIDCategory = AdminSettingController.IDCategory_Find(CategoryName).Tables[0];
             string IDCategory = dtIDCategory.Rows[0][0].ToString();
@@ -96,8 +101,6 @@ namespace VegetableShop_DBMS.Views
             DataTable dtIDSubcategory = AdminSettingController.IDSubCategory_Find(SubCategoryName).Tables[0];
             string IDSubCategory = dtIDSubcategory.Rows[0][0].ToString();
 
-            //bool check = SignUpController.Register_Customer(UserName, PassWord, FullName, Gender, 
-            //    DateofBirth, PhoneNumber, Email, Image, Province, District, Ward, Street, ref err);
             bool check = AdminSettingController.AddItem(UserName, PassWord, ItemName, ImportPrice, SalePrice, Description, Orgin, IDCategory, IDSubCategory, Image, ref err);
             if (check == true)
             {

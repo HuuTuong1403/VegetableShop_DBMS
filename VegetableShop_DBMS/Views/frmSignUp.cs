@@ -114,6 +114,10 @@ namespace VegetableShop_DBMS.Views
             string District = cbbDistrict.SelectedItem.ToString();
             string Ward = cbbWard.SelectedItem.ToString();
             string Street = txtStreet.Text.Trim();
+            if(iName == "")
+            {
+                iName = "noImageUser.png";
+            }
             string Image = iName;
             bool check = SignUpController.Register_Customer(UserName, PassWord, FullName, Gender, DateofBirth, PhoneNumber, Email, Image, Province, District, Ward, Street, ref err);
             if (check == true)

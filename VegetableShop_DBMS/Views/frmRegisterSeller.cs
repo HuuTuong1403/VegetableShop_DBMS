@@ -31,7 +31,7 @@ namespace VegetableShop_DBMS.Views
             DateTime DateofBirth = dtpDateOfBirth.Value;
             string PhoneNumber = txtPhone.Text.Trim();
             string Email = txtEmail.Text.Trim();
-            string Image = "";
+            string Image = "noImageUser.png";
 
             bool check = AdminSettingController.Register_Seller(UserName, UserNameSeller, PassWord, PassWordSeller, FullName, Gender, DateofBirth, PhoneNumber, Email, Image, ref err);
             if (check == true)
@@ -43,6 +43,11 @@ namespace VegetableShop_DBMS.Views
             {
                 MessageBox.Show("Đăng ký thất bại, xin thử lại lần nữa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnChooseImage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
